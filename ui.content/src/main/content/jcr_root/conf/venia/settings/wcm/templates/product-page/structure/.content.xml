@@ -13,7 +13,7 @@
             layout="simple">
             <header jcr:primaryType="nt:unstructured"
                 sling:resourceType="venia/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/venia/us/en/site/header/master"/>
+                fragmentVariationPath="/content/experience-fragments/venia/us/en/site/new/header/master"/>
             <container jcr:primaryType="nt:unstructured" 
                 sling:resourceType="venia/components/container" 
                 layout="responsiveGrid">
