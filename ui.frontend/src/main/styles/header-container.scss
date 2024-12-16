@@ -1,0 +1,128 @@
+// Define scoped variables
+$primary-color: #000; // Text and icons color
+$secondary-color: #6a1b9a; // Purple links color
+$hover-color: #333; // Link hover color
+$border-color: #ccc; // Border for search input
+$bg-color: #fff; // Background color
+
+// Mixin for flexbox layout
+@mixin flex-center($justify: space-between) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+// Main container styles
+.header-container {
+    background-color: $bg-color;
+    padding: 10px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+    .cmp-container {
+        @include flex-center();
+        flex-wrap: wrap;
+        gap: 20px;
+
+        // Logo section
+        .image {
+            margin-bottom: 0px !important;
+            .cmp-image__image {
+                height: 50px;
+                width: auto;
+            }
+        }
+
+        // Navigation links
+        .navigation {
+            flex: 1; // Allow navigation to take available space
+
+            nav {
+                .cmp-navigation__group {
+                    @include flex-center(flex-start);
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    .cmp-navigation__item {
+                        margin-right: 20px;
+
+                        .cmp-navigation__item-link {
+                            text-decoration: none;
+                            color: $primary-color;
+                            font-weight: 500;
+                            font-size: 16px;
+
+                            &:hover {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Search bar
+        .searchbar {
+            position: relative;
+
+            .searchbar__root {
+                display: flex;
+                align-items: center;
+
+                .searchbar__form {
+                    display: flex;
+
+                    .searchbar__fields {
+                        position: relative;
+
+                        .searchbar__input {
+                            width: 200px;
+                            padding: 8px 10px;
+                            border: 1px solid $border-color;
+                            border-radius: 20px;
+                            outline: none;
+                            font-size: 14px;
+
+                            &::placeholder {
+                                color: #aaa;
+                            }
+                        }
+
+                        .searchbar__search-icon {
+                            position: absolute;
+                            left: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Mini account and mini cart sections
+        .miniaccount,
+        .minicart {
+            button {
+                background: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: $primary-color;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $hover-color;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    stroke: $primary-color;
+                }
+            }
+        }
+    }
+}
