@@ -1,0 +1,97 @@
+<style>
+    /* Social Share Section */
+    .social-share {
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .social-share h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Social Icons Styling */
+    .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        /* Spacing between icons */
+    }
+
+    .social-icons li {
+        display: inline-block;
+    }
+
+    /* Icon Links Styling */
+    .social-icons li a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        line-height: 40px;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-icons li a:hover {
+        background-color: #ddd;
+        transform: scale(1.1);
+    }
+
+    /* Social Icon Images */
+    .social-icons li a img {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+</style>
+
+<div class="social-share">
+    <h3>Share this page:</h3>
+    <ul class="social-icons">
+        <!-- Facebook Sharing -->
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${currentPage.path @ context='uri'}&quote=${currentPage.title @ context='html'}&picture=/content/dam/venia/184c25ed-8faf-44f6-8738-cdc8399080cb__1600X644.jpg" 
+                target="_blank" title="Share on Facebook" class="facebook">
+                <img src="/content/dam/venia/icons/facebook.png" alt="Facebook" />
+            </a>
+        </li>
+
+        <!-- Twitter Sharing -->
+        <li>
+            <a href="https://x.com/intent/tweet?url=${currentPage.path @ context='uri'}&text=${currentPage.title @ context='html'}&media=/content/dam/venia/184c25ed-8faf-44f6-8738-cdc8399080cb__1600X644.jpg"
+                target="_blank" title="Share on Twitter" class="twitter">
+                <img src="/content/dam/venia/icons/twitter.png" alt="Twitter" />
+            </a>
+        </li>
+
+        <!-- LinkedIn Sharing -->
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=${currentPage.path @ context='uri'}&title=${currentPage.title @ context='html'}&summary=${currentPage.title @ context='html'}&source=&image=/content/dam/venia/184c25ed-8faf-44f6-8738-cdc8399080cb__1600X644.jpg"
+                target="_blank" title="Share on LinkedIn" class="linkedin">
+                <img src="/content/dam/venia/icons/linkedin.png" alt="LinkedIn" />
+            </a>
+        </li>
+
+        <!-- Pinterest Sharing with Image -->
+        <li>
+            <a href="https://pinterest.com/pin/create/button/?url=${currentPage.path @ context='uri'}&media=/content/dam/venia/184c25ed-8faf-44f6-8738-cdc8399080cb__1600X644.jpg&description=${currentPage.title @ context='html'}"
+                target="_blank" title="Share on Pinterest" class="pinterest">
+                <img src="/content/dam/venia/icons/pinterest.png" alt="Pinterest" />
+            </a>
+        </li>
+
+        <!-- WhatsApp Sharing -->
+        <li>
+            <a href="https://api.whatsapp.com/send?text=${currentPage.title @ context='html'}+${currentPage.path @ context='uri'}+Image:/content/dam/venia/184c25ed-8faf-44f6-8738-cdc8399080cb__1600X644.jpg"
+                target="_blank" class="whatsapp">
+                <img src="/content/dam/venia/icons/whatsapp.png" alt="WhatsApp" />
+            </a>
+        </li>
+    </ul>
+</div>
