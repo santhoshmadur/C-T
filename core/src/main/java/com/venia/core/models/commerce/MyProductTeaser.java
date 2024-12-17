@@ -22,4 +22,5 @@ public interface MyProductTeaser extends ProductTeaser {
     // Extend the existing interface with the additional properties which you
     // want to expose to the HTL template.
     public Boolean isShowBadge();
+    public void test();
 }
