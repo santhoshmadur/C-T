@@ -67,7 +67,8 @@ export default {
         cartDetailsContainer: '.cartcontainer__body',
         checkoutPageContainer: '.checkoutpage__body',
         orderHistoryPageContainer: '.orderhistory__body',
-        wishlistPageContainer: '.wishlist__body'
+        wishlistPageContainer: '.wishlist__body',
+        floatingBanner: '.floating-banner'
     },
     pagePaths: {
         baseUrl,

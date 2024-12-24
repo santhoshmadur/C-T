@@ -1,0 +1,55 @@
+.floating-banner {
+    /* .banner {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+ */
+
+
+ .banner {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid black;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute children */
+}
+
+.scrolling-content {
+    display: flex;
+    animation: scroll 15s linear infinite; /* Adjust duration for speed */
+}
+
+.item {
+    /* width: 8rem; */
+    flex: 0 0 auto;
+    color:white;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust based on the number of items */
+    }
+}
+
+/* .item {
+    padding: 0 2rem; 
+} */
+
+.item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 10%; /* Adjust width as needed */
+    color: white;
+    text-align: center;
+}
+}

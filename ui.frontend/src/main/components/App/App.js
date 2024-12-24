@@ -45,6 +45,7 @@ import AccountInformationPage from '../AccountInformationPage';
 import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
+import FloatingBanner from '../FloatingBanner';
 const App = props => {
     const { mountingPoints, pagePaths, storeView } = config;
     const { locale, messages } = props;
@@ -57,6 +58,9 @@ const App = props => {
 
     window.STORE_NAME = storeView;
     window.DEFAULT_COUNTRY_CODE = locale;
+
+    const bannerText = document.querySelector(".floating-banner")?.getAttribute("data-bannerText");
+
 
     return (
         <IntlProvider locale={locale} messages={messages}>
@@ -94,6 +98,13 @@ const App = props => {
                         <Portal selector={mountingPoints.bundleProductOptionsContainer}>
                             <BundleProductOptions />
                         </Portal>
+
+                       { 
+                       
+                        
+                        <Portal selector={mountingPoints.floatingBanner}>
+                            <FloatingBanner bannerText={bannerText}/>
+                        </Portal>}
 
                         <PortalPlacer
                             selector={mountingPoints.giftCardProductOptionsContainer}
