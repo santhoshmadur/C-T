@@ -12,6 +12,8 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.jcr.Node;
+import javax.jcr.Session;
 import javax.servlet.Servlet;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -23,37 +25,34 @@ import java.util.Scanner;
         "sling.servlet.methods=" + HttpConstants.METHOD_POST,
         "sling.servlet.paths=/bin/instagram/post",
 })
-@Designate(ocd = InstagramConfig.class)
 public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
-    private volatile String accessToken;
-    private volatile String instagramAccountId;
-
-    @Activate
-    @Deactivate
-    protected void activateDeactivate(InstagramConfig config) {
-        accessToken = config.accessToken();
-        instagramAccountId = config.instagramAccountId();
-    }
+    private volatile String accessToken="EAANWVbfnSJABO2K52xu7iXCv4DuHZCt7utHOkdSnGMgHkffWUReKO3ZCk1mPUTuPNOovIpfZCypTzHSwo7042lu9ZAxfu0tmzXt2FwY6P3KcgHVEZAQpZBOn8N8Elo1eeTSA4u4x6nDlMEi6vN7BXulW7cWexqsknfZB14gPZCQrWaT1GwNPRiCFE13pKRw04MK7qDDSddGt2Cm3T2rE24OCZBSUZCvQZDZD";
+    private volatile String instagramAccountId="17841471407996353";
 
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
-        String imageUrl = request.getParameter("imageUrl");
+        String damPath = request.getParameter("damPath");
         String caption = request.getParameter("caption");
 
-        if (imageUrl == null || caption == null) {
+        if (damPath == null || caption == null) {
             response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
-            response.getWriter().write("Missing parameters: imageUrl or caption");
+            response.getWriter().write("Missing parameters: damPath or caption");
             return;
         }
 
         try {
-            // Step 1: Create Media Container
-            String creationId = createMediaContainer(imageUrl, caption);
+            boolean isPublished = isImagePublished(request, damPath);
+            if (!isPublished) {
+                response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
+                response.getWriter().write("Image is not published.");
+                return;
+            }
+            String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;
+            String creationId = createMediaContainer(publishImpageUrl, caption);
 
             if (creationId != null) {
-                // Step 2: Publish Media
                 publishMedia(creationId);
                 response.setStatus(SlingHttpServletResponse.SC_OK);
                 response.getWriter().write("Media Published Successfully");
@@ -68,13 +67,12 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
     }
 
-    private String createMediaContainer(String imageUrl, String caption) throws Exception {
+    private String createMediaContainer(String publishImpageUrl, String caption) throws Exception {
         String endpoint = "https://graph.facebook.com/v21.0/" + instagramAccountId + "/media";
         String payload = String.format(
                 "{\"image_url\":\"%s\",\"caption\":\"%s\",\"access_token\":\"%s\"}",
-                imageUrl, caption, accessToken
+                publishImpageUrl, caption, accessToken
         );
-
         return sendPostRequest(endpoint, payload, "id");
     }
 
@@ -84,7 +82,6 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
                 "{\"creation_id\":\"%s\",\"access_token\":\"%s\"}",
                 creationId, accessToken
         );
-
         sendPostRequest(endpoint, payload, null);
     }
 
@@ -116,5 +113,19 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         int startIndex = response.indexOf(key) + key.length() + 3;
         int endIndex = response.indexOf("\"", startIndex);
         return response.substring(startIndex, endIndex);
+    }
+
+    private boolean isImagePublished(SlingHttpServletRequest request, String damPath) {
+        try {
+            Session session = request.getResourceResolver().adaptTo(Session.class);
+            Node assetNode = session.getNode(damPath);
+            if (assetNode.hasProperty("cq:lastReplicationAction")) {
+                String replicationAction = assetNode.getProperty("cq:lastReplicationAction").getString();
+                return "Activate".equals(replicationAction);
+            }
+        } catch (Exception e) {
+            LOG.error("Error checking publication status for {}", damPath, e);
+        }
+        return false;
     }
 }
