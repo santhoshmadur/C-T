@@ -1,14 +1,10 @@
 package com.venia.core.models.commerce.servlets;
 
-import com.venia.core.models.commerce.config.InstagramConfig;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.metatype.annotations.Designate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +24,7 @@ import java.util.Scanner;
 public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
-    private volatile String accessToken="EAANWVbfnSJABO2K52xu7iXCv4DuHZCt7utHOkdSnGMgHkffWUReKO3ZCk1mPUTuPNOovIpfZCypTzHSwo7042lu9ZAxfu0tmzXt2FwY6P3KcgHVEZAQpZBOn8N8Elo1eeTSA4u4x6nDlMEi6vN7BXulW7cWexqsknfZB14gPZCQrWaT1GwNPRiCFE13pKRw04MK7qDDSddGt2Cm3T2rE24OCZBSUZCvQZDZD";
+    private volatile String accessToken="EAANWVbfnSJABOxZBgTZA6vY7y6q4vMe4o1iN2mTsZAAzkiKCrwCWf8tHPBVgHUuGR4nPUUq1hdHZCH3aOS83bRDAMiChhzo9hZC3fK4Ls5bwSgLDfGDHAlNKZB0V4LwmhpJPPI2IjYZCkEfomzUS1w35MaPHTKoClFKZCep6nN3bjKeg3b7OuQojC4XXySwvFkWr1pmZBBzIvgGCI11YuxBKhh8ojYQZDZD";
     private volatile String instagramAccountId="17841471407996353";
 
     @Override
