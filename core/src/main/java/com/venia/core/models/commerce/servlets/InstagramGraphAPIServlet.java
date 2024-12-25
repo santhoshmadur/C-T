@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
-    private volatile String accessToken="EAANWVbfnSJABOxZBgTZA6vY7y6q4vMe4o1iN2mTsZAAzkiKCrwCWf8tHPBVgHUuGR4nPUUq1hdHZCH3aOS83bRDAMiChhzo9hZC3fK4Ls5bwSgLDfGDHAlNKZB0V4LwmhpJPPI2IjYZCkEfomzUS1w35MaPHTKoClFKZCep6nN3bjKeg3b7OuQojC4XXySwvFkWr1pmZBBzIvgGCI11YuxBKhh8ojYQZDZD";
+    private volatile String accessToken="EAANWVbfnSJABO02EuTNXTHh2FLJawRjAHZAIlNSlvsY9JchTZAnDFfusBfoBwyIh2rsMcbl68ZCK8EEtzfU4eMmwcW473iaoqk9nw2it45XpBO03VC6Mri8ucei0obo7kj60OoOI9NZCOiZBTS7KlkBZCjKVfuxN7KPNqJpFoc7Jdps2mHXwc7uCZAHD6kQ2d05";
     private volatile String instagramAccountId="17841471407996353";
 
     @Override
