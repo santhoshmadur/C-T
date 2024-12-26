@@ -58,7 +58,7 @@ const App = props => {
 
     window.STORE_NAME = storeView;
     window.DEFAULT_COUNTRY_CODE = locale;
-
+    
     return (
         <IntlProvider locale={locale} messages={messages}>
             <ConfigContextProvider config={config}>

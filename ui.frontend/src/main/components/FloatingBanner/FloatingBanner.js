@@ -3,7 +3,7 @@ import React from 'react';
 const FloatingBanner = () => {
 
   const bannerText = document.querySelector(".floating-banner")?.getAttribute("data-bannerText");
-    const items = Array.from({ length: 10 }, (_, index) => bannerText);
+  const items = Array.from({ length: 20 }, (_, index) => bannerText);
 
   return (
     <div className='banner'>
