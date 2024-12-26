@@ -65,6 +65,10 @@
                                                                 jcr:primaryType="nt:unstructured"
                                                                 cssName="white-border-heading bigger-font"
                                                                 text="white-border-heading bigger-font"/>
+                                                            <heroBanner-content-text
+                                                                jcr:primaryType="nt:unstructured"
+                                                                cssName="heroBanner-content-text"
+                                                                text="heroBanner-content-text"/>
                                                         </styles>
                                                     </styles>
                                                     <misctools
