@@ -16,11 +16,15 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
+import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 
-@Component(service = Servlet.class, property = {
-        "sling.servlet.methods=" + HttpConstants.METHOD_POST,
-        "sling.servlet.paths=/bin/instagram/post",
-})
+@Component(service = Servlet.class)
+@SlingServletResourceTypes(
+        methods = {HttpConstants.METHOD_GET,HttpConstants.METHOD_POST},
+        resourceTypes = "venia/resource",
+        selectors = {"post"},
+        extensions = {"ig"}
+)
 public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
