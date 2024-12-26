@@ -1,7 +1,9 @@
 import React from 'react';
 
-const FloatingBanner = (props) => {
-    const items = Array.from({ length: 10 }, (_, index) => props.bannerText);
+const FloatingBanner = () => {
+
+  const bannerText = document.querySelector(".floating-banner")?.getAttribute("data-bannerText");
+    const items = Array.from({ length: 10 }, (_, index) => bannerText);
 
   return (
     <div className='banner'>
@@ -9,7 +11,6 @@ const FloatingBanner = (props) => {
         {items.map((item, index) => (
           <div className='item' key={index}>{item}</div>
         ))}
-        {/* Duplicate the items for seamless scrolling */}
         {items.map((item, index) => (
           <div className='item' key={index + items.length}>{item}</div>
         ))}

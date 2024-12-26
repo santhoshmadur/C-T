@@ -59,9 +59,6 @@ const App = props => {
     window.STORE_NAME = storeView;
     window.DEFAULT_COUNTRY_CODE = locale;
 
-    const bannerText = document.querySelector(".floating-banner")?.getAttribute("data-bannerText");
-
-
     return (
         <IntlProvider locale={locale} messages={messages}>
             <ConfigContextProvider config={config}>
@@ -99,12 +96,9 @@ const App = props => {
                             <BundleProductOptions />
                         </Portal>
 
-                       { 
-                       
-                        
                         <Portal selector={mountingPoints.floatingBanner}>
-                            <FloatingBanner bannerText={bannerText}/>
-                        </Portal>}
+                            <FloatingBanner />
+                        </Portal>
 
                         <PortalPlacer
                             selector={mountingPoints.giftCardProductOptionsContainer}
