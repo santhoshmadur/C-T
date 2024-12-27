@@ -46,6 +46,7 @@ import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
 import FloatingBanner from '../FloatingBanner';
+import InfiniteCarousel from '../InfinateCarousel';
 const App = props => {
     const { mountingPoints, pagePaths, storeView } = config;
     const { locale, messages } = props;
@@ -58,7 +59,7 @@ const App = props => {
 
     window.STORE_NAME = storeView;
     window.DEFAULT_COUNTRY_CODE = locale;
-    
+
     return (
         <IntlProvider locale={locale} messages={messages}>
             <ConfigContextProvider config={config}>
@@ -98,6 +99,10 @@ const App = props => {
 
                         <Portal selector={mountingPoints.floatingBanner}>
                             <FloatingBanner />
+                        </Portal>
+
+                        <Portal selector={mountingPoints.infiniteCarousel}>
+                            <InfiniteCarousel />
                         </Portal>
 
                         <PortalPlacer
