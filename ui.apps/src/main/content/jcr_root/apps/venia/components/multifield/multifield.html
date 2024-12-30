@@ -1,8 +1,8 @@
-<div data-sly-use.model="com.venia.core.models.commerce.MultifieldModel">
-    <div data-sly-list.parent="${model.main}">
+<sly  data-sly-use.model="com.venia.core.models.commerce.MultifieldModel">
+    <div class="multifield-wrapper"  data-sly-list.parent="${model.main}">
 
         <sly data-sly-test="${parent.listFrom == 'children'}">
-            <div data-sly-list.image="${parent.imageLink}">
+            <div class="multifield-image"  data-sly-list.image="${parent.imageLink}">
                 <a href="${image.linkURL}" target="${image.linkTarget}">
                     <img src="${image.image}" alt="${image.altText}">
                 </a>
@@ -10,10 +10,10 @@
         </sly>
 
         <sly data-sly-test="${parent.listFrom == 'static'}">
-            <div data-sly-list.text="${parent.textLink}">
+            <div  class="multifield-text"  data-sly-list.text="${parent.textLink}">
                 <a href="${text.linkURL}" target="${text.linkTarget}">${text.text}</a>
             </div>
         </sly>
 
     </div>
-</div>
+</sly>
