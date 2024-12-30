@@ -29,7 +29,9 @@ $venia-warning-light: rgb(254, 229, 232);
 
 
 // UI-Code and theory variables
-
+$ct-font: Helvetica Neue, Helvetica, -apple-system,
+BlinkMacSystemFont,
+sans-serif;
 $ct-color-white: #FFFFFF;
 $ct-color-white-opacity-light: #FFFFFF4D;
 $ct-color-white-soft: #F8F8F8;
@@ -125,6 +127,8 @@ $ct-color-gray: #808080;
     /* font family */
     --venia-global-fontFamily-sansSerif: 'Muli', sans-serif;
     --venia-global-fontFamily-serif: 'Source Serif Pro', serif;
+
+    --CT-global-fontFamily-helveticaNeue: 'Helvetica Neue', Helvetica;
 
     /* font size */
     --venia-global-fontSize-50: 0.6875rem;
