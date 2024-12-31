@@ -16,23 +16,21 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
-import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 
-@Component(service = Servlet.class)
-@SlingServletResourceTypes(
-        methods = {HttpConstants.METHOD_GET,HttpConstants.METHOD_POST},
-        resourceTypes = "venia/resource",
-        selectors = {"post"},
-        extensions = {"ig"}
-)
+@Component(service = Servlet.class,
+        property = {
+                "sling.servlet.methods=" + HttpConstants.METHOD_POST,
+                "sling.servlet.paths=/bin/venia/servlet"
+        })
 public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
-    private volatile String accessToken="EAANWVbfnSJABO02EuTNXTHh2FLJawRjAHZAIlNSlvsY9JchTZAnDFfusBfoBwyIh2rsMcbl68ZCK8EEtzfU4eMmwcW473iaoqk9nw2it45XpBO03VC6Mri8ucei0obo7kj60OoOI9NZCOiZBTS7KlkBZCjKVfuxN7KPNqJpFoc7Jdps2mHXwc7uCZAHD6kQ2d05";
+    private volatile String accessToken="EAANWVbfnSJABO0ZC6SaBAkNsMeiNk5z8Fi9t9KUt715yPAWxCRNwipCuKbk9ZAANJeWKVb1EdpKaZASPF8sK0TzCXb7GFStb1xFl8HTlNZBxI75GokhQOviskN4d7pWdcnId8hmgHrVj4fRteXIoUZAyoc4WkZCced1hw6NouVRsrBFeXPXop94Dbcayoiu54z";
     private volatile String instagramAccountId="17841471407996353";
 
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
+        response.setContentType("application/json");
         String damPath = request.getParameter("damPath");
         String caption = request.getParameter("caption");
 
@@ -43,12 +41,12 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
 
         try {
-            boolean isPublished = isImagePublished(request, damPath);
+            /*boolean isPublished = isImagePublished(request, damPath);
             if (!isPublished) {
                 response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("Image is not published.");
                 return;
-            }
+            }*/
             String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;
             String creationId = createMediaContainer(publishImpageUrl, caption);
 
