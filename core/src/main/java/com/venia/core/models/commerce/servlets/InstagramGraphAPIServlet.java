@@ -2,6 +2,8 @@ package com.venia.core.models.commerce.servlets;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.osgi.service.component.annotations.Component;
@@ -115,11 +117,20 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
 
     private boolean isImagePublished(SlingHttpServletRequest request, String damPath) {
         try {
-            Session session = request.getResourceResolver().adaptTo(Session.class);
-            Node assetNode = session.getNode(damPath);
-            if (assetNode.hasProperty("cq:lastReplicationAction")) {
+            Resource resource = request.getResource();
+            ResourceResolver resourceResolver = resource.getResourceResolver();
+            Session session = resourceResolver.adaptTo(Session.class);
+            Node assetNode = null;
+            if (session != null) {
+                assetNode = session.getNode(damPath);
+            }else {
+                LOG.error("session is null");
+            }
+            if (assetNode != null && assetNode.hasProperty("cq:lastReplicationAction")) {
                 String replicationAction = assetNode.getProperty("cq:lastReplicationAction").getString();
                 return "Activate".equals(replicationAction);
+            }else {
+                LOG.error("assetNode or assetNode.hasProperty is null");
             }
         } catch (Exception e) {
             LOG.error("Error checking publication status for {}", damPath, e);
