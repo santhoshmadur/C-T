@@ -50,25 +50,45 @@
                                                         jcr:primaryType="nt:unstructured"
                                                         features="*"/>
                                                     <styles
-                                                        jcr:primaryType="nt:unstructured"
-                                                        features="*">
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
                                                         <styles jcr:primaryType="cq:WidgetCollection">
                                                             <white-heading
-                                                                jcr:primaryType="nt:unstructured"
-                                                                cssName="white-heading"
-                                                                text="white-heading"/>
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="white-heading"
+                                                                    text="white-heading"/>
                                                             <white-border-heading
-                                                                jcr:primaryType="nt:unstructured"
-                                                                cssName="white-border-heading"
-                                                                text="white-border-heading"/>
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="white-border-heading"
+                                                                    text="white-border-heading"/>
                                                             <white-border-heading-bigger-font
-                                                                jcr:primaryType="nt:unstructured"
-                                                                cssName="white-border-heading bigger-font"
-                                                                text="white-border-heading bigger-font"/>
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="white-border-heading bigger-font"
+                                                                    text="white-border-heading bigger-font"/>
                                                             <heroBanner-content-text
-                                                                jcr:primaryType="nt:unstructured"
-                                                                cssName="heroBanner-content-text"
-                                                                text="heroBanner-content-text"/>
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="heroBanner-content-text"
+                                                                    text="heroBanner-content-text"/>
+                                                            <modal-body-pack-heading
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="modal-body-pack-heading"
+                                                                    text="modal-body-pack-heading"/>
+                                                            <modal-body-pack-heading-v
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="modal-body-pack-heading-v"
+                                                                    text="modal-body-pack-heading-v"/>
+                                                            <modal-body-pack-text
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="modal-body-pack-text"
+                                                                    text="modal-body-pack-text"/>
+                                                            <las-vegas
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="las-vegas"
+                                                                    text="las-vegas"/>
+                                                            <wolves
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="wolves"
+                                                                    text="wolves"/>
                                                         </styles>
                                                     </styles>
                                                     <misctools
