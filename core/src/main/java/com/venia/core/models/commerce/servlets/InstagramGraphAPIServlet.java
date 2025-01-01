@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Objects;
 import java.util.Scanner;
 
 @Component(service = Servlet.class,
@@ -36,7 +37,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         String damPath = request.getParameter("damPath");
         String caption = request.getParameter("caption");
 
-        if (damPath == null || caption == null) {
+        if (damPath == null || damPath.isEmpty() || caption == null || caption.isEmpty()) {
             response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().write("Missing parameters: damPath or caption");
             return;
@@ -55,7 +56,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
             if (creationId != null) {
                 publishMedia(creationId);
                 response.setStatus(SlingHttpServletResponse.SC_OK);
-                response.getWriter().write("Media Published Successfully and post ID is "+ creationId);
+                response.getWriter().write("Media Published Successfully");
             } else {
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 response.getWriter().write("Failed to create or publish media.");
@@ -122,7 +123,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
             Session session = resourceResolver.adaptTo(Session.class);
             Node assetNode = null;
             if (session != null) {
-                assetNode = session.getNode(damPath);
+                assetNode = session.getNode(damPath+"/jcr:content");
             }else {
                 LOG.error("session is null");
             }
