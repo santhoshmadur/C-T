@@ -46,9 +46,9 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
                 response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("Image is not published.");
                 return;
-            }*/
-            String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;
-            String creationId = createMediaContainer(publishImpageUrl, caption);
+            }
+            String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;*/
+            String creationId = createMediaContainer(damPath, caption);
 
             if (creationId != null) {
                 publishMedia(creationId);
