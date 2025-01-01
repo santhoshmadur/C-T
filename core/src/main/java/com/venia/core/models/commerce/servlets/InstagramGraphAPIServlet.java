@@ -41,19 +41,19 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
 
         try {
-            /*boolean isPublished = isImagePublished(request, damPath);
+            boolean isPublished = isImagePublished(request, damPath);
             if (!isPublished) {
                 response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("Image is not published.");
                 return;
             }
-            String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;*/
-            String creationId = createMediaContainer(damPath, caption);
+            String publishImpageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/"+damPath;
+            String creationId = createMediaContainer(publishImpageUrl, caption);
 
             if (creationId != null) {
                 publishMedia(creationId);
                 response.setStatus(SlingHttpServletResponse.SC_OK);
-                response.getWriter().write("Media Published Successfully");
+                response.getWriter().write("Media Published Successfully and post ID is "+ creationId);
             } else {
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 response.getWriter().write("Failed to create or publish media.");
