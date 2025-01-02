@@ -156,7 +156,7 @@
     const sizeOptions = document.getElementById("size-options");
 
     function updateImageBackground() {
-      imageSection.style.backgroundImage = `url(${imagePath[selectedIndex]})`;
+      imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
       imageSection.style.backgroundSize = "cover, cover";
       imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
     }
