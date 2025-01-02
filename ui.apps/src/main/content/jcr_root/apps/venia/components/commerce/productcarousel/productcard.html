@@ -19,7 +19,7 @@
         data-product-base-sku="${product.combinedSku.baseSku}"
         id="${product.id}"
         data-cmp-data-layer="${product.data.json}"
-        class="card product__card">
+        class="product__card">
         <a href="${product.URL}"
             target="${productCarousel.linkTarget}"
             title="${product.title}"
@@ -28,9 +28,8 @@
             <div class="product__card__image">
                 <img class="product__image" src="${product.imageURL}" alt="${product.imageAlt}" />
             </div>
+            <div class="produxt__card-price-name">
             <div class="product__card-title">${product.Title}</div>
-            <div>
-            <sly data-sly-call="${priceTemplate.price @ priceRange=product.priceRange, displayYouSave=false}"></sly>
             <sly data-sly-call="${actionsTemplate.actions @ product=product, productCarousel=productCarousel}"></sly>
             </div>
         </a>
