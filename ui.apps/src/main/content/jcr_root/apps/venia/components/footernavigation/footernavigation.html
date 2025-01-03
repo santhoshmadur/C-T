@@ -1,17 +1,127 @@
-<div>
-    <div data-sly-resource="${'text' @ resourceType='venia/components/text'}"></div>
-    <form class="signup-form">
-        <input type="email" placeholder="Your Email Address" />
-        <button type="submit">
-            <span>&#8594;</span>
-        </button>
-    </form>
-</div>
-<div>
-    <div data-sly-resource="${'firstcolumn' @ resourceType='venia/components/multifield'}"></div>
-    <div data-sly-resource="${'secondcolumn' @ resourceType='venia/components/multifield'}"></div>
-    <div data-sly-resource="${'thirdcolumn' @ resourceType='venia/components/multifield'}"></div>
-    <div data-sly-resource="${'fourcolumn' @ resourceType='venia/components/multifield'}"></div>
-    <div data-sly-resource="${'socialMedia' @ resourceType='venia/components/multifield'}"></div>
-    <div data-sly-resource="${'logo' @ resourceType='venia/components/image'}"></div>
-</div>
+<style>
+    .footer {
+        display: flex;
+        padding: 64px 56px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        background: #404040;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+
+    .footer-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 72px;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-column li {
+        margin-bottom: 10px;
+    }
+
+    .footer-column a {
+        color: #FFF;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+
+    .footer-column a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-icons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-icons a img {
+        filter: invert(1);
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer-circle {
+        width: 294px;
+        height: 293px;
+        background: #D9D9D9;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+
+</style>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">SCHEDULE & TICKETS</a></li>
+                    <li><a href="#">FAN ZONE</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">FULL SEASON MEMBERSHIPS</a></li>
+                    <li><a href="#">HALF-SEASON MEMBERSHIPS</a></li>
+                    <li><a href="#">QUARTER SEASON MEMBERSHIPS</a></li>
+                    <li><a href="#">GROUP TICKETS</a></li>
+                    <li><a href="#">TICKET TERMS & CONDITIONS</a></li>
+                    <li><a href="#">HOW TO AVOID TICKET FRAUD</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">EMPLOYMENT</a></li>
+                    <li><a href="#">HEALTH & SAFETY</a></li>
+                    <li><a href="#">THOMAS & MACK CENTER</a></li>
+                    <li><a href="#">STAFF DIRECTORY</a></li>
+                    <li><a href="#">EXECUTIVE TEAM</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">YOUR PRIVACY CHOICES</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-icons">
+            <a href="#"><img src="/content/dam/venia/sites/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="/content/dam/venia/sites/tik-tok.png" alt="TikTok"></a>
+            <a href="#"><img src="/content/dam/venia/sites/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+    <div class="footer-circle"></div>
+</footer>
