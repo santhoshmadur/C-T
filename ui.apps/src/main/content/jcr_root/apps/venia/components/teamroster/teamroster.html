@@ -1,0 +1,45 @@
+<sly data-sly-use.model="com.venia.core.models.commerce.MultifieldModel">
+      <h1>Team Roster line 3</h1>
+     <div>
+        <h1>Team Roster line 5</h1>
+        <div class="pfs-profile text-align-center mt-30">
+            <img class="" src="${model.teamLogoFileReference}"/>
+            <h3 class="font-size-56 font-weight-700">${model.teamName}</h3>
+        </div>
+        <sly data-sly-test.item="${model.item}">
+            <div class="card-container" style="margin-top: 30px;">
+                <div class="pfs-card-container ${model.numberOfCards} border_bottom">
+                    <div class="pfs-card text-grey">
+                        <div class="pfs-card-header-block border_bottom content-center">
+                            <div class="pfs-card-title-block">
+                                <h2 class="">Stats</h2>
+                            </div>
+                            <div class="pfs-card-image-block mt-15">
+                                <img class="" src="${item.playerImageFileReference}"  />
+                            </div>
+                        </div>
+                        <div class="pfs-card-content-block mt-15">
+                            <div class="pfs-card-text-block mt-15">
+                                <div class="pfs-card-text font-size-20px font-weight-400">
+                                    ${item.firstName}
+                                </div>
+                                <div class="pfs-card-text font-weight-700 font-size-28 text-align-end">
+                                    ${item.playerJerseyNumber}
+                                </div>
+                            </div>
+                            <div class="pfs-card-text-block mt-15">
+                                <div class="pfs-card-text font-size-20 font-weight-700">
+                                    ${item.lastName}
+                                </div>
+                                <div class="pfs-card-text font-size-14 text-align-end">
+                                    ${item.playerRole}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </sly>
+    </div>
+</sly>
+<h1>Team Roster line 3</h1>
