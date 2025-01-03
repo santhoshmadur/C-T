@@ -205,50 +205,6 @@
                 </policy_footer>
             </experiencefragment>
             <container jcr:primaryType="nt:unstructured">
-                <policy_7943564815000
-                    jcr:lastModified="{Date}2024-12-17T15:50:22.555+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="header-container"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    layoutDisabled="false">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                    <cq:styleGroups jcr:primaryType="nt:unstructured">
-                        <item0
-                            cq:styleGroupLabel="header-container"
-                            jcr:primaryType="nt:unstructured">
-                            <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0
-                                    cq:styleClasses="header-container"
-                                    cq:styleId="1734293380946"
-                                    cq:styleLabel="header-container"
-                                    jcr:primaryType="nt:unstructured"/>
-                            </cq:styles>
-                        </item0>
-                    </cq:styleGroups>
-                </policy_7943564815000>
-                <policy_4130258523499
-                    jcr:lastModified="{Date}2024-12-17T15:51:59.148+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="products-container"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    layoutDisabled="false">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                    <cq:styleGroups jcr:primaryType="nt:unstructured">
-                        <item0
-                            cq:styleGroupLabel="products-container"
-                            jcr:primaryType="nt:unstructured">
-                            <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0
-                                    cq:styleClasses="products-container"
-                                    cq:styleId="1734305753537"
-                                    cq:styleLabel="products-container"
-                                    jcr:primaryType="nt:unstructured"/>
-                            </cq:styles>
-                        </item0>
-                    </cq:styleGroups>
-                </policy_4130258523499>
                 <policy_1574694950110
                     jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
                     jcr:primaryType="nt:unstructured"
