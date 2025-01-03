@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     jcr:primaryType="cq:EditConfig">
     <cq:inplaceEditing
         jcr:primaryType="cq:InplaceEditingConfig"
@@ -94,8 +94,8 @@
                     jcr:primaryType="nt:unstructured"
                     features="bold,italic"/>
                 <commercelinks
-                        jcr:primaryType="nt:unstructured"
-                        features="modifylink"/>
+                    jcr:primaryType="nt:unstructured"
+                    features="modifylink"/>
             </rtePlugins>
             <uiSettings jcr:primaryType="nt:unstructured">
                 <cui jcr:primaryType="nt:unstructured">
@@ -126,21 +126,21 @@
                         toolbar="[#format,#justify,#lists,links#modifylink,links#unlink,commercelinks#modifylink,#paraformat,fullscreen#start,control#close,control#save]">
                         <popovers jcr:primaryType="nt:unstructured">
                             <format
-                                    jcr:primaryType="nt:unstructured"
-                                    items="[format#bold,format#italic,format#underline]"
-                                    ref="format"/>
+                                jcr:primaryType="nt:unstructured"
+                                items="[format#bold,format#italic,format#underline]"
+                                ref="format"/>
                             <justify
-                                    jcr:primaryType="nt:unstructured"
-                                    items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
-                                    ref="justify"/>
+                                jcr:primaryType="nt:unstructured"
+                                items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                ref="justify"/>
                             <lists
-                                    jcr:primaryType="nt:unstructured"
-                                    items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
-                                    ref="lists"/>
+                                jcr:primaryType="nt:unstructured"
+                                items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                ref="lists"/>
                             <paraformat
-                                    jcr:primaryType="nt:unstructured"
-                                    items="paraformat:getFormats:paraformat-pulldown"
-                                    ref="paraformat"/>
+                                jcr:primaryType="nt:unstructured"
+                                items="paraformat:getFormats:paraformat-pulldown"
+                                ref="paraformat"/>
                         </popovers>
                     </fullscreen>
                 </cui>

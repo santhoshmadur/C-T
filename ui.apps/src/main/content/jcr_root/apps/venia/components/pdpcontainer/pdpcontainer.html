@@ -1,0 +1,190 @@
+<style>
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #DEDEDE;
+    }
+
+    .product-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .image-detail-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-section {
+      width: 344px;
+      height: 532px;
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .details-section {
+      max-width: 400px;
+    }
+
+    .color-selector,
+    .size-selector {
+      margin: 10px 0;
+    }
+
+    .color-options {
+      display: flex;
+      gap: 10px;
+    }
+
+    .color-box {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .size-options {
+      display: flex;
+      gap: 5px;
+    }
+
+    .size-button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+
+    .size-button.selected {
+      background: black;
+      color: white;
+    }
+
+    .sustainability-info {
+      font-size: 0.9em;
+      color: gray;
+    }
+
+    .add-to-bag {
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .ai-section {
+      margin-top: 20px;
+      display: flex;
+      height: 118px;
+      width: 420px;
+      position: relative;
+      text-align: center;
+      align-items: center;
+      border-radius: 16px;
+      background: #F8F8F8;
+    }
+
+    .ai-section .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      text-align: left;
+      padding: 0 20px;
+      margin-top: 15px;
+    }
+
+    .ai-section .content h3 {
+      margin: 0;
+    }
+
+    .upload-button {
+      padding: 10px 30px;
+      cursor: pointer;
+      height: 118px;
+      width: 118px;
+      border-radius: 16px;
+      border: 5px solid #F8F8F8;
+      background: #808080;
+    }
+</style>
+<div class="app-container">
+    <div class="product-container">
+        <div class="image-detail-container">
+            <div class="image-section" id="image-section"></div>
+            <div class="ai-section">
+                <div class="content">
+                    <h3>SEE YOURSELF IN THIS KIT</h3>
+                    <p>Upload a photo of yourself, and our AI will show you how this looks on you!</p>
+                </div>
+                <div class="button">
+                    <button class="upload-button">Start</button>
+                </div>
+            </div>
+        </div>
+        <div class="details-section">
+            <h1>INAUGURAL SEASON WOLVES HOODIE</h1>
+            <p>Show your team pride in ultimate comfort. Wrap yourself in the spirit of Wolves with this premium hoodie. Made from a soft, durable cotton-poly blend, it's perfect for repping the team wherever you go.</p>
+            <h1>$89</h1>
+            <div class="color-selector">
+                <p>Select Color:</p>
+                <div class="color-options" id="color-options"></div>
+            </div>
+            <div class="size-selector">
+                <p>Select Size:</p>
+                <div class="size-options" id="size-options"></div>
+            </div>
+            <p class="sustainability-info">This product is made with at least 50% sustainable materials, using a blend of both recycled polyester and organic cotton fibers.</p>
+            <button class="add-to-bag" id="add-to-bag">Add To Bag | $89</button>
+        </div>
+    </div>
+</div>
+<script>
+    const colors = ["rgb(0 0 0)", "rgb(78 8 185)", "rgb(0 146 129)"];
+    const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
+    const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/purple.png', '/content/dam/venia/sites/green.png']; //replace DAM image path
+    let selectedColor = "rgb(0 0 0)";
+    let selectedSize = "M";
+    let selectedIndex = 0;
+    const imageSection = document.getElementById("image-section");
+    const colorOptions = document.getElementById("color-options");
+    const sizeOptions = document.getElementById("size-options");
+
+    function updateImageBackground() {
+      imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
+      imageSection.style.backgroundSize = "cover, cover";
+      imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
+    }
+    colors.forEach((color, index) => {
+      const colorBox = document.createElement("div");
+      colorBox.className = "color-box";
+      colorBox.style.backgroundColor = color;
+      colorBox.style.border = selectedColor === color ? "2px solid #fff" : "2px solid transparent";
+      colorBox.setAttribute("id", index);
+      colorBox.addEventListener("click", () => {
+        selectedIndex = index;
+        updateImageBackground();
+        document.querySelectorAll(".color-box").forEach(box => box.style.border = "2px solid transparent");
+        colorBox.style.border = "2px solid #fff";
+      });
+      colorOptions.appendChild(colorBox);
+    });
+    sizes.forEach(size => {
+      const sizeButton = document.createElement("button");
+      sizeButton.className = "size-button";
+      sizeButton.textContent = size;
+      if (size === selectedSize) sizeButton.classList.add("selected");
+      sizeButton.addEventListener("click", () => {
+        selectedSize = size;
+        document.querySelectorAll(".size-button").forEach(button => button.classList.remove("selected"));
+        sizeButton.classList.add("selected");
+      });
+      sizeOptions.appendChild(sizeButton);
+    });
+    updateImageBackground();
+</script>

@@ -1,0 +1,125 @@
+.heroBanner-container {
+    display: flex;
+    padding: 36px 112px 88px 112px;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    background: $ct-color-gray-dark;
+
+
+    .heroBanner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .heroBanner-content-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+    }
+
+    .heroBanner-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .white-heading {
+        font-family: "Helvetica Neue";
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 100%;
+        /* 112px */
+        letter-spacing: -1.68px;
+        text-transform: uppercase;
+        color: $ct-color-white;
+    }
+
+    .white-border-heading {
+        color: $ct-color-white;
+        font-family: "Helvetica Neue";
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 56px */
+        letter-spacing: -1.68px;
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 3;
+        -webkit-text-stroke-color: $ct-color-white;
+
+    }
+
+    .bigger-font {
+        font-size: 112px;
+    }
+
+    .heroBanner-content {
+        display: flex;
+        width: 450px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .heroBanner-content-text-wrapper {
+        color: $ct-color-white;
+        font-family: "Helvetica Neue";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: 120%;
+        /* 24px */
+    }
+
+    .heroBanner-content-button {
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: $ct-color-white;
+        color: #404040;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 16px */
+        letter-spacing: -0.48px;
+    }
+
+    .heroBanner-levels {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .heroBanner-level {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        background-image: url('../../../../ui.apps/src/main/content/jcr_root/apps/venia/components/text/images/wolf-logo.png');
+        border-radius: 15px;
+        color: #FFF;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 100%;
+        /* 36px */
+        letter-spacing: -1.08px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

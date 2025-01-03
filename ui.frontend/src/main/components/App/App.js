@@ -41,10 +41,11 @@ import AccountTrigger from '../Header/accountTrigger';
 import OrderHistoryPage from '../OrderHistoryPage';
 import WishlistPage from '../WishlistPage';
 import AccountInformationPage from '../AccountInformationPage';
-
+import ScheduleTickets from '../ScheduleTickets';
 import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
+import FloatingBanner from '../FloatingBanner';
 const App = props => {
     const { mountingPoints, pagePaths, storeView } = config;
     const { locale, messages } = props;
@@ -57,7 +58,7 @@ const App = props => {
 
     window.STORE_NAME = storeView;
     window.DEFAULT_COUNTRY_CODE = locale;
-
+    
     return (
         <IntlProvider locale={locale} messages={messages}>
             <ConfigContextProvider config={config}>
@@ -95,6 +96,12 @@ const App = props => {
                             <BundleProductOptions />
                         </Portal>
 
+                        <Portal selector={mountingPoints.floatingBanner}>
+                            <FloatingBanner />
+                        </Portal>
+                        <Portal selector={mountingPoints.scheduleTickets}>
+                            <ScheduleTickets />
+                        </Portal>
                         <PortalPlacer
                             selector={mountingPoints.giftCardProductOptionsContainer}
                             component={GiftCartOptions}
