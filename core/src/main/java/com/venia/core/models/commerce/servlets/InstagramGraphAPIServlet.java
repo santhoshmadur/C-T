@@ -50,7 +50,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
                 return;
             }
 
-            String publishImageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com/" + damPath;
+            String publishImageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com" + damPath;
             String creationId = createMediaContainer(publishImageUrl, caption);
 
             if (creationId != null) {

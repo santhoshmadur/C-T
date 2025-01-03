@@ -1,9 +1,9 @@
-.floating-banner {
+@mixin floating-banner-styles($border-color, $bg-color) {
     .banner {
         width: 100%;
         height: 3rem;
-        border: 1px solid $ct-color-gray-dark;
-        background-color: $ct-color-gray-dark;
+        border: 1px solid $border-color;
+        background-color: $bg-color;
         display: flex;
         align-items: center;
         overflow: hidden;
@@ -19,7 +19,6 @@
         flex: 0 0 auto;
         font-family: $ct-font-inter;
         color: $ct-color-white;
-        padding: 0 2px;
         text-align: center;
         font-size: 16px;
         font-style: normal;
@@ -32,10 +31,20 @@
         0% {
             transform: translateX(0);
         }
-
         100% {
             transform: translateX(-50%);
         }
     }
+}
 
+.floating-banner-gray-bg {
+    .floating-banner {
+        @include floating-banner-styles($ct-color-gray-dark, $ct-color-gray-dark);
+    }
+}
+
+.floating-banner-black-bg {
+    .floating-banner {
+        @include floating-banner-styles(black, black);
+    }
 }

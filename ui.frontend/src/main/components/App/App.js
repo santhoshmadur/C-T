@@ -41,7 +41,7 @@ import AccountTrigger from '../Header/accountTrigger';
 import OrderHistoryPage from '../OrderHistoryPage';
 import WishlistPage from '../WishlistPage';
 import AccountInformationPage from '../AccountInformationPage';
-
+import ScheduleTickets from '../ScheduleTickets';
 import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
@@ -99,7 +99,9 @@ const App = props => {
                         <Portal selector={mountingPoints.floatingBanner}>
                             <FloatingBanner />
                         </Portal>
-
+                        <Portal selector={mountingPoints.scheduleTickets}>
+                            <ScheduleTickets />
+                        </Portal>
                         <PortalPlacer
                             selector={mountingPoints.giftCardProductOptionsContainer}
                             component={GiftCartOptions}
