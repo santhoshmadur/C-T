@@ -1,8 +1,9 @@
 {
   "identifier": "default",
   "service.ranking": 5,
-  "url": "$[env:COMMERCE_ENDPOINT;default=]",
+  "url": "https://cscd.vation.com/graphql",
   "acceptSelfSignedCertificates": false,
+  "allowHttpProtocol": true,
   "httpMethod": "GET",
   "httpHeaders": ["$[secret:COMMERCE_AUTH_HEADER;default=]"],
   "maxHttpConnections": 20,

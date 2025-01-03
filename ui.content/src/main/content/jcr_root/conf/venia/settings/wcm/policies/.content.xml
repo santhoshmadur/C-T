@@ -578,6 +578,85 @@
                     </default>
                 </product>
             </commerce>
+            <floatingbanner jcr:primaryType="nt:unstructured">
+                <policy_1735895504943
+                    jcr:lastModified="{Date}2025-01-03T14:44:02.758+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="floating-banner"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    allowedTypes="[h1,h2,h3,h4,h5,h6]"
+                    linkDisabled="false"
+                    type="h1">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="floating-banner"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="floating-banner-black-bg"
+                                    cq:styleId="1735895528255"
+                                    cq:styleLabel="black-bg"
+                                    jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                    cq:styleClasses="floating-banner-gray-bg"
+                                    cq:styleId="1735897221424"
+                                    cq:styleLabel="gray-bg"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1735895504943>
+            </floatingbanner>
+            <headernavigation jcr:primaryType="nt:unstructured">
+                <policy_1735898948983
+                        jcr:lastModified="{Date}2025-01-03T16:01:36.025+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="header-navigation"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                                cq:styleGroupLabel="header-navigation"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="clp-header"
+                                        cq:styleId="1735900132655"
+                                        cq:styleLabel="CLP Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                        cq:styleClasses="plp-header"
+                                        cq:styleId="1735899000102"
+                                        cq:styleLabel="PLP Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item2
+                                        cq:styleClasses="pdp-header"
+                                        cq:styleId="1735900158885"
+                                        cq:styleLabel="PDP Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item3
+                                        cq:styleClasses="home-header"
+                                        cq:styleId="1735900181145"
+                                        cq:styleLabel="Home Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item4
+                                        cq:styleClasses="team-roster-header"
+                                        cq:styleId="1735900206502"
+                                        cq:styleLabel="Team Roster Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item5
+                                        cq:styleClasses="schedule-tickets-header"
+                                        cq:styleId="1735900253795"
+                                        cq:styleLabel="Schedule Tickets Header"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1735898948983>
+            </headernavigation>
         </components>
     </venia>
 </jcr:root>
