@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Team Roster"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <teamroster
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Team Roster"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <teamname
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Enter Team Name"
+                                                name="./teamName"/>
+                                            <teamlogo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                allowUpload="{Boolean}true"
+                                                autoStart="{Boolean}false"
+                                                class="cq-droptarget"
+                                                fieldLabel="Left Image Asset"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./teamLogoFileReference"
+                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                multiple="{Boolean}false"
+                                                name="./leftImage"
+                                                title="Upload Image Asset For left Card"
+                                                uploadUrl="${suffix.path}"
+                                                useHTML5="{Boolean}true"/>
+                                            <numberofcards
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="select number of cards per row"
+                                                name="./numberofcards">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <three
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="3 Grid"
+                                                        value="grid-3cl"/>
+                                                    <four
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="4 Grid"
+                                                        value="grid-4cl"/>
+                                                </items>
+                                            </numberofcards>
+                                            <teamroster
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Manual Card Tile"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <playerdetails
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                        composite="{Boolean}true"
+                                                        name="Player Details">
+                                                        <field
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                            name="./teamRoster">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <column
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <filereference
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            jcr:title="Image"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            margin="{Boolean}true">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <columns
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                                                    margin="{Boolean}true">
+                                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                                        <column
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                                <file
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                                                                    allowUpload="{Boolean}false"
+                                                                                                    autoStart="{Boolean}false"
+                                                                                                    class="cq-droptarget"
+                                                                                                    fieldLabel="Player Image"
+                                                                                                    fileNameParameter="./fileName"
+                                                                                                    fileReferenceParameter="./playerImageFileReference"
+                                                                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                                                                    multiple="{Boolean}false"
+                                                                                                    name="./file"
+                                                                                                    title="Upload Player Image"
+                                                                                                    uploadUrl="${suffix.path}"
+                                                                                                    useHTML5="{Boolean}true"/>
+                                                                                            </items>
+                                                                                        </column>
+                                                                                    </items>
+                                                                                </columns>
+                                                                            </items>
+                                                                        </filereference>
+                                                                        <firstname
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Enter player First Name"
+                                                                            name="./firstName"/>
+                                                                        <lastname
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Enter player Last Name"
+                                                                            name="./lastName"/>
+                                                                        <playerrole
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Enter player Role"
+                                                                            name="./playerRole"/>
+                                                                        <playerJerseyNumber
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Player Jersey Number"
+                                                                            name="./playerJerseyNumber"/>
+                                                                    </items>
+                                                                </column>
+                                                            </items>
+                                                        </field>
+                                                    </playerdetails>
+                                                </items>
+                                            </teamroster>
+                                        </items>
+                                    </column>
+                                </items>
+                            </column>
+                        </items>
+                    </teamroster>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
