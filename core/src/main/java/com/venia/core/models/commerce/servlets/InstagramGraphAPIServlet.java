@@ -21,7 +21,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Scanner;
 
 @Component(service = Servlet.class,
         property = {
@@ -48,12 +47,12 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
 
         try {
-/*            boolean isPublished = isImagePublished(request, damPath);
+            boolean isPublished = isImagePublished(request, damPath);
             if (!isPublished) {
                 response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("{\"error\": \"Image is not published.\"}");
                 return;
-            }*/
+            }
 
             String publishUrl = "https://publish-p127270-e1239469.adobeaemcloud.com" + damPath;
             String creationId=null;
