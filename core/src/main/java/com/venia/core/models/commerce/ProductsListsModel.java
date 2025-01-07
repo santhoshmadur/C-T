@@ -41,7 +41,11 @@ public class ProductsListsModel {
     }
 
     public String getLink() {
-        return link;
+        if (link.contains("/content/")){
+            return link+".html";
+        }else {
+            return link;
+        }
     }
 
     @Model(
