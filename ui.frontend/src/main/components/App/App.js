@@ -45,7 +45,7 @@ import ScheduleTickets from '../ScheduleTickets';
 import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
-import FloatingBanner from '../FloatingBanner';
+
 const App = props => {
     const { mountingPoints, pagePaths, storeView } = config;
     const { locale, messages } = props;
