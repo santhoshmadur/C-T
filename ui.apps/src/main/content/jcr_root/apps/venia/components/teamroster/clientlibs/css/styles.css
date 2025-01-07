@@ -4,7 +4,6 @@
                 
 body{
     width: 100%;
-    max-width: 1400px;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -360,7 +359,7 @@ button:active{
 }
 
 .font-weight-700{
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .font-weight-500{

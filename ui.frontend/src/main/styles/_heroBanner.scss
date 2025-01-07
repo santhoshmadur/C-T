@@ -93,6 +93,11 @@
         letter-spacing: -0.48px;
     }
 
+    .heroBanner-content-button:hover{
+        background-color: #D8D8D8;
+        color: #333333; 
+    }
+
     .heroBanner-levels {
         display: flex;
         flex-direction: column;
