@@ -96,9 +96,6 @@ const App = props => {
                             <BundleProductOptions />
                         </Portal>
 
-                        <Portal selector={mountingPoints.floatingBanner}>
-                            <FloatingBanner />
-                        </Portal>
                         <Portal selector={mountingPoints.scheduleTickets}>
                             <ScheduleTickets />
                         </Portal>
