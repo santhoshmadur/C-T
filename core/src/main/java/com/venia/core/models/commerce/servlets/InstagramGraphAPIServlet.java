@@ -1,5 +1,7 @@
 package com.venia.core.models.commerce.servlets;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
@@ -13,11 +15,12 @@ import org.slf4j.LoggerFactory;
 import javax.jcr.Node;
 import javax.jcr.Session;
 import javax.servlet.Servlet;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Scanner;
 
 @Component(service = Servlet.class,
         property = {
@@ -35,8 +38,9 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         response.setContentType("application/json");
         String damPath = request.getParameter("damPath");
         String caption = request.getParameter("caption");
+        String media_type = request.getParameter("media_type");
 
-        if (damPath == null || damPath.isEmpty() || caption == null || caption.isEmpty()) {
+        if (damPath == null || damPath.isEmpty() || media_type == null || media_type.isEmpty()) {
             response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().write("{\"error\": \"Missing parameters: damPath or caption\"}");
             return;
@@ -50,13 +54,22 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
                 return;
             }
 
-            String publishImageUrl = "https://publish-p127270-e1239469.adobeaemcloud.com" + damPath;
-            String creationId = createMediaContainer(publishImageUrl, caption);
+            String publishUrl = "https://publish-p127270-e1239469.adobeaemcloud.com" + damPath;
+            String creationId=null;
+            if(media_type.equalsIgnoreCase("IMAGES")) {
+                 creationId = createImageContainer(publishUrl, caption);
+            } else if (media_type.equalsIgnoreCase("REELS")) {
+                 creationId = createReelsContainer(publishUrl, caption);
+            } else if (media_type.equalsIgnoreCase("IMAGE_STORIES")) {
+                 creationId = createStoryImageContainer(publishUrl);
+            } else if (media_type.equalsIgnoreCase("VIDEO_STORIES")) {
+                 creationId = createStoryVideoContainer(publishUrl);
+            }
 
             if (creationId != null) {
                 publishMedia(creationId);
                 response.setStatus(SlingHttpServletResponse.SC_OK);
-                response.getWriter().write("{\"message\": \"Image shared successfully!\"}");
+                response.getWriter().write("{\"message\": \"Shared successfully!\"}");
             } else {
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 response.getWriter().write("{\"error\": \"Failed to create or publish media.\"}");
@@ -68,11 +81,35 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
     }
 
-    private String createMediaContainer(String publishImageUrl, String caption) throws Exception {
+    private String createImageContainer(String publishUrl, String caption) throws Exception {
         String endpoint = "https://graph.facebook.com/v21.0/" + instagramAccountId + "/media";
         String payload = String.format(
                 "{\"image_url\":\"%s\",\"caption\":\"%s\",\"access_token\":\"%s\"}",
-                publishImageUrl, caption, accessToken
+                publishUrl, caption, accessToken
+        );
+        return sendPostRequest(endpoint, payload, "id");
+    }
+    private String createReelsContainer(String publishUrl, String caption) throws Exception {
+        String endpoint = "https://graph.facebook.com/v21.0/" + instagramAccountId + "/media";
+        String payload = String.format(
+                "{\"media_type\":\"REELS\",\"video_url\":\"%s\",\"caption\":\"%s\",\"access_token\":\"%s\"}",
+                publishUrl, caption, accessToken
+        );
+        return sendPostRequest(endpoint, payload, "id");
+    }
+    private String createStoryImageContainer(String imageUrl) throws Exception {
+        String endpoint = "https://graph.facebook.com/v21.0/" + instagramAccountId + "/media";
+        String payload = String.format(
+                "{\"image_url\":\"%s\",\"media_type\":\"STORIES\",\"access_token\":\"%s\"}",
+                imageUrl, accessToken
+        );
+        return sendPostRequest(endpoint, payload, "id");
+    }
+    private String createStoryVideoContainer(String videoUrl) throws Exception {
+        String endpoint = "https://graph.facebook.com/v21.0/" + instagramAccountId + "/media";
+        String payload = String.format(
+                "{\"video_url\":\"%s\",\"media_type\":\"STORIES\",\"access_token\":\"%s\"}",
+                videoUrl, accessToken
         );
         return sendPostRequest(endpoint, payload, "id");
     }
@@ -92,28 +129,49 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         conn.setDoOutput(true);
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json");
+        conn.setConnectTimeout(10000);
+        conn.setReadTimeout(10000);
 
         try (OutputStream os = conn.getOutputStream()) {
             os.write(payload.getBytes());
             os.flush();
         }
 
-        try (Scanner scanner = new Scanner(conn.getInputStream())) {
+        // Wait 10 seconds after sending the payload
+        Thread.sleep(10000);
+
+        // Check the response code
+        int responseCode = conn.getResponseCode();
+        if (responseCode != HttpURLConnection.HTTP_OK) {
+            throw new IOException("HTTP request failed with response code: " + responseCode);
+        }
+
+        // Wait 10 seconds after checking the response code
+        Thread.sleep(10000);
+
+        // Read the response
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
             StringBuilder response = new StringBuilder();
-            while (scanner.hasNext()) {
-                response.append(scanner.nextLine());
+            String line;
+            while ((line = reader.readLine()) != null) {
+                response.append(line);
             }
-            if (responseKey != null && response.indexOf(responseKey) != -1) {
+
+            if (responseKey != null) {
                 return parseResponse(response.toString(), responseKey);
             }
             return null;
         }
     }
 
-    private String parseResponse(String response, String key) {
-        int startIndex = response.indexOf(key) + key.length() + 3;
-        int endIndex = response.indexOf("\"", startIndex);
-        return response.substring(startIndex, endIndex);
+    private String parseResponse(String response, String key) throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode rootNode = objectMapper.readTree(response);
+        JsonNode valueNode = rootNode.path(key);
+        if (!valueNode.isMissingNode()) {
+            return valueNode.asText();
+        }
+        throw new IllegalArgumentException("Key not found in response: " + key);
     }
 
     private boolean isImagePublished(SlingHttpServletRequest request, String damPath) {
