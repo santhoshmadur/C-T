@@ -657,6 +657,34 @@
                     </cq:styleGroups>
                 </policy_1735898948983>
             </headernavigation>
+            <productlists jcr:primaryType="nt:unstructured">
+                <policy_1736243497496
+                        jcr:lastModified="{Date}2025-01-07T15:23:18.684+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Products-lists"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                                cq:styleGroupLabel="Products-lists"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="products-lists-dark-gray"
+                                        cq:styleId="1736243546009"
+                                        cq:styleLabel="dark-gray"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                        cq:styleClasses="products-lists-light-gray"
+                                        cq:styleId="1736243547810"
+                                        cq:styleLabel="light-gray"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1736243497496>
+            </productlists>
         </components>
     </venia>
 </jcr:root>
