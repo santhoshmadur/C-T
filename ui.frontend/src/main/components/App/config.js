@@ -68,7 +68,6 @@ export default {
         checkoutPageContainer: '.checkoutpage__body',
         orderHistoryPageContainer: '.orderhistory__body',
         wishlistPageContainer: '.wishlist__body',
-        floatingBanner: '.floating-banner',
         scheduleTickets: '.schedule-tickets'
     },
     pagePaths: {
