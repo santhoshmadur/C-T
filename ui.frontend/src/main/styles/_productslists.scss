@@ -1,6 +1,8 @@
 .products-lists-light-gray {
   .gear-container {
-    padding: 48px 56px 160px 56px;
+    display: flex;
+    padding: 48px 56px;
+    flex-direction: column;
     background: #e8e8e8;
   }
 
@@ -88,7 +90,6 @@
 }
 .products-lists-dark-gray {
   .gear-container {
-    padding: 48px 56px 160px 56px;
     background: #404040;
   }
 
