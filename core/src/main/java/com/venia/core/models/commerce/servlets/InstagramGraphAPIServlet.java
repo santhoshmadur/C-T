@@ -69,7 +69,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
             if (creationId != null) {
                 publishMedia(creationId);
                 response.setStatus(SlingHttpServletResponse.SC_OK);
-                response.getWriter().write("{\"message\": \"Image shared successfully!\"}");
+                response.getWriter().write("{\"message\": \"Shared successfully!\"}");
             } else {
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 response.getWriter().write("{\"error\": \"Failed to create or publish media.\"}");
@@ -132,10 +132,6 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         conn.setConnectTimeout(10000);
         conn.setReadTimeout(10000);
 
-        // Wait 10 seconds after opening the connection
-        Thread.sleep(10000);
-
-        // Send the payload
         try (OutputStream os = conn.getOutputStream()) {
             os.write(payload.getBytes());
             os.flush();
@@ -161,10 +157,6 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
                 response.append(line);
             }
 
-            // Wait 10 seconds before parsing the response
-            Thread.sleep(10000);
-
-            // Parse and return the response key value
             if (responseKey != null) {
                 return parseResponse(response.toString(), responseKey);
             }
@@ -181,7 +173,6 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
         }
         throw new IllegalArgumentException("Key not found in response: " + key);
     }
-
 
     private boolean isImagePublished(SlingHttpServletRequest request, String damPath) {
         try {
