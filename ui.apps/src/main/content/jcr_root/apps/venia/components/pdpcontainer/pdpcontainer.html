@@ -24,6 +24,23 @@
       flex-direction: row;
       gap: 20px;
       padding: 56px 94px;
+      position: relative;
+    }
+
+    .image-mini-container{
+      position: absolute;
+      top: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      left: 0px;
+    }
+     
+    .image-mini-container div{
+      width: 56px;
+      height: 56px;
+      background: rgba(250,250,250,.5);
+      border: solid 1px #fff;
     }
 
     .image-detail-container {
@@ -55,6 +72,7 @@
     .details-section__description--subHeading {
       font-weight: 500;
       letter-spacing: -0.48px;
+      font-size: 16px;
     }
 
     .details-section__description--text {
@@ -73,6 +91,20 @@
       margin: 10px 0;
     }
 
+    .select-size-heading{
+      width: 400px;
+    }
+
+    .select-size-heading .inner-div{
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+    }
+
+    .select-size-heading span{
+      font-weight: 800;
+    }
+
     .details-section__color-selector .color-options {
       display: flex;
       gap: 10px;
@@ -89,6 +121,7 @@
       display: flex;
       gap: 5px;
       flex-wrap: wrap;
+      margin-top: 5px;
     }
 
     .details-section__size-selector .size-button {
@@ -96,7 +129,8 @@
       border: 1px solid #ccc;
       background: white;
       cursor: pointer;
-      min-width: 85px;
+      min-width: 93px;
+      font-weight: 400;
     }
 
     .details-section__size-selector .size-button.selected {
@@ -182,6 +216,12 @@
 </style>
 <div class="app-container">
     <div class="product-container">
+      <div class="image-mini-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
         <div class="image-detail-container">
             <div class="image-section" id="image-section"></div>
             <div class="ai-section">
@@ -205,7 +245,10 @@
                 <div class="color-options" id="color-options"></div>
             </div>
             <div class="details-section__size-selector">
-                <div class="select-size-heading"> Select Size <div class="size-options" id="size-options"></div>
+                <div class="select-size-heading"> 
+                  <div class="inner-div"><span> Select Size </span> Size Guide</div>
+
+                  <div class="size-options" id="size-options"></div>
                 </div>
             </div>
             <div class="details-section__sustainability-info"> This product is made with at least 50% sustainable materials, using a blend of both recycled polyester and organic cotton fibers. </div>

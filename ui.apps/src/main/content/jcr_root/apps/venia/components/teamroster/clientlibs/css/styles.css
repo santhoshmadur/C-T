@@ -325,6 +325,7 @@ button:active{
     position: absolute;
     right: 0px;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .pfs-card-image-block{
@@ -376,6 +377,10 @@ button:active{
 
 .text-align-center{
     text-align: center;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
 }
 
 .pfs-card-container{
