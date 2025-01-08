@@ -1,9 +1,9 @@
 import React from 'react';
 // import './schedule.css';
 
-const productImages = document.querySelector('.schedule-tickets').getAttribute("data-imgUrl").split(',');
+const productImages = document.querySelector('.schedule-tickets')?.getAttribute("data-imgUrl").split(',') || [];
 
-const bgImages = document.querySelector('.schedule-tickets').getAttribute("data-bg-imgurl").split(',');;
+const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data-bg-imgurl").split(',') || [];
 
  const ScheduleTickets = () => {
       const cards = [
@@ -135,7 +135,7 @@ const bgImages = document.querySelector('.schedule-tickets').getAttribute("data-
                     </div>
                </div>
                <div className='card-block'>
-                {cards.map((card, cardIndex) => (
+                {cards.length > 0 ? (cards.map((card, cardIndex) => (
                       <div className="scheduleCard" key={cardIndex}>
                           <h2 className='scheduleCard--day'>{card.day}</h2>
                           <p className='scheduleCard--date'>{card.date}</p>
@@ -153,7 +153,7 @@ const bgImages = document.querySelector('.schedule-tickets').getAttribute("data-
                           : null
                         }
                       </div>
-                  ))}
+                  ))): <div>No games scheduled</div>}
                </div>
             </div>
         </div>
@@ -219,7 +219,7 @@ const bgImages = document.querySelector('.schedule-tickets').getAttribute("data-
             <div className="gear-container">
               <div className="gear-header">
                 <h1>GEAR UP FOR THE GAME!</h1>
-                <a href="#" className="shop-all">
+                <a href="https://publish-p127270-e1239469.adobeaemcloud.com/content/venia/language-masters/en/home/product-landing-page.html" className="shop-all">
                   SHOP ALL &gt;
                 </a>
               </div>
