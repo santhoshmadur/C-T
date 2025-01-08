@@ -31,7 +31,7 @@ $font-family: 'Helvetica Neue';
     font-size: 144px;
     width: 100%;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 144px;
     text-transform: uppercase;
     z-index: 2;
@@ -365,7 +365,7 @@ $font-family: 'Helvetica Neue';
         p:nth-child(1) {
           font-size: 16px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 800;
           line-height: 100%;
         }
       }
@@ -447,14 +447,14 @@ $font-family: 'Helvetica Neue';
     
           .gear-info {
             display: flex;
-            margin: 10px;
+            margin: 10px 0;
             justify-content: space-between;
             text-align: left;
             align-items: flex-end;
     
             .gear-name {
-              font-size: 14px;
-              color: #555;
+              font-size: 16px;
+              color: #FFF;
               margin-bottom: 10px;
               width: 140px;
             }
@@ -465,7 +465,7 @@ $font-family: 'Helvetica Neue';
               color: #000000;
               border: none;
               border-radius: 4px;
-              font-size: 14px;
+              font-size: 16px;
               cursor: pointer;
     
               &:hover {
