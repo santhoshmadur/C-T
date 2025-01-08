@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     background: #e8e8e8;
+    padding: 56px;
+
   }
 
   .gear-header {
@@ -22,6 +24,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #000;
+    margin-right: 20px;
   }
 
   .gear-grid {
@@ -51,9 +54,9 @@
   }
 
   .gear-image img {
-    max-width: 100%;
+    max-width: 11pc;
     display: block;
-    display: block;
+    max-height: 17pc;
   }
 
   .gear-info {
@@ -62,11 +65,11 @@
     justify-content: space-between;
     text-align: left;
     align-items: flex-end;
+    color: #404040;
   }
 
   .gear-name {
     font-size: 16px;
-    color: #fff;
     margin-bottom: 10px;
     width: 140px;
   }
@@ -88,6 +91,7 @@
 }
 .products-lists-dark-gray {
   .gear-container {
+    padding: 56px;
     background: #404040;
   }
 
@@ -109,6 +113,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #fff !important;
+    margin-right: 20px;
   }
 
   .gear-grid {
@@ -138,10 +143,9 @@
   }
 
   .gear-image img {
-    max-width: 100%;
-    height: calc(100% - 20px);
+    max-width: 11pc;
     display: block;
-    display: block;
+    max-height: 17pc;
   }
 
   .gear-info {

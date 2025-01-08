@@ -121,18 +121,18 @@ const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data
       ];
 
       const products = [
-        { name: 'Inaugural Season Wolves Hoodie', price: '$89' },
-        { name: 'Inaugural Season Wolves Jersey', price: '$129' },
-        { name: 'Inaugural Season Wolves Trucker Hat', price: '$49' },
-        { name: "Men's Wolves Tee", price: '$49' },
+        { name: 'Inaugural Season',productName:'Wolves Hoodie', price: '$89' },
+        { name: 'Inaugural Season',productName:'Wolves Jersey', price: '$129' },
+        { name: 'Inaugural Season',productName:'Wolves Trucker Hat', price: '$49' },
+        { name: "Men's",productName:' Wolves Tee', price: '$49' },
       ];
       
     return (
         <>
         <div className='schedule-container'>
             <div className='schedule-container__banner'>
-                <div className='banner-opacity'>2025/6</div>
-                <div className='banner-text'>SCHEDULE TICKETS</div>
+                <div className='banner-opacity'>2024/5</div>
+                <div className='banner-text'>SCHEDULE & TICKETS</div>
             </div>
             <div className="schedule-and-tickets-container">
                <div className='top-block'>
@@ -247,7 +247,7 @@ const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data
           </div>
           {/* gear Up Container */}
           <div className='game-container--gearUp'>
-            <div className="gear-container">
+            <div className="game-container--gearUp__gear-container">
               <div className="gear-header">
                 <h1>GEAR UP FOR THE GAME!</h1>
                 <a href="https://publish-p127270-e1239469.adobeaemcloud.com/content/venia/language-masters/en/home/product-landing-page.html" className="shop-all">
@@ -261,7 +261,9 @@ const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data
                     <img src={productImages[index]} alt={product.name} />
                   </div>
                   <div className="gear-info">
-                    <div className="gear-name">{product.name}</div>
+                  <div className="gear-name">{product.name}
+                      <div>{product.productName}</div>
+                    </div>
                     <button className="buy-button">Buy Now | {product.price}</button>
                   </div>
                 </div>
