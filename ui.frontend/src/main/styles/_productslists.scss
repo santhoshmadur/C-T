@@ -1,7 +1,6 @@
 .products-lists-light-gray {
   .gear-container {
     display: flex;
-    padding: 48px 56px;
     flex-direction: column;
     background: #e8e8e8;
   }
@@ -53,7 +52,6 @@
 
   .gear-image img {
     max-width: 100%;
-    height: calc(100% - 20px);
     display: block;
     display: block;
   }
@@ -68,7 +66,7 @@
 
   .gear-name {
     font-size: 16px;
-    color: #555;
+    color: #fff;
     margin-bottom: 10px;
     width: 140px;
   }
