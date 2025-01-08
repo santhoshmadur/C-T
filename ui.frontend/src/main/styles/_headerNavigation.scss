@@ -10,6 +10,7 @@
     height: 88px;
     padding: 29px 56px;
     align-items: center;
+    gap: 24px;
 
     .header-navigation-wrapper {
         display: flex;
@@ -157,8 +158,8 @@
     }
 
     &.home-header {
-        background-color: transparent;
-        //background-color: #808080;
+        //background-color: transparent;
+        background-color: #808080;
 
         .header-navigation-wrapper {
             .header-navigation-left {

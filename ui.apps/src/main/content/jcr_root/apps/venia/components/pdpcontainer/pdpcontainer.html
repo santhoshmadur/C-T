@@ -1,53 +1,23 @@
 <style>
     .app-container {
-      font-family: "Helvetica Neue";
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
       background: #DEDEDE;
-    }
-
-    .flex-column {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .description--heading {
-      font-size: 20px;
-      font-weight: 800;
-      color: #404040;
     }
 
     .product-container {
       display: flex;
       flex-direction: row;
       gap: 20px;
-      padding: 56px 94px;
-      position: relative;
-    }
-
-    .image-mini-container{
-      position: absolute;
-      top: 0px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      left: 0px;
-    }
-     
-    .image-mini-container div{
-      width: 56px;
-      height: 56px;
-      background: rgba(250,250,250,.5);
-      border: solid 1px #fff;
     }
 
     .image-detail-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 24px;
     }
 
     .image-section {
@@ -59,123 +29,60 @@
 
     .details-section {
       max-width: 400px;
-      color: #404040;
-      font-style: normal;
     }
 
-    .details-section__description--heading {
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: -0.48px;
-    }
-
-    .details-section__description--subHeading {
-      font-weight: 500;
-      letter-spacing: -0.48px;
-      font-size: 16px;
-    }
-
-    .details-section__description--text {
-      font-size: 16px;
-      font-weight: 400;
-    }
-
-    .details-section__description--price {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.6px;
-    }
-
-    .details-section__color-selector,
-    .details-section__size-selector {
+    .color-selector,
+    .size-selector {
       margin: 10px 0;
     }
 
-    .select-size-heading{
-      width: 400px;
-    }
-
-    .select-size-heading .inner-div{
-      display: flex;
-      justify-content: space-between;
-      font-size: 16px;
-    }
-
-    .select-size-heading span{
-      font-weight: 800;
-    }
-
-    .details-section__color-selector .color-options {
+    .color-options {
       display: flex;
       gap: 10px;
     }
 
-    .details-section__color-selector .color-box {
+    .color-box {
       width: 36px;
       height: 36px;
       cursor: pointer;
       border: 2px solid transparent;
     }
 
-    .details-section__size-selector .size-options {
+    .size-options {
       display: flex;
       gap: 5px;
-      flex-wrap: wrap;
-      margin-top: 5px;
     }
 
-    .details-section__size-selector .size-button {
-      padding: 10px 30px;
+    .size-button {
+      padding: 5px 10px;
       border: 1px solid #ccc;
       background: white;
       cursor: pointer;
-      min-width: 93px;
-      font-weight: 400;
     }
 
-    .details-section__size-selector .size-button.selected {
-      background: #404040;
+    .size-button.selected {
+      background: black;
       color: white;
     }
 
-    .details-section__sustainability-info {
-      padding: 16px;
-      background: #D9D9D9;
-      color: #404040;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: -0.48px;
+    .sustainability-info {
+      font-size: 0.9em;
+      color: gray;
     }
 
-    .details-section__shipping .shipping-text {
-      color: #404040;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 14px */
-      letter-spacing: -0.42px;
-      padding-bottom: 24px;
-    }
-
-    .details-section__shipping .add-to-bag {
-      padding: 16px 24px;
-      background: #404040;
+    .add-to-bag {
+      padding: 10px 20px;
+      background: black;
       color: white;
       border: none;
       cursor: pointer;
     }
 
-    .details-section__shipping .add-to-bag:hover {
-      background: #ffffff;
-      color: #333333;
-    }
-
     .ai-section {
+      margin-top: 20px;
       display: flex;
       height: 118px;
-      width: 374px;
+      width: 420px;
       position: relative;
       text-align: center;
       align-items: center;
@@ -189,18 +96,11 @@
       flex-wrap: nowrap;
       text-align: left;
       padding: 0 20px;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    .ai-section .content .section--heading {
-      font-size: 16px;
-      font-weight: 800;
-      color: #404040;
-    }
-
-    .ai-section .content .section--description {
-      margin: 10px 0;
-      width: 210px;
+    .ai-section .content h3 {
+      margin: 0;
     }
 
     .upload-button {
@@ -209,61 +109,46 @@
       height: 118px;
       width: 118px;
       border-radius: 16px;
-      color: #F8F8F8;
       border: 5px solid #F8F8F8;
       background: #808080;
     }
 </style>
 <div class="app-container">
     <div class="product-container">
-      <div class="image-mini-container">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
         <div class="image-detail-container">
             <div class="image-section" id="image-section"></div>
             <div class="ai-section">
                 <div class="content">
-                    <div class="section--heading">SEE YOURSELF IN THIS KIT</div>
-                    <div class="section--description">Upload a photo of yourself, and our AI will show you how this looks on you!</div>
+                    <h3>SEE YOURSELF IN THIS KIT</h3>
+                    <p>Upload a photo of yourself, and our AI will show you how this looks on you!</p>
                 </div>
                 <div class="button">
                     <button class="upload-button">Start</button>
                 </div>
             </div>
         </div>
-        <div class="details-section flex-column">
-            <div class="details-section__description flex-column">
-                <div class="details-section__description--heading">INAUGURAL SEASON WOLVES HOODIE</div>
-                <div class="details-section__description--subHeading">Show your team pride in ultimate comfort.</div>
-                <div class="details-section__description--text">Wrap yourself in the spirit of Wolves with this premium hoodie. Made from a soft, durable cotton-poly blend, it's perfect for repping the team wherever you go.</div>
-                <div class="details-section__description--price">$89</div>
-            </div>
-            <div class="details-section__color-selector">
+        <div class="details-section">
+            <h1>INAUGURAL SEASON WOLVES HOODIE</h1>
+            <p>Show your team pride in ultimate comfort. Wrap yourself in the spirit of Wolves with this premium hoodie. Made from a soft, durable cotton-poly blend, it's perfect for repping the team wherever you go.</p>
+            <h1>$89</h1>
+            <div class="color-selector">
+                <p>Select Color:</p>
                 <div class="color-options" id="color-options"></div>
             </div>
-            <div class="details-section__size-selector">
-                <div class="select-size-heading"> 
-                  <div class="inner-div"><span> Select Size </span> Size Guide</div>
-
-                  <div class="size-options" id="size-options"></div>
-                </div>
+            <div class="size-selector">
+                <p>Select Size:</p>
+                <div class="size-options" id="size-options"></div>
             </div>
-            <div class="details-section__sustainability-info"> This product is made with at least 50% sustainable materials, using a blend of both recycled polyester and organic cotton fibers. </div>
-            <div class="details-section__shipping">
-                <div class="shipping-text">Shipping and taxes calculated at checkout.</div>
-                <button class="add-to-bag" id="add-to-bag">Add To Bag | $89</button>
-            </div>
+            <p class="sustainability-info">This product is made with at least 50% sustainable materials, using a blend of both recycled polyester and organic cotton fibers.</p>
+            <button class="add-to-bag" id="add-to-bag">Add To Bag | $89</button>
         </div>
     </div>
 </div>
 <script>
-    const colors = ["rgb(0 0 0)", "rgb(255 255 255)", "rgb(200 200 200)"];
+    const colors = ["rgb(0 0 0)", "rgb(78 8 185)", "rgb(0 146 129)"];
     const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
-    const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/white.png', '/content/dam/venia/sites/gray.png'];
-    let selectedColor = "rgb(64 64 64)";
+    const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/purple.png', '/content/dam/venia/sites/green.png']; //replace DAM image path
+    let selectedColor = "rgb(0 0 0)";
     let selectedSize = "M";
     let selectedIndex = 0;
     const imageSection = document.getElementById("image-section");
@@ -272,7 +157,7 @@
 
     function updateImageBackground() {
       imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
-      imageSection.style.backgroundSize = "100%, 100%";
+      imageSection.style.backgroundSize = "cover, cover";
       imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
     }
     colors.forEach((color, index) => {
