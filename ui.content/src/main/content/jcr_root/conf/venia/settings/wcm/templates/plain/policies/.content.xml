@@ -30,13 +30,17 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                             <headernavigation
-                                    cq:policy="venia/components/headernavigation/policy_1735898948983"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                cq:policy="venia/components/headernavigation/policy_1735898948983"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
                             <floatingbanner
-                                    cq:policy="venia/components/floatingbanner/policy_1735895504943"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                cq:policy="venia/components/floatingbanner/policy_1735895504943"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <productlists
+                                cq:policy="venia/components/productlists/policy_1736261357857"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
                         </components>
                     </venia>
                 </container>

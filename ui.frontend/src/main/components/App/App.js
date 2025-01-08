@@ -45,7 +45,7 @@ import ScheduleTickets from '../ScheduleTickets';
 import loadLocaleData from './i18n';
 
 import '../../site/main.scss';
-import FloatingBanner from '../FloatingBanner';
+
 const App = props => {
     const { mountingPoints, pagePaths, storeView } = config;
     const { locale, messages } = props;
@@ -96,9 +96,6 @@ const App = props => {
                             <BundleProductOptions />
                         </Portal>
 
-                        <Portal selector={mountingPoints.floatingBanner}>
-                            <FloatingBanner />
-                        </Portal>
                         <Portal selector={mountingPoints.scheduleTickets}>
                             <ScheduleTickets />
                         </Portal>
