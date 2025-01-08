@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
   @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 
@@ -278,6 +279,9 @@
   }
 </style>
 <div clas="heroBanner-main">
+=======
+<div class="heroBanner-main">
+>>>>>>> cf62201f6a649c894c89d4ab889541501ff5eed6
   <div class="heroBanner-container">
     <div class="heroBanner">
       <div class="heroBanner-content-wrapper">
@@ -325,9 +329,12 @@
   const modal = document.getElementById("gameModal");
   const openButton = document.querySelector(".heroBanner-content-button");
   const closeButton = document.querySelector(".close-button");
-  openButton.addEventListener("click", () => {
+  window.setTimeout(() => {
     modal.classList.remove("hidden");
-  });
+  }, 10000);
+/*   openButton.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  }); */
   closeButton.addEventListener("click", () => {
     modal.classList.add("hidden");
   });
