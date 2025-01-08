@@ -72,11 +72,7 @@ public class MultifieldModel {
         }
 
         public String getLinkURL() {
-            if (linkURL.contains("/content/")){
-                return linkURL+".html";
-            }else {
-                return linkURL;
-            }
+            return linkURL;
         }
     }
 
@@ -104,11 +100,7 @@ public class MultifieldModel {
         }
 
         public String getLinkURL() {
-            if (linkURL.contains("/content/")){
-                return linkURL+".html";
-            }else {
-                return linkURL;
-            }
+            return linkURL;
         }
     }
 }

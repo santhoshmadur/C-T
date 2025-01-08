@@ -1,13 +1,18 @@
 <style>
-    .cards-container {
+    body {
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .card-container {
       display: grid;
       grid-row-gap: 20px;
     }
 
-    .cards,
-    .cards-xl {
+    .card,
+    .card-xl {
       min-width: 400px;
-      width: 100%;
+      width: 400px;
       display: flex;
       flex-direction: column;
       padding: 15px;
@@ -16,9 +21,9 @@
       justify-content: space-between;
     }
 
-    .cards-xl {
+    .card-xl {
       width: 100%;
-      max-width: 100%;
+      max-width: 96%;
     }
 
     .w-65 {
@@ -30,104 +35,96 @@
       grid-row-gap: 20px;
     }
 
-    .cards-xl-height {
+    .card-xl-height {
       height: inherit;
       justify-content: space-between;
     }
 
-    .cards-block {
+    .card-block {
       display: grid;
       gap: 20px;
     }
 
-    .cards-block.bg-cover img {
+    .card-block.bg-cover img {
       width: 100%;
       height: -webkit-fill-available;
     }
 
-    .bg-cover .cards {
+    .bg-cover .card {
       padding: 0px;
       width: 100%;
       height: inherit;
     }
 
-    .cards-header-block {
+    .card-header-block {
       display: flex;
     }
 
-    .cards-title-block {
+    .card-title-block {
       position: absolute;
       width: 100px;
       height: inherit;
       left: 20px;
     }
 
-    .cards-title-block h1 {
+    .card-title-block h1 {
       position: absolute;
       transform: rotate(270deg);
-      font-size: 50px;
-      font-weight: 800;
+      font-size: 56px;
+      font-weight: 700;
       top: 82px;
-      left: -55px;
+      left: -75px;
       border: solid 2px;
       font-family: 'Helvetica Neue';
       text-wrap-mode: nowrap;
-      padding: 10px;
-
     }
 
-    .cards-title-overlay-block {
+    .card-title-overlay-block {
       width: 25%;
       background: rgba(250, 250, 250, .5);
       padding: 15px;
       height: fit-content;
     }
 
-    .cards-image-block {
+    .card-image-block {
       display: flex;
     }
 
-    .cards-image-block img {
+    .card-image-block img {
       width: 100%;
       transform: scale(1);
       transition: 0.3s ease-in-out;
     }
 
-    .cards-image-block:hover img {
+    .card-image-block:hover img {
       transform: scale(1.2);
     }
 
-    .cards-custom-btn span {
+    .card-custom-btn span {
       padding: 5px 12px;
       border-radius: 15px;
     }
 
-    .cards-content-block {
+    .card-content-block {
       width: 400px;
     }
 
-    .cards-text-block {
+    .card-text-block {
       display: flex;
       justify-content: space-between;
     }
 
-    .cards-text {
+    .card-text {
       margin-top: 0px;
-      width: 130px;
+      width: 115px;
     }
 
-    .cards-carousel-btn{
-      display: flex;
-      align-items: center;
-    }
-
-    .cards-carousel-btn img {
-      height: 30px !important;
+    .card-carousel-btn img {
+      height: 30px;
       width: 30px !important;
-      margin-left: 6px;
     }
 
-    .cards-buynow-btn button {
+    .card-buynow-btn button {
       padding: 10px;
       border-style: none;
       text-transform: capitalize;
@@ -186,11 +183,6 @@
       text-transform: capitalize;
     }
 
-    button:hover {
-      background-color: #D8D8D8;
-      color: #333333;
-    }
-
     .grid-2cl-30-60 {
       grid-template-columns: 32% 65.5%;
     }
@@ -213,29 +205,29 @@
     }
 
     .twowordtext {
-      left: -122px !important;
-      top: 165px !important;
+      left: -176px !important;
+      top: 140px !important;
     }
 
     .threewordtext {
-      left: -191px !important;
-      top: 252px !important;
+      left: -269px !important;
+      top: 234px !important;
     }
 
-    .cards-header-block div:nth-of-type(2) {
+    .card-header-block div:nth-of-type(2) {
       margin-left: 100px;
-      margin-right: 20px;
+      /* margin-right: 100px; */
     }
 
-    .row-reverse .cards-header-block {
+    .row-reverse .card-header-block {
       flex-direction: row-reverse;
     }
 
-    .row-reverse .cards-image-block {
+    .row-reverse .card-image-block {
       margin-left: 100px;
     }
 
-    .row-reverse .cards-content-block {
+    .row-reverse .card-content-block {
       align-self: end;
     }
 
@@ -247,95 +239,95 @@
       width: unset !important;
     }
 </style>
-<div class="cards-container" style="margin-top: 30px;">
-    <div class="cards-block grid-2cl-30-60">
-        <div class="cards bg-light-gray">
-            <div class="cards-header-block">
-                <div class="cards-title-block">
+<div class="card-container" style="margin-top: 30px;">
+    <div class="card-block grid-2cl-30-60">
+        <div class="card bg-light-gray">
+            <div class="card-header-block">
+                <div class="card-title-block">
                     <h1 class="text-grey">HOODIE</h1>
                 </div>
-                <div class="cards-image-block">
+                <div class="card-image-block">
                     <img class="n-mt-30" src="/content/dam/venia/sites/hoodie.png" />
                 </div>
             </div>
-            <div class="cards-content-block mt-15">
-                <div class="cards-carousel-btn">
+            <div class="card-content-block mt-15">
+                <div class="card-carousel-btn">
                     <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-black.png" />
                     <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-black.png" />
                 </div>
-                <div class="cards-custom-btn mt-15">
+                <div class="card-custom-btn mt-15">
                     <span class="bg-gray">Customizable </span>
                 </div>
-                <div class="cards-text-block mt-15">
-                    <div class="cards-text"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn">
-                        <button type="button" onclick="location.href='https://publish-p127270-e1239469.adobeaemcloud.com/content/venia/language-masters/en/home/product-detail-page.html?rdesw=432'" class="bg-dark-gray text-white">Buy Now | $89 </button>
+                <div class="card-text-block mt-15">
+                    <div class="card-text"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn">
+                        <button type="button" class="bg-dark-gray text-white">Buy Now | $89 </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cards-xl bg-gray">
-            <div class="cards-header-block">
-                <div class="cards-title-block">
+        <div class="card-xl bg-gray">
+            <div class="card-header-block">
+                <div class="card-title-block">
                     <h1 class="text-white">JERSEY</h1>
                 </div>
-                <div class="cards-title-overlay-block">
+                <div class="card-title-overlay-block">
                     <p>There’s no better way to show your team pride that by wearing the team kit!</p>
                     <p>Customize with your own name or a player name, home or away colors, and logo placement.</p>
                 </div>
-                <div class="cards-image-block">
+                <div class="card-image-block">
                     <img class="mt-30" src="/content/dam/venia/sites/jersey3.png" />
                     <img class="mt-30" src="/content/dam/venia/sites/jersey4.png" />
                 </div>
             </div>
-            <div class="cards-content-block mt-15">
-                <div class="cards-carousel-btn">
+            <div class="card-content-block mt-15">
+                <div class="card-carousel-btn">
                     <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-white.svg" />
                     <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-white.svg" />
                 </div>
-                <div class="cards-custom-btn mt-15">
+                <div class="card-custom-btn mt-15">
                     <span class="bg-white">Customizable </span>
                 </div>
-                <div class="cards-text-block mt-15">
-                    <div class="cards-text"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn">
+                <div class="card-text-block mt-15">
+                    <div class="card-text"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn">
                         <button type="button" class="bg-dark-gray text-white">Buy Now | $89 </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="cards-block bg-cover grid-3-cl">
-        <div class="cards ">
+    <div class="card-block bg-cover grid-3-cl">
+        <div class="card ">
             <img class="" src="/content/dam/venia/sites/girl-in-hoodie.png" />
         </div>
-        <div class="cards ">
+        <div class="card ">
             <img class="" src="/content/dam/venia/sites/image-1.png" />
         </div>
-        <div class="cards ">
+        <div class="card ">
             <img class="" src="/content/dam/venia/sites/image-5.png" />
         </div>
     </div>
-    <div class="cards-block grid-2cl-60-30">
+    <div class="card-block grid-2cl-60-30">
         <div class="column">
             <div class="row">
-                <div class="cards-xl bg-gray-lineargradient row-reverse">
-                    <div class="cards-header-block">
-                        <div class="cards-title-block">
+                <div class="card-xl bg-gray-lineargradient row-reverse">
+                    <div class="card-header-block">
+                        <div class="card-title-block">
                             <h1 class="twowordtext">LIMITED DROP</h1>
                         </div>
-                        <div class="cards-title-overlay-block">
+                        <div class="card-title-overlay-block">
                             <p>There’s no better way to show your team pride that by wearing the team kit!</p>
                             <p>Customize with your own name or a player name, home or away colors, and logo placement.</p>
                         </div>
-                        <div class="cards-image-block">
+                        <div class="card-image-block">
                             <img class="n-mt-30" src="/content/dam/venia/sites/sneakers.png" />
                         </div>
                     </div>
-                    <div class="cards-content-block mt-15">
-                        <div class="cards-text-block mt-15">
-                            <div class="cards-text text-white"> Limited Edition DiVERGE Custom Sneakers </div>
-                            <div class="cards-buynow-btn">
+                    <div class="card-content-block mt-15">
+                        <div class="card-text-block mt-15">
+                            <div class="card-text text-white"> Limited Edition DiVERGE Custom Sneakers </div>
+                            <div class="card-buynow-btn">
                                 <button type="button" class="bg-white">Buy Now | $89 </button>
                             </div>
                         </div>
@@ -343,41 +335,41 @@
                 </div>
             </div>
             <div class="row grid-2cl">
-                <div class="cards bg-grey">
-                    <div class="cards-header-block">
-                        <div class="cards-title-block">
+                <div class="card bg-grey">
+                    <div class="card-header-block">
+                        <div class="card-title-block">
                             <h1 class="twowordtext text-white">TRUCKER HAT</h1>
                         </div>
-                        <div class="cards-image-block">
+                        <div class="card-image-block">
                             <img class="mt-30" src="/content/dam/venia/sites/hat 1.png" />
                         </div>
                     </div>
-                    <div class="cards-content-block mt-30">
-                        <div class="cards-carousel-btn">
+                    <div class="card-content-block mt-30">
+                        <div class="card-carousel-btn">
                             <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-white.svg" />
                             <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-white.svg" />
                         </div>
-                        <div class="cards-text-block mt-15">
-                            <div class="cards-text text-white"> Inaugural Season Wolves Hoodie </div>
-                            <div class="cards-buynow-btn">
+                        <div class="card-text-block mt-15">
+                            <div class="card-text text-white"> Inaugural Season Wolves Hoodie </div>
+                            <div class="card-buynow-btn">
                                 <button type="button" class="bg-white">Buy Now | $89 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cards bg-light-gray">
-                    <div class="cards-header-block">
-                        <div class="cards-title-block">
+                <div class="card bg-light-gray">
+                    <div class="card-header-block">
+                        <div class="card-title-block">
                             <h1 class="twowordtext">BASKET BALL</h1>
                         </div>
-                        <div class="cards-image-block">
+                        <div class="card-image-block">
                             <img class="mt-30" src="/content/dam/venia/sites/basketball.png" />
                         </div>
                     </div>
-                    <div class="cards-content-block mt-30">
-                        <div class="cards-text-block mt-30">
-                            <div class="cards-text mt-30"> Inaugural Season Wolves Hoodie </div>
-                            <div class="cards-buynow-btn mt-30">
+                    <div class="card-content-block mt-30">
+                        <div class="card-text-block mt-30">
+                            <div class="card-text mt-30"> Inaugural Season Wolves Hoodie </div>
+                            <div class="card-buynow-btn mt-30">
                                 <button type="button" class="bg-dark-gray text-white">Buy Now | $89 </button>
                             </div>
                         </div>
@@ -386,26 +378,26 @@
             </div>
         </div>
         <div class="column">
-            <div class="cards cards-xl-height bg-grey">
-                <div class="cards-header-block">
-                    <div class="cards-title-block">
+            <div class="card card-xl-height bg-grey">
+                <div class="card-header-block">
+                    <div class="card-title-block">
                         <h1 class="threewordtext text-white">MOBILE PHONE CASE</h1>
                     </div>
-                    <div class="cards-image-block">
+                    <div class="card-image-block">
                         <img class="" src="/content/dam/venia/sites/iphone-case 1.png" />
                     </div>
                 </div>
-                <div class="cards-content-block mt-15">
-                    <div class="cards-carousel-btn">
+                <div class="card-content-block mt-15">
+                    <div class="card-carousel-btn">
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-white.svg" />
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-white.svg" />
                     </div>
-                    <div class="cards-custom-btn mt-15">
+                    <div class="card-custom-btn mt-15">
                         <span class="bg-gray">Customizable </span>
                     </div>
-                    <div class="cards-text-block mt-15">
-                        <div class="cards-text text-white"> Inaugural Season Wolves Hoodie </div>
-                        <div class="cards-buynow-btn">
+                    <div class="card-text-block mt-15">
+                        <div class="card-text text-white"> Inaugural Season Wolves Hoodie </div>
+                        <div class="card-buynow-btn">
                             <button type="button" class="bg-white">Buy Now | $89 </button>
                         </div>
                     </div>
@@ -413,79 +405,79 @@
             </div>
         </div>
     </div>
-    <div class="cards-block bg-cover grid-2cl-30-60">
-        <div class="cards ">
+    <div class="card-block bg-cover grid-2cl-30-60">
+        <div class="card ">
             <img class="" src="/content/dam/venia/sites/image-(1).png" />
         </div>
-        <div class="cards-xl bg-gray-lineargradient row-reverse">
-            <div class="cards-header-block">
-                <div class="cards-title-block">
-                    <h1 class="text-grey" style="top:136px;left:-98px">WOLF MASK</h1>
+        <div class="card-xl bg-gray-lineargradient row-reverse">
+            <div class="card-header-block">
+                <div class="card-title-block">
+                    <h1>HOODIE</h1>
                 </div>
-                <div class="cards-title-overlay-block">
+                <div class="card-title-overlay-block">
                     <p>There’s no better way to show your team pride that by wearing the team kit!</p>
                     <p>Customize with your own name or a player name, home or away colors, and logo placement.</p>
                 </div>
-                <div class="cards-image-block">
+                <div class="card-image-block">
                     <img class="mt-30" src="/content/dam/venia/sites/wolf-mask 1.png" />
                 </div>
             </div>
-            <div class="cards-content-block mt-15">
-                <div class="cards-text-block mt-15">
-                    <div class="cards-text text-white"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn">
+            <div class="card-content-block mt-15">
+                <div class="card-text-block mt-15">
+                    <div class="card-text text-white"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn">
                         <button type="button" class="bg-dark-gray text-white">Buy Now | $89 </button>
                     </div>
                 </div>
-                <div class="cards-text-block mt-15">
-                    <div class="cards-text text-white"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn">
+                <div class="card-text-block mt-15">
+                    <div class="card-text text-white"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn">
                         <button type="button" class="bg-white">Buy Now | $89 </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="cards-block bg-cover grid-2cl">
-        <div class="cards-xl bg-light-gray">
-            <div class="cards-header-block content-center">
-                <div class="cards-title-block">
-                    <h1 class="text-white" style="left:-102px;top:116px">MEN’S TEE</h1>
+    <div class="card-block bg-cover grid-2cl">
+        <div class="card-xl bg-light-gray">
+            <div class="card-header-block content-center">
+                <div class="card-title-block">
+                    <h1 class="text-white" style="left:-117px">MEN’S TEE</h1>
                 </div>
-                <div class="cards-image-block">
+                <div class="card-image-block">
                     <img class="mt-30" src="/content/dam/venia/sites/tee-mens1.png" />
                 </div>
             </div>
-            <div class="cards-content-block mt-15 no-width">
-                <div class="cards-text-block mt-15">
-                    <div class="cards-carousel-btn mt-30">
+            <div class="card-content-block mt-15 no-width">
+                <div class="card-text-block mt-15">
+                    <div class="card-carousel-btn mt-30">
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-black.png" />
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-black.png" />
                     </div>
-                    <div class="cards-text mt-30"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn mt-30">
+                    <div class="card-text mt-30"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn mt-30">
                         <button type="button" class="bg-white">Buy Now | $89 </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cards-xl bg-gray">
-            <div class="cards-header-block content-center">
-                <div class="cards-title-block">
+        <div class="card-xl bg-gray">
+            <div class="card-header-block content-center">
+                <div class="card-title-block">
                     <h1 class="text-white twowordtext">WOMEN’S TEE</h1>
                 </div>
-                <div class="cards-image-block">
+                <div class="card-image-block">
                     <img class="mt-30" src="/content/dam/venia/sites/tee-womens1.png" />
                 </div>
             </div>
-            <div class="cards-content-block mt-30 no-width">
-                <div class="cards-text-block mt-30">
-                    <div class="cards-carousel-btn mt-30">
+            <div class="card-content-block mt-30 no-width">
+                <div class="card-text-block mt-30">
+                    <div class="card-carousel-btn mt-30">
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-prev-white.svg" />
                         <img class="n-mt-30" src="/content/dam/venia/sites/arw-btn-nxt-white.svg" />
                     </div>
-                    <div class="cards-text mt-30"> Inaugural Season Wolves Hoodie </div>
-                    <div class="cards-buynow-btn mt-30">
+                    <div class="card-text mt-30"> Inaugural Season Wolves Hoodie </div>
+                    <div class="card-buynow-btn mt-30">
                         <button type="button" class="bg-dark-gray text-white">Buy Now | $89 </button>
                     </div>
                 </div>
