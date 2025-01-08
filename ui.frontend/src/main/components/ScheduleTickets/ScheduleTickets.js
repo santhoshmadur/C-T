@@ -131,7 +131,7 @@ const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data
         <>
         <div className='schedule-container'>
             <div className='schedule-container__banner'>
-                <div className='banner-opacity'>2025/6</div>
+                <div className='banner-opacity'>2024/5</div>
                 <div className='banner-text'>SCHEDULE & TICKETS</div>
             </div>
             <div className="schedule-and-tickets-container">
