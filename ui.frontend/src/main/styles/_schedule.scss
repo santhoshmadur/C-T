@@ -475,7 +475,9 @@ $font-family: 'Helvetica Neue';
 }
 
 .gear-container {
-  padding: 48px 56px 160px 56px;
+  display: flex;
+  padding: 48px 56px;
+  flex-direction: column;
 
   .gear-header {
     display: flex;
