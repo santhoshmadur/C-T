@@ -247,7 +247,7 @@ const bgImages = document.querySelector('.schedule-tickets')?.getAttribute("data
           </div>
           {/* gear Up Container */}
           <div className='game-container--gearUp'>
-            <div className="gear-container">
+            <div className="game-container--gearUp__gear-container">
               <div className="gear-header">
                 <h1>GEAR UP FOR THE GAME!</h1>
                 <a href="https://publish-p127270-e1239469.adobeaemcloud.com/content/venia/language-masters/en/home/product-landing-page.html" className="shop-all">
