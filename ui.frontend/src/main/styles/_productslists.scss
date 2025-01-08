@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     background: #e8e8e8;
+    padding: 56px;
+
   }
 
   .gear-header {
@@ -22,6 +24,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #000;
+    margin-right: 20px;
   }
 
   .gear-grid {
@@ -88,6 +91,7 @@
 }
 .products-lists-dark-gray {
   .gear-container {
+    padding: 56px;
     background: #404040;
   }
 
@@ -109,6 +113,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #fff !important;
+    margin-right: 20px;
   }
 
   .gear-grid {
