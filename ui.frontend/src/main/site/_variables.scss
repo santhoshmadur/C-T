@@ -33,7 +33,7 @@ $ct-font: Helvetica Neue, Helvetica, -apple-system,
 BlinkMacSystemFont,
 sans-serif;
 $ct-font-inter: Inter, serif;
-$ct-color-white: #FFFFFF;
+
 $ct-color-white-opacity-light: #FFFFFF4D;
 $ct-color-white-soft: #F8F8F8;
 $ct-color-white-muted: #C8C8C8;
@@ -44,6 +44,13 @@ $ct-color-black: #000000;
 
 $ct-color-gray-dark: #404040;
 $ct-color-gray: #808080;
+
+// UI Kit colors
+
+$ct-color-primary: #B9571A;
+$ct-color-primary-dark: #28455C;
+$ct-color-white: #FFFFFF;
+
 
 :root {
     --venia-anim-bounce: cubic-bezier(0.5, 1.8, 0.9, 0.8);
