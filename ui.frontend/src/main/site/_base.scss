@@ -121,7 +121,7 @@ button:disabled {
     background-color: $ct-color-primary;
 }
 
-.ct-button-primary-white {
+.ct-button-primary:hover {
     color: $ct-color-primary-dark;
     background-color: $ct-color-white;
 }
@@ -131,7 +131,7 @@ button:disabled {
     border: 1.5px solid $ct-color-primary-dark;
 }
 
-.ct-button-secondary-white {
+.ct-button-secondary:hover {
     color: $ct-color-white;
     border: 1.5px solid $ct-color-white;
 }
@@ -140,6 +140,6 @@ button:disabled {
     color: $ct-color-primary-dark;
 }
 
-.ct-button-tertiary-white {
+.ct-button-tertiary:hover {
     color: $ct-color-white;
 }
