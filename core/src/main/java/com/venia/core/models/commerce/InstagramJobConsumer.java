@@ -108,8 +108,8 @@ public class InstagramJobConsumer implements JobConsumer {
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Type", "application/json");
-            //conn.setConnectTimeout(10000);
-            //conn.setReadTimeout(10000);
+            conn.setConnectTimeout(10000);
+            conn.setReadTimeout(10000);
 
             try (OutputStream os = conn.getOutputStream()) {
                 os.write(payload.getBytes());
@@ -117,7 +117,7 @@ public class InstagramJobConsumer implements JobConsumer {
             }
 
             // Wait 10 seconds after sending the payload
-            //Thread.sleep(10000);
+            Thread.sleep(10000);
 
             // Check the response code
             int responseCode = conn.getResponseCode();
@@ -126,7 +126,7 @@ public class InstagramJobConsumer implements JobConsumer {
             }
 
             // Wait 10 seconds after checking the response code
-            //Thread.sleep(10000);
+            Thread.sleep(10000);
 
             // Read the response
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
