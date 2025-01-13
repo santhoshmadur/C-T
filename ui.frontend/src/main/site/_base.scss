@@ -18,7 +18,7 @@ body {
     padding: 0;
 }
 
-div.header + div.responsivegrid {
+div.header+div.responsivegrid {
     margin: 0 auto;
     max-width: 1500px !important;
     float: none !important;
@@ -95,4 +95,51 @@ button:disabled {
     clip: rect(0 0 0 0);
     overflow: hidden;
     white-space: nowrap;
+}
+
+// UI Kit button styles
+
+.ct-button {
+    display: inline-flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    text-align: center;
+    font-family: $ct-font;
+    font-size: var(--venia-global-fontSize-200);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.16px;
+}
+
+.ct-button-primary {
+    color: $ct-color-white;
+    background-color: $ct-color-primary;
+}
+
+.ct-button-primary:hover {
+    color: $ct-color-primary-dark;
+    background-color: $ct-color-white;
+}
+
+.ct-button-secondary {
+    color: $ct-color-primary-dark;
+    border: 1.5px solid $ct-color-primary-dark;
+}
+
+.ct-button-secondary:hover {
+    color: $ct-color-white;
+    border: 1.5px solid $ct-color-white;
+}
+
+.ct-button-tertiary {
+    color: $ct-color-primary-dark;
+}
+
+.ct-button-tertiary:hover {
+    color: $ct-color-white;
 }
