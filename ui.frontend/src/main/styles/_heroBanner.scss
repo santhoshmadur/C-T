@@ -30,7 +30,7 @@
     }
 
     .white-heading {
-        font-family: "Helvetica Neue";
+      
         font-size: 56px;
         font-style: normal;
         font-weight: 900;
@@ -42,7 +42,7 @@
     }
 
     .white-border-heading {
-        font-family: "Helvetica Neue";
+      
         font-size: 56px;
         font-style: normal;
         font-weight: 800;
@@ -69,7 +69,7 @@
 
     .heroBanner-content-text-wrapper {
         color: $ct-color-white;
-        font-family: "Helvetica Neue";
+      
         font-size: 20px;
         font-style: normal;
         font-weight: 400 !important;
@@ -85,7 +85,6 @@
         gap: 10px;
         background: $ct-color-white;
         text-align: center;
-        font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -196,7 +195,6 @@
     .modal-header .las-vegas {
         color: #D6D6D6;
         text-align: center;
-        font-family: "Helvetica Neue";
         font-size: 64px;
         font-style: normal;
         font-weight: 800;
@@ -208,7 +206,6 @@
     }
 
     .modal-header .wolves {
-        font-family: "Helvetica Neue";
         font-size: 64px;
         width: 100%;
         font-style: normal;
@@ -244,7 +241,6 @@
 
     .modal-body-pack-heading {
         color: #ffffff;
-        font-family: "Helvetica Neue";
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
@@ -256,7 +252,6 @@
 
     .modal-body-pack-heading-v {
         color: #ffffff;
-        font-family: "Helvetica Neue";
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
@@ -269,7 +264,6 @@
     .modal-body-pack-text {
         color: #ffffff;
         font-feature-settings: 'liga'off, 'clig'off;
-        font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -304,23 +298,22 @@
         border: none;
         background: transparent;
 
+    }
 
-        span{
-            display: flex;
-            width: 48px;
-            padding: 16px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 32px;
-            border: 1.5px solid #FFF;
-        }
+    .arrow-icon{
+        display: flex;
+        width: 48px;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        border: 1.5px solid #FFF;
     }
 
     .email-input::placeholder {
       color: #ffffff;
       font-feature-settings: 'liga' off, 'clig' off;
-      font-family: "Helvetica Neue";
       font-size: 16px;
       font-style: normal;
       font-weight: 500;

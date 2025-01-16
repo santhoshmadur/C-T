@@ -100,15 +100,23 @@
             &-name{
               margin-bottom: 10px;
               display: block;
+              letter-spacing: -0.48px;
+              text-transform: uppercase;
 
             }
             &-availability{
+              font-size: 14px;
               font-style: italic;
+              font-weight: 400;
+              line-height: 100%;
             }
           }
           &-price {
-            font-weight: bold;
-            color: #28455C;
+            color: #474747;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
           }
         }
       }

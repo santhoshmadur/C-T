@@ -110,9 +110,11 @@
     width: 100%;
     overflow: hidden;
     margin: 60px auto;
+    height: 460px;
 
     swiper-container {
       width: 100%;
+      height: inherit;
     }
 
     swiper-container .swiper-3d {
@@ -146,26 +148,32 @@
       border-radius: 16px;
       box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
     }
+    swiper-slide.swiper-slide-fully-visible.swiper-slide-active .slide-text{
+      display: block !important;
+    }
 
-    .slide-content .slide-text {
+    swiper-slide .slide-text {
+      display: none !important;
       padding: 20px;
       text-align: left;
       display: flex;
       width: 100%;
       flex-direction: column;
       gap: 4px;
+   
+      .slide-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 5px 0;
+      }
+      .slide-time {
+         font-size: 0.8rem;
+         color: #999;
+       }
     }
+ 
 
-    swiper-slide .slide-title {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin: 5px 0;
-    }
-
-    swiper-slide .slide-time {
-      font-size: 0.8rem;
-      color: #999;
-    }
+    
 
     .swiper-slide {
       display: flex;
