@@ -109,7 +109,9 @@
     }
 
     &.clp-header {
-        background-color: #404040;
+        background-color: transparent;
+        position: absolute;
+        top: 48px;
 
         .header-navigation-wrapper {
             .header-navigation-left {
@@ -121,18 +123,41 @@
                     }
                 }
             }
+
+            .header-navigation-right {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 48px;
+
+                p {
+                    color: var(--White, #FFF);
+                    text-align: center;
+                    font-family: "Helvetica Neue";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 100%;
+                    /* 14px */
+                    letter-spacing: -0.42px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;      
+                }
+            }
         }
     }
 
     &.plp-header {
-        background-color: #808080;
+        background-color: #FFF;
 
         .header-navigation-wrapper {
             .header-navigation-left {
                 .multifield-wrapper {
                     .multifield-text {
                         a {
-                            color: #FFFFFF;
+                            color: #28455C;
                         }
                     }
                 }
@@ -141,14 +166,14 @@
     }
 
     &.pdp-header {
-        background-color: #DEDEDE;
+        background-color: #FFF;
 
         .header-navigation-wrapper {
             .header-navigation-left {
                 .multifield-wrapper {
                     .multifield-text {
                         a {
-                            color: #404040;
+                            color: #28455C;
                         }
                     }
                 }
@@ -158,6 +183,8 @@
 
     &.home-header {
         background-color: transparent;
+        position: absolute;
+        top: 48px;
         //background-color: #808080;
 
         .header-navigation-wrapper {
