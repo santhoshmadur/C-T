@@ -1,5 +1,5 @@
 <div class="heroBanner-main">
-  <div class="heroBanner-container">
+  <div class="heroBanner-container" style="background-image: url(/content/dam/code-theory/banner.png);">
     <div class="heroBanner">
       <div class="heroBanner-content-wrapper">
         <div class="heroBanner-heading">
@@ -14,28 +14,39 @@
         </div>
       </div>
       <div class="heroBanner-levels">
-        <div class="heroBanner-level" style="background-image: url('/content/dam/venia/sites/wolf-logo.png');">1</div>
-        <div class="heroBanner-level" style="background-image: url('/content/dam/venia/sites/wolf-logo.png');">2</div>
-        <div class="heroBanner-level" style="background-image: url('/content/dam/venia/sites/wolf-logo.png');">3</div>
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('/content/dam/code-theory/bg-logo.png');"></div>
+          <div class="heroBanner-level-text">1</div>
+        </div>
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('/content/dam/code-theory/bg-logo.png');"></div>
+          <div class="heroBanner-level-text">2</div>
+        </div>
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('/content/dam/code-theory/bg-logo.png');"></div>
+          <div class="heroBanner-level-text">3</div>
+        </div>
       </div>
     </div>
   </div>
   <div id="gameModal" class="modal hidden">
-    <div class="modal-content">
+    <div class="modal-content" style="background-image: url('/content/dam/code-theory/popup.png');">
       <span class="close-button">&times; </span>
       <div class="modal-wrapper">
-        <div class="modal-header">
-          <sly data-sly-resource="${'popupleft' @ resourceType='venia/components/text'}"></sly>
-        </div>
         <div class="modal-body">
-          <div class="modal-body-wolf-image" style="background-image: url('/content/dam/venia/sites/wolf.png');"></div>
+          <div class="modal-body-wolf-image" style="background-image: url('/content/dam/code-theory/bg-logo.png');"></div>
           <sly data-sly-resource="${'popupcenter' @ resourceType='venia/components/text'}"></sly>
           <div class="user-input-wrapper">
             <div class="input-container">
               <input type="email" placeholder="Your Email Address" class="email-input" />
-              <img src="/content/dam/venia/sites/arrow.svg" alt="arrow" class="arrow-icon" />
+              <span class="arrow-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                  <path d="M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 1L17 8L10 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+              </span>
             </div>
-            <hr class="line" />
+            <div class="line"></div>
           </div>
         </div>
       </div>
@@ -44,20 +55,21 @@
 </div>
 <script>
   const modal = document.getElementById("gameModal");
-  const openButton = document.querySelector(".heroBanner-content-button");
   const closeButton = document.querySelector(".close-button");
+  let isPopupShown = false;
   window.setTimeout(() => {
-    modal.classList.remove("hidden");
+    if(!isPopupShown){
+      modal.classList.remove("hidden");
+    }
   }, 10000);
-/*   openButton.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-  }); */
   closeButton.addEventListener("click", () => {
     modal.classList.add("hidden");
+    isPopupShown = true;
   });
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.classList.add("hidden");
+      isPopupShown = true;
     }
   });
 </script>
