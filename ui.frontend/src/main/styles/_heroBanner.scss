@@ -1,24 +1,26 @@
 
 .heroBanner-main {
 .heroBanner-container {
-    display: flex;
-    padding: 36px 112px 88px 112px;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    background: $ct-color-gray-dark;
+    display: block;
+    padding: 70px;
+    background: #28455c;
+    height: 772px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
     .heroBanner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         align-self: stretch;
     }
 
     .heroBanner-content-wrapper {
         display: flex;
-        align-items: center;
-        gap: 56px;
+        align-items: start;
+        gap: 16px;
+        flex-direction: column;
     }
 
     .heroBanner-heading {
@@ -28,7 +30,7 @@
     }
 
     .white-heading {
-        font-family: "Helvetica Neue";
+      
         font-size: 56px;
         font-style: normal;
         font-weight: 900;
@@ -40,7 +42,7 @@
     }
 
     .white-border-heading {
-        font-family: "Helvetica Neue";
+      
         font-size: 56px;
         font-style: normal;
         font-weight: 800;
@@ -59,7 +61,7 @@
 
     .heroBanner-content {
         display: flex;
-        width: 450px;
+        width: 660px;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
@@ -67,7 +69,7 @@
 
     .heroBanner-content-text-wrapper {
         color: $ct-color-white;
-        font-family: "Helvetica Neue";
+      
         font-size: 20px;
         font-style: normal;
         font-weight: 400 !important;
@@ -82,50 +84,58 @@
         align-items: center;
         gap: 10px;
         background: $ct-color-white;
-        color: #404040;
         text-align: center;
-        font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
-        /* 16px */
         letter-spacing: -0.48px;
+        background-color: #ffffff;
+        color: #29455c;
+        border-radius: 16px;
     }
 
     .heroBanner-content-button:hover {
-        background-color: #D8D8D8;
-        color: #333333;
+        text-decoration: underline;
     }
 
     .heroBanner-levels {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         gap: 10px;
     }
 
     .heroBanner-level {
-        width: 100px;
-        height: 100px;
+        width: 189px;
+        height: 251px;
         flex-shrink: 0;
-        background-image: url('../../../../ui.apps/src/main/content/jcr_root/apps/venia/components/text/images/wolf-logo.png');
         border-radius: 15px;
-        color: #FFF;
-        text-align: center;
-        font-family: "Helvetica Neue";
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: 100%;
-        /* 36px */
-        letter-spacing: -1.08px;
-        text-transform: uppercase;
         display: flex;
         justify-content: center;
+        border: 1.178px solid var(--Dark-Color, #28455C);
+        background: #FFF;
         align-items: center;
-        border:solid 1px #fff;
+        flex-direction: column;
+        gap: 0.367px;
+        flex-shrink: 0;
+
+        &-image{
+            background-repeat: no-repeat;
+            width: 200px;
+            background-size: contain;
+            background-position: top center;
+            height: 100px;
+        }
+        &-text{
+            font-size: 121.726px;
+            color:#B9571A;
+            font-weight: 900;
+            line-height: 100%;
+            letter-spacing: -3.652px;
+            text-transform: uppercase;
+        }
     }
 
   }
@@ -148,7 +158,7 @@
     }
 
     .modal-content {
-        background: white;
+        background: var(--Dark-Color, #28455C);
         width: 500px;
         padding: 20px;
         border-radius: 16px;
@@ -163,6 +173,7 @@
         font-size: 24px;
         cursor: pointer;
         float: right;
+        color: #ffffff;
     }
 
     .modal-wrapper {
@@ -184,7 +195,6 @@
     .modal-header .las-vegas {
         color: #D6D6D6;
         text-align: center;
-        font-family: "Helvetica Neue";
         font-size: 64px;
         font-style: normal;
         font-weight: 800;
@@ -196,7 +206,6 @@
     }
 
     .modal-header .wolves {
-        font-family: "Helvetica Neue";
         font-size: 64px;
         width: 100%;
         font-style: normal;
@@ -222,7 +231,8 @@
 
     .modal-body {
         height: 100%;
-        padding: 56px 56px 56px 0;
+        padding: 20px;
+        gap: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -230,8 +240,7 @@
     }
 
     .modal-body-pack-heading {
-        color: #404040;
-        font-family: "Helvetica Neue";
+        color: #ffffff;
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
@@ -242,8 +251,7 @@
     }
 
     .modal-body-pack-heading-v {
-        color: #A4A4A4;
-        font-family: "Helvetica Neue";
+        color: #ffffff;
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
@@ -254,20 +262,20 @@
     }
 
     .modal-body-pack-text {
-        color: #404040;
+        color: #ffffff;
         font-feature-settings: 'liga'off, 'clig'off;
-        font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
         text-align: left;
+        width: 453px;
         margin-top: 8px;
     }
 
     .user-input-wrapper {
         display: flex;
-        width: 400px;
+        width: 570px;
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
@@ -277,21 +285,35 @@
     .input-container {
         display: flex;
         align-items: center;
-        gap: 16px;
+        width: 100%;
+        gap: 25px;
         align-self: stretch;
     }
 
     .email-input {
-        width: 400px;
+        width: 520px;
         border-radius: 4px;
         outline: none;
+        color: #ffffff;
         border: none;
+        background: transparent;
+
+    }
+
+    .arrow-icon{
+        display: flex;
+        width: 48px;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        border: 1.5px solid #FFF;
     }
 
     .email-input::placeholder {
-      color: #404040;
+      color: #ffffff;
       font-feature-settings: 'liga' off, 'clig' off;
-      font-family: "Helvetica Neue";
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -299,9 +321,9 @@
     }
 
     .line {
-        width: 400px;
+        width: 570px;
         height: 3px;
-        background: #404040;
+        border-bottom: 2px solid #ffffff;
         margin: 0;
     }
 }

@@ -69,22 +69,18 @@ public class InstagramJobServlet extends SlingAllMethodsServlet {
             response.getWriter().write("{\"error\": \"Job submission failed.\"}");
         }
     }
+
     private boolean isImagePublished(SlingHttpServletRequest request, String damPath) {
         try {
-            Resource resource = request.getResource();
-            ResourceResolver resourceResolver = resource.getResourceResolver();
+            ResourceResolver resourceResolver = request.getResourceResolver();
             Session session = resourceResolver.adaptTo(Session.class);
-            Node assetNode = null;
+
             if (session != null) {
-                assetNode = session.getNode(damPath + "/jcr:content");
-            } else {
-                LOG.error("Session is null");
-            }
-            if (assetNode != null && assetNode.hasProperty("cq:lastReplicationAction")) {
-                String replicationAction = assetNode.getProperty("cq:lastReplicationAction").getString();
-                return "Activate".equals(replicationAction);
-            } else {
-                LOG.error("Asset node or property cq:lastReplicationAction is missing");
+                Node assetNode = session.getNode(damPath + "/jcr:content");
+                if (assetNode != null && assetNode.hasProperty("cq:lastReplicationAction")) {
+                    String replicationAction = assetNode.getProperty("cq:lastReplicationAction").getString();
+                    return "Activate".equals(replicationAction);
+                }
             }
         } catch (Exception e) {
             LOG.error("Error checking publication status for {}", damPath, e);

@@ -1,176 +1,119 @@
-.clp-header,
-.plp-header,
-.pdp-header,
-.home-header,
-.team-roster-header,
-.schedule-tickets-header {
-    //background-color: #FFFFFF;
+.headernavigation {
     display: flex;
     width: 100%;
     height: 88px;
     padding: 29px 56px;
     align-items: center;
 
-    .header-navigation-wrapper {
+    &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex: 1 0 0;
+    }
 
-        .header-navigation-left {
-            .multifield-wrapper {
-                display: inline-flex;
-                align-items: center;
-                gap: 48px;
+    &__left {
+        .multifield-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 48px;
 
-                .multifield-image {
+            &__image {
 
-                    a,
-                    a img {
-                        width: 48px;
-                        height: 48px;
-                        display: block;
-                    }
-                }
-
-                .multifield-text {
-                    display: flex;
-                    align-items: center;
-                    gap: 32px;
-
-                    a {
-                        //color: $ct-color-gray-dark;
-                        text-align: center;
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 800;
-                        line-height: normal;
-                    }
+                a,
+                a img {
+                    width: 48px;
+                    height: 48px;
+                    display: block;
                 }
             }
-        }
 
-        .header-navigation-right {
-            .multifield-wrapper {
+            &__text {
                 display: flex;
                 align-items: center;
-                gap: 48px;
+                gap: 32px;
 
-                .multifield-image {
-
-                    a,
-                    a img {
-                        width: 24px;
-                        height: 24px;
-                        flex-shrink: 0;
-                        display: block;
-                    }
-                }
-
-                .multifield-image:nth-of-type(2) {
-                    display: flex;
-                    align-items: center;
-                    gap: 16px;
+                a {
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal;
                 }
             }
         }
     }
 
-    &.team-roster-header {
-        background-color: #FFFFFF;
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 48px;
 
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #404040;
-                        }
-                    }
-                }
-            }
+        p {
+            text-align: center;
+            font-family: "Helvetica Neue";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 100%;
+            letter-spacing: -0.42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search span,
+        .add-to-bag span,
+        .add-to-bag span img,
+        .search span img {
+            width: 24px;
+            height: 24px;
         }
     }
-
-    &.schedule-tickets-header {
-        background-color: #808080;
-
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.clp-header {
-        background-color: #404040;
-
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.plp-header {
-        background-color: #808080;
-
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.pdp-header {
-        background-color: #DEDEDE;
-
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #404040;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.home-header {
-        background-color: transparent;
-        //background-color: #808080;
-
-        .header-navigation-wrapper {
-            .header-navigation-left {
-                .multifield-wrapper {
-                    .multifield-text {
-                        a {
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }
+
+    .headernavigation.team-roster {
+        background-color: $ct-color-white;
+
+        .headernavigation__left .multifield-wrapper__text a {
+            color: $ct-color-primary-dark;
+        }
+    }
+
+    .headernavigation.schedule-tickets {
+        background-color: $ct-color-gray;
+
+        .headernavigation__left .multifield-wrapper__text a {
+            color: $ct-color-white;
+        }
+    }
+
+    .headernavigation.clp-header,
+    .headernavigation.home-header {
+        background-color: transparent;
+        position: absolute;
+        top: 48px;
+
+        .headernavigation__left .multifield-wrapper__text a {
+            color: $ct-color-white;
+        }
+
+        .headernavigation__right p {
+            color: $ct-color-white;
+        }
+    }
+
+    .headernavigation.plp-header,
+    .headernavigation.pdp-header {
+        background-color: $ct-color-white;
+
+        & .headernavigation__left .multifield-wrapper__text a {
+            color: $ct-color-primary-dark;
+        }
+
+        & .headernavigation__right p {
+            color: $ct-color-primary-dark;
+        }
+    }
