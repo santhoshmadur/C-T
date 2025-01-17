@@ -154,7 +154,6 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
             os.flush();
         }
         Thread.sleep(20000);
-
         int responseCode = conn.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {
             throw new IOException("HTTP request failed with response code: " + responseCode);
