@@ -1,11 +1,10 @@
 .joinThePack-wrapper {
-    font-family: 'Helvetica Neue', sans-serif;
         display: flex;
         padding: 56px;
         align-items: center;
         gap: 268px;
         align-self: stretch;
-        background: #606060;
+        background: #28455C url('/content/dam/code-theory/bottom_banner.png') no-repeat;
     
     .joinThePack-container {
         display: flex;
@@ -41,10 +40,9 @@
     
     .joinThePack-heading-1 {
         color: var(--Primary-White, #FFF);
-        font-feature-settings: 'liga' off, 'clig' off;
-        font-family: "Helvetica Neue";
-        font-size: 56px;
+        font-size: 60px;
         font-style: normal;
+        width: 624px;
         font-weight: 800;
         line-height: 80%;
         /* 44.8px */
@@ -52,26 +50,19 @@
     }
     
     .joinThePack-heading-2 {
-        color: #B9B9B9;
-        font-feature-settings: 'liga' off, 'clig' off;
-        font-family: "Helvetica Neue";
         font-size: 32px;
         font-style: normal;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 80%;
-        /* 25.6px */
         text-transform: uppercase;
+        color: #C8C0AC;
     }
     
     .joinThePack-description {
         color: var(--Primary-White, #FFF);
-        font-feature-settings: 'liga' off, 'clig' off;
-        font-family: "Helvetica Neue";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 120%;
-        /* 19.2px */
     }
     
     .joinThePack-right {
@@ -79,7 +70,6 @@
         width: 445px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
         margin-top: 32px;
     }
     
@@ -97,6 +87,7 @@
         outline: none;
         border: none;
         background-color: transparent;
+        text-transform: uppercase;
     }
     
     .email-input::placeholder {
@@ -115,6 +106,13 @@
     }
     
     .arrow-icon{
-        filter:brightness(0) invert(1);
+        display: flex;
+        width: 48px;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        border: 1.5px solid #FFF;
     }
 }    
