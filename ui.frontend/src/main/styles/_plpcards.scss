@@ -42,13 +42,15 @@
   
       .cards-block.bg-cover img {
         width: 100%;
-        height: -webkit-fill-available;
+        height: 100%;
       }
   
       .bg-cover .cards {
         padding: 0px;
         width: 100%;
         height: inherit;
+        min-height: 467px;
+        overflow: hidden;
       }
   
       .cards-header-block {
@@ -87,33 +89,27 @@
         display: flex;
       }
   
-      .cards-image-block img {
-        width: 100%;
-        transform: scale(1);
-        transition: 0.3s ease-in-out;
-      }
+      // .cards-image-block img {
+      //   width: 100%;
+      //   transform: scale(1);
+      //   transition: 0.3s ease-in-out;
+      // }
   
-      .cards-image-block:hover img {
-        transform: scale(1.2);
-      }
+      // .cards-image-block:hover img {
+      //   transform: scale(1.2);
+      // }
   
       .cards-custom-btn span {
-        padding: 5px 12px;
-        border-radius: 15px;
-      }
-  
-      .cards-content-block {
-        width: 400px;
-      }
-  
-      .cards-text-block {
-        display: flex;
-        justify-content: space-between;
+        color:#B9571A;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
       }
   
       .cards-text {
-        margin-top: 0px;
-        width: 130px;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform:uppercase;
       }
   
       .cards-carousel-btn{
@@ -122,15 +118,21 @@
       }
   
       .cards-carousel-btn img {
-        height: 30px !important;
+        height: 30px;
         width: 30px !important;
-        margin-left: 6px;
       }
   
       .cards-buynow-btn button {
-        padding: 10px;
+        padding:16px 24px;
         border-style: none;
-        text-transform: capitalize;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 800;
+        border-radius: 32px;
+        min-width: 105px;
+        min-height: 45px;
+        border: solid 2px;
+        cursor: pointer;
       }
   
       .bg-light-gray {
@@ -162,13 +164,24 @@
       }
   
       .text-white {
-        color: #fff;
+        color: #fff !important;
       }
   
       .text-grey {
         color: #404040;
       }
-  
+
+      .text-gray{
+        color: #474747;
+      }
+
+      .text-blue{
+        color:#28455C;
+      }
+      
+      .text-align-end{
+        text-align: end;
+      }
       .n-mt-30 {
         margin-top: -30px;
       }
@@ -184,11 +197,6 @@
       button:active {
         border-style: none;
         text-transform: capitalize;
-      }
-  
-      button:hover {
-        background-color: #D8D8D8;
-        color: #333333;
       }
   
       .grid-2cl-30-60 {
@@ -212,21 +220,6 @@
         grid-template-columns: 49% 49%;
       }
   
-      .twowordtext {
-        left: -122px !important;
-        top: 165px !important;
-      }
-  
-      .threewordtext {
-        left: -191px !important;
-        top: 252px !important;
-      }
-  
-      .cards-header-block div:nth-of-type(2) {
-        margin-left: 100px;
-        margin-right: 20px;
-      }
-  
       .row-reverse .cards-header-block {
         flex-direction: row-reverse;
       }
@@ -246,4 +239,94 @@
       .no-width {
         width: unset !important;
       }
+
+      .carousel-part{
+        position: absolute;
+        width: 96%;
+        /* overflow-x: hidden; */
+        overflow: hidden;
+    }
+    
+    .rc-carousel-box.hoodie{
+        display: flex;
+        margin-top: 40px;
+        margin-left: -100px;
+        justify-content: space-between;
+    }
+    
+    .rc-carousel-box.hat{
+        display: flex;
+        margin-top: 90px;
+        justify-content: space-between;
+    }
+    
+    .rc-carousel-box.jersey{
+        display: flex;
+        margin-top: 15px;
+        margin-left: -160px;
+        justify-content: space-between;
+    }
+    
+    .hoodie .rc-carousel-item-image{
+        height: 235px !important;
+        width: auto !important;
+        cursor: pointer;
+    }
+    
+    .hat .rc-carousel-item-image{
+        height: 180px !important;
+        width: auto !important;
+        cursor: pointer;
+    }
+    
+    .jersey .rc-carousel-item-image{
+        height: 330px !important;
+        width: auto !important;
+        cursor: pointer;
+        margin-right: -50px;
+    }
+    
+    .cards-content-block{
+        position: absolute;
+        bottom: 15px;
+        width: 96%;
+        display: grid;
+        z-index: 2;
+    }
+    
+    .rc-carousel-item-image:hover{
+        transform: scale(1.2);
+    }
+    
+    .cards-text-block{
+        display: grid;
+    }
+    
+    .grid-2cl-75-25{
+        grid-template-columns: 75% 25%;
+    }
+    
+    .mobile_img{
+        z-index: 2;
+        margin-top: 100px;
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    .mobile_img:hover,.mask_img:hover,.shoeimg:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    
+    .padding-15{
+        padding: 15px;
+    }
+    
+    .shoeimg{
+        position: absolute;
+        top: 0;
+        left: 23%;
+        height: 93% !important;
+        width: auto !important;
+    }
 }
