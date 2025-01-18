@@ -35,7 +35,7 @@ public class InstagramGraphAPIServlet extends SlingAllMethodsServlet {
     private static final Logger LOG = LoggerFactory.getLogger(InstagramGraphAPIServlet.class);
     private static final String API_VERSION = "v21.0";
 
-    private final String accessToken = "EAANWVbfnSJABO0ZC6SaBAkNsMeiNk5z8Fi9t9KUt715yPAWxCRNwipCuKbk9ZAANJeWKVb1EdpKaZASPF8sK0TzCXb7GFStb1xFl8HTlNZBxI75GokhQOviskN4d7pWdcnId8hmgHrVj4fRteXIoUZAyoc4WkZCced1hw6NouVRsrBFeXPXop94Dbcayoiu54z";
+    private final String accessToken = "EAANWVbfnSJABO3HgXuvTh42SEA9Dv9jgwN08LCxqNxhCsfb3A6GX2GFybW7cSWcSJ4dvGTZAlbUjQjycOdNQAvi62JXTYnFcU4SPOpOuSOvYdZCQrLd4ZACWpdZBeBAJGHcHjOidDdy5QpLPxQZAUpcVy3KaH9lqIewZAdDNtGoYd5ha8ztmQQVSalYqvYZAIGW";
     private final String instagramAccountId = "17841471407996353";
 
     @Override
