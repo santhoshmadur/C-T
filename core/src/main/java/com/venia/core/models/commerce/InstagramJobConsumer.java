@@ -2,21 +2,15 @@ package com.venia.core.models.commerce;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.event.jobs.Job;
 import org.apache.sling.event.jobs.consumer.JobConsumer;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.Node;
-import javax.jcr.Session;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,7 +32,7 @@ public class InstagramJobConsumer implements JobConsumer {
     private static final Logger LOG = LoggerFactory.getLogger(InstagramJobConsumer.class);
 
     private final String instagramAccountId = "17841471407996353";
-    private final String accessToken = "EAANWVbfnSJABO0ZC6SaBAkNsMeiNk5z8Fi9t9KUt715yPAWxCRNwipCuKbk9ZAANJeWKVb1EdpKaZASPF8sK0TzCXb7GFStb1xFl8HTlNZBxI75GokhQOviskN4d7pWdcnId8hmgHrVj4fRteXIoUZAyoc4WkZCced1hw6NouVRsrBFeXPXop94Dbcayoiu54z";
+    private final String accessToken = "EAANWVbfnSJABO3HgXuvTh42SEA9Dv9jgwN08LCxqNxhCsfb3A6GX2GFybW7cSWcSJ4dvGTZAlbUjQjycOdNQAvi62JXTYnFcU4SPOpOuSOvYdZCQrLd4ZACWpdZBeBAJGHcHjOidDdy5QpLPxQZAUpcVy3KaH9lqIewZAdDNtGoYd5ha8ztmQQVSalYqvYZAIGW";
     private static final String API_VERSION = "v21.0";
     private String mediaType = null;
 

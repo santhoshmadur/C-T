@@ -44,11 +44,16 @@
                             fieldLabel="Product Image"
                             name="./productImage"
                             rootPath="/content/dam/venia"/>
-                        <productctalabel
+                        <productprice
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Product CTA Label"
-                            name="./productLabel"/>
+                            fieldLabel="Product Price"
+                            name="./productPrice"/>
+                        <productavailability
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Product Availability"
+                            name="./productAvailability"/>
                     </items>
                 </field>
             </multi>

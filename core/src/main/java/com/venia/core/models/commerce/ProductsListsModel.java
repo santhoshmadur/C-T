@@ -61,7 +61,10 @@ public class ProductsListsModel {
         private String productImage;
 
         @ValueMapValue
-        private String productLabel;
+        private String productPrice;
+
+        @ValueMapValue
+        private String productAvailability;
 
         public String getProductName() {
             return productName;
@@ -71,8 +74,12 @@ public class ProductsListsModel {
             return productImage;
         }
 
-        public String getProductLabel() {
-            return productLabel;
+        public String getProductAvailability() {
+            return productAvailability;
+        }
+
+        public String getProductPrice() {
+            return productPrice;
         }
     }
 }
