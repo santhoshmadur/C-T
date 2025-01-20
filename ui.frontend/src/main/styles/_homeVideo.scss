@@ -28,7 +28,7 @@
 }
 
 .video-heading .las-vegas {
-    color: #FFF;
+    color: $ct-color-white;
     text-align: center;
     font-family: "Helvetica Neue";
     font-size: 96px;
@@ -43,8 +43,8 @@
 .video-heading .wolves {
     text-align: center;
     -webkit-text-stroke-width: 3;
-    -webkit-text-stroke-color: #FFF;
-    color: #FFF;
+    -webkit-text-stroke-color: $ct-color-white;
+    color: $ct-color-white;
     font-family: "Helvetica Neue";
     font-size: 120px;
     font-style: normal;
@@ -72,10 +72,10 @@
     align-items: center;
     gap: 4px;
     border-radius: 1000px;
-    border: 2px solid #FFF;
-    background: rgba(255, 255, 255, 0.50);
+    border: 2px solid $ct-color-white;
+    background: rgba($ct-color-white, 0.50);
     backdrop-filter: blur(16.600000381469727px);
-    color: #FFF;
+    color: $ct-color-white;
     font-family: "Helvetica Neue";
     font-size: 20px;
     font-style: normal;
@@ -96,9 +96,9 @@
 }
 
 .video-description .description {
-    color: #FFF;
+    color: $ct-color-white;
     -webkit-text-stroke-width: 1;
-    -webkit-text-stroke-color: #FFF;
+    -webkit-text-stroke-color: $ct-color-white;
     font-family: "Helvetica Neue";
     font-size: 55px;
     font-style: normal;
@@ -114,7 +114,7 @@
 }
 
 .video-description .tag-line {
-    color: #FFF;
+    color: $ct-color-white;
     font-family: "Helvetica Neue";
     font-size: 24px;
     font-style: normal;

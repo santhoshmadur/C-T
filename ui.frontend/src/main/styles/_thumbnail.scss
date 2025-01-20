@@ -1,6 +1,6 @@
 .thumbnail-wrapper {
     width: 100%;
-
+}
 
 .thumbnail-container {
     display: flex;
@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    color: #404040;
+    color: $ct-color-gray;
     font-family: "Helvetica Neue";
     font-size: 24px;
     font-style: normal;
@@ -49,7 +49,7 @@
 
 .thumbnail-stats {
     width: 200px;
-    color: #404040;
+    color: $ct-color-gray;
     font-family: "Helvetica Neue";
     font-size: 16px;
     font-style: normal;
@@ -76,8 +76,8 @@
     align-items: center;
     gap: 4px;
     border-radius: 1000px;
-    border: 1px solid var(--Utility-Neutral-White, #FFF);
-    background: rgba(255, 255, 255, 0.50);
+    border: 1px solid var(--Utility-Neutral-White, $ct-color-white);
+    background: rgba($ct-color-white, 0.50);
     backdrop-filter: blur(16.600000381469727px);
     color: var(--Utility-Neutral-Black, #111);
 
@@ -89,5 +89,4 @@
     line-height: 140%;
     /* 22.4px */
     letter-spacing: -0.32px;
-}
 }
