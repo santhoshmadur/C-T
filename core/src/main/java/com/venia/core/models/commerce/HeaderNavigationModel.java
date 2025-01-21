@@ -44,7 +44,11 @@ public class HeaderNavigationModel {
     }
 
     public String getHeaderLogoLink() {
-        return headerLogoLink;
+        if (headerLogoLink.contains("/content/")){
+            return headerLogoLink+".html";
+        }else {
+            return headerLogoLink;
+        }
     }
 
     public Boolean getLinkTarget() {
@@ -91,7 +95,11 @@ public class HeaderNavigationModel {
         }
 
         public String getNavLink() {
-            return navLink;
+            if (navLink.contains("/content/")){
+                return navLink+".html";
+            }else {
+                return navLink;
+            }
         }
 
         public String getLinkTarget() {

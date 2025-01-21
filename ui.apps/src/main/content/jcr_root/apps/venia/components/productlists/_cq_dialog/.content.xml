@@ -54,6 +54,12 @@
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Product Availability"
                             name="./productAvailability"/>
+                        <productdetailpagelink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                fieldLabel="Product Detail Page Link"
+                                name="./productdetailpagelink"
+                                rootPath="/content"/>
                     </items>
                 </field>
             </multi>

@@ -66,6 +66,9 @@ public class ProductsListsModel {
         @ValueMapValue
         private String productAvailability;
 
+        @ValueMapValue
+        private String productdetailpagelink;
+
         public String getProductName() {
             return productName;
         }
@@ -80,6 +83,14 @@ public class ProductsListsModel {
 
         public String getProductPrice() {
             return productPrice;
+        }
+
+        public String getProductdetailpagelink() {
+            if (productdetailpagelink.contains("/content/")){
+                return productdetailpagelink+".html";
+            }else {
+                return productdetailpagelink;
+            }
         }
     }
 }
