@@ -14,7 +14,7 @@
   .description--heading {
     font-size: 20px;
     font-weight: 800;
-    color: #404040;
+    color: $ct-color-gray-dark;
   }
 
   .product-container {
@@ -68,13 +68,13 @@
   .details-section {
     width: 35%;
     max-width: 400px;
-    color: #404040;
+    color: $ct-color-gray-dark;
     font-style: normal;
 
     &__description{
 
       &--heading {
-        color: #28455C;
+        color: $ct-color-primary-dark;
         font-weight: 800;
         font-size: 35px;
         letter-spacing: -1.05px;
@@ -84,11 +84,11 @@
         font-size: 16px;
         font-weight: 600;
         letter-spacing: -0.48px;
-        color: #404040;
+        color: $ct-color-gray-dark;
       }
 
       &--text {
-        color: #404040;
+        color: $ct-color-gray-dark;
         font-size: 16px;
         font-weight: 400;
       }
@@ -121,7 +121,7 @@
             text-align: center;
             line-height: 40px;
             font-size: 14px;
-            color: #404040;
+            color: $ct-color-gray-dark;
             z-index: 2;
             position: relative;
             user-select: none;
@@ -134,8 +134,8 @@
             width: calc(50% - 4px);
             height: calc(100% - 4px);
             border-radius: 32px;
-            outline: 1.5px solid #404040;
-            background: #ffffff;
+            outline: 1.5px solid $ct-color-gray-dark;
+            background: $ct-color-white;
             z-index: 1;
             transition: left 0.5s ease, background-color 0.3s ease;
           }
@@ -173,7 +173,7 @@
             flex-shrink: 0;
           }
           &.colorActive {
-            border-color: #404040;;
+            border-color: $ct-color-gray-dark;;
           }
         }
       }
@@ -213,14 +213,14 @@
       }
       
       .size-button.selected{
-        background: #B9571A;
-        color: #ffffff;
+        background: $ct-color-primary;
+        color: $ct-color-white;
       }
     }
     &__sustainability-info{
       width: 403px;
       padding: 10px;
-      color: #404040;
+      color: $ct-color-gray-dark;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -244,13 +244,13 @@
         align-items: center;
       }
       .add-to-bag {
-        background: #B9571A;
-        color: #ffffff;
+        background: $ct-color-primary;
+        color: $ct-color-white;
       }
       .try-on{
         border-radius: 32px;
-        border: 1.5px solid var(--Dark-Color, #28455C);
-        background: #ffffff;
+        border: 1.5px solid var(--Dark-Color, $ct-color-primary-dark);
+        background: $ct-color-white;
       }
     }
   }

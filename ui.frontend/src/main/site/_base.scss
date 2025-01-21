@@ -14,8 +14,10 @@ html {
 body {
     background-color: $color-background;
     color: $venia-text;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    // min-width: 1400px;
+    max-width: 1440px;
 }
 
 div.header+div.responsivegrid {
@@ -142,4 +144,10 @@ button:disabled {
 
 .ct-button-tertiary:hover {
     color: $ct-color-white;
+}
+
+@media (min-width:770px) and (max-width: 1320px) {
+    body{
+        min-width: 1400px;
+    }
 }

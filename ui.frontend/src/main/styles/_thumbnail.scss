@@ -1,92 +1,117 @@
 .thumbnail-wrapper {
     width: 100%;
-}
-
-.thumbnail-container {
     display: flex;
-}
-
-.thumbnail-card {
-    display: flex;
-    align-items: end;
-    padding: 20px;
-    width: 25%;
-    height: 360px;
+    padding: 48px 52px;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
-}
 
-.thumbnail-card-container {
-    width: 100%;
-}
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+    }
 
-.thumbnail-score {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 12px;
-}
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.thumbnail-score-1,
-.thumbnail-score-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    color: $ct-color-gray;
-    font-family: "Helvetica Neue";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 100%;
-    /* 24px */
-    letter-spacing: -0.72px;
-    text-transform: uppercase;
-}
+    &__heading-text {
+        color: $ct-color-primary-dark;
+        font-family: "Helvetica Neue";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        /* 48px */
+        letter-spacing: -1.44px;
+        text-transform: uppercase;
+    }
 
-.thumbnail-details {
-    display: flex;
-    justify-content: space-between;
-}
+    &__heading-link {
+        display: flex;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: $ct-color-primary-dark;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        /* 14px */
+        letter-spacing: -0.42px;
+        text-decoration: none;
+        border-radius: 32px;
+        border: 1.5px solid $ct-color-primary-dark;
+    }
 
-.thumbnail-stats {
-    width: 200px;
-    color: $ct-color-gray;
-    font-family: "Helvetica Neue";
-    font-size: 16px;
-    font-style: normal;
-    line-height: normal;
-}
+    &__cards {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+        justify-content: space-between;
+    }
 
-.thumbnail-stats .team-names {
-    font-weight: 500;
-    text-transform: uppercase;
-}
+    &__card {
+        width: 318px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
 
-.thumbnail-stats .highlights {
-    font-weight: 800;
-}
+    &__card img {
+        width: 318px;
+        height: 212px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        background: lightgray -50.186px -4px / 131.563% 110.6% no-repeat;
+    }
 
-.thumbnail-stats .date {
-    font-size: 14px;
-    font-weight: 400;
-}
+    &__card-description {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 
-.thumbnail-time {
-    display: inline-flex;
-    padding: 12px;
-    align-items: center;
-    gap: 4px;
-    border-radius: 1000px;
-    border: 1px solid var(--Utility-Neutral-White, $ct-color-white);
-    background: rgba($ct-color-white, 0.50);
-    backdrop-filter: blur(16.600000381469727px);
-    color: var(--Utility-Neutral-Black, #111);
+    &__category {
+        color: $ct-color-primary;
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
 
-    /* Global/Utility Large */
-    font-family: "Helvetica Neue";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    /* 22.4px */
-    letter-spacing: -0.32px;
+    &__card-heading {
+        color: $ct-color-primary-dark;
+        font-family: "Helvetica Neue";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    &__card-date {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card-date p {
+        color: $ct-color-primary-dark;
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
