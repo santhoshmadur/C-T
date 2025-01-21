@@ -1,11 +1,11 @@
-    <div class="campaign-content-wrapper">
-        <div class="carousel-container">
-            <swiper-container class="mySwiper" space-between="20" navigation="true" effect="coverflow" effectgrab-cursor="true" centered-slides="true"
-            slides-per-view="4" loop="true" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="50"
-            coverflow-effect-modifier="1.5" coverflow-effect-slide-shadows="false">
+<div class="campaign-content-wrapper">
+    <div class="carousel-container">
+        <swiper-container class="mySwiper" space-between="20" navigation="true" effect="coverflow"
+            effectgrab-cursor="true" centered-slides="true" slides-per-view="4" loop="true" coverflow-effect-rotate="0"
+            coverflow-effect-stretch="0" coverflow-effect-depth="50" coverflow-effect-modifier="1.5"
+            coverflow-effect-slide-shadows="false">
             <swiper-slide>
-                <div class="slide-content"
-                    style="background-image: url('/content/dam/code-theory/c1.png')" >
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c1.png')">
                 </div>
                 <div class="slide-text">
                     <h2 class="slide-title">Try guarding this.</h2>
@@ -13,8 +13,7 @@
                 </div>
             </swiper-slide>
             <swiper-slide>
-                <div class="slide-content"
-                    style="background-image: url('/content/dam/code-theory/c6.png')" >
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c6.png')">
                 </div>
                 <div class="slide-text">
                     <h2 class="slide-title">It’s about to go DOWN.</h2>
@@ -22,17 +21,15 @@
                 </div>
             </swiper-slide>
             <swiper-slide>
-                <div class="slide-content"
-                style="background-image: url('/content/dam/code-theory/c3.png')" >
-            </div>
-            <div class="slide-text">
-                <h2 class="slide-title">Ice in his veins.</h2>
-                <p class="slide-time">4 days ago</p>
-            </div>
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c3.png')">
+                </div>
+                <div class="slide-text">
+                    <h2 class="slide-title">Ice in his veins.</h2>
+                    <p class="slide-time">4 days ago</p>
+                </div>
             </swiper-slide>
             <swiper-slide>
-                <div class="slide-content"
-                    style="background-image: url('/content/dam/code-theory/c4.png')" >
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c4.png')">
                 </div>
                 <div class="slide-text">
                     <h2 class="slide-title">Try guarding this.</h2>
@@ -40,8 +37,7 @@
                 </div>
             </swiper-slide>
             <swiper-slide>
-                <div class="slide-content"
-                    style="background-image: url('/content/dam/code-theory/c5.png')" >
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c5.png')">
                 </div>
                 <div class="slide-text">
                     <h2 class="slide-title">Practice hunt on deck!</h2>
@@ -49,25 +45,75 @@
                 </div>
             </swiper-slide>
             <swiper-slide>
-            <div class="slide-content"
-                style="background-image: url('/content/dam/code-theory/c6.png')" >
-            </div>
-            <div class="slide-text">
-                <h2 class="slide-title">Practice hunt on deck!</h2>
-                <p class="slide-time">4 hours ago</p>
-            </div>
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c6.png')">
+                </div>
+                <div class="slide-text">
+                    <h2 class="slide-title">Practice hunt on deck!</h2>
+                    <p class="slide-time">4 hours ago</p>
+                </div>
             </swiper-slide>
             <swiper-slide>
-                <div class="slide-content"
-                style="background-image: url('/content/dam/code-theory/c7.png')" >
-            </div>
-            <div class="slide-text">
-                <h2 class="slide-title">Practice hunt on deck!</h2>
-                <p class="slide-time">4 hours ago</p>
-            </div>
+                <div class="slide-content" style="background-image: url('/content/dam/code-theory/c7.png')">
+                </div>
+                <div class="slide-text">
+                    <h2 class="slide-title">Practice hunt on deck!</h2>
+                    <p class="slide-time">4 hours ago</p>
+                </div>
             </swiper-slide>
         </swiper-container>
-        </div>  
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiperContainer = document.querySelector('swiper-container');
+        const shadowRoot = swiperContainer.shadowRoot;
+
+        const swiperPrevButton = shadowRoot.querySelector('.swiper-button-prev');
+        const swiperNextButton = shadowRoot.querySelector('.swiper-button-next');
+
+        if (swiperPrevButton) {
+            swiperPrevButton.querySelector("svg").remove();
+            swiperPrevButton.style.display = 'flex';
+            swiperPrevButton.style.width = '48px';
+            swiperPrevButton.style.height = '48px';
+            swiperPrevButton.style.backgroundRepeat = 'no-repeat';
+            swiperPrevButton.style.backgroundImage = "url('/content/dam/venia/sites/homepage/left-arrow.svg')";
+            swiperPrevButton.style.backgroundPosition = 'center';
+            swiperPrevButton.style.justifyContent = 'center';
+            swiperPrevButton.style.alignItems = 'center';
+            swiperPrevButton.style.gap = '10px';
+            swiperPrevButton.style.borderRadius = '32px';
+            swiperPrevButton.style.border = '1.5px solid #28455C';
+            swiperPrevButton.style.backgroundColor = '#FFF';
+            swiperPrevButton.style.cursor = 'pointer';
+            swiperPrevButton.style.zIndex = '10'; 
+            swiperPrevButton.style.margin = '0 auto';
+            swiperPrevButton.style.transform = 'translateX(80%) translateY(-100%)';
+
+        }
+
+        if (swiperNextButton) {
+            swiperNextButton.querySelector("svg").remove()
+            swiperNextButton.style.display = 'flex';
+            swiperNextButton.style.width = '48px';
+            swiperNextButton.style.height = '48px';
+            swiperNextButton.style.backgroundRepeat = 'no-repeat';
+            swiperNextButton.style.backgroundImage = "url('/content/dam/venia/sites/homepage/right-arrow.svg')";
+            swiperNextButton.style.backgroundPosition = 'center';
+            swiperNextButton.style.justifyContent = 'center';
+            swiperNextButton.style.alignItems = 'center';
+            swiperNextButton.style.gap = '10px';
+            swiperNextButton.style.borderRadius = '32px';
+            swiperNextButton.style.border = '1.5px solid #28455C';
+            swiperNextButton.style.backgroundColor = '#FFF';
+            swiperNextButton.style.cursor = 'pointer';
+            swiperNextButton.style.zIndex = '10';
+            swiperNextButton.style.margin = '0 auto';
+            swiperNextButton.style.transform = 'translateX(-70%) translateY(-100%)';
+        }
+    });
+</script>

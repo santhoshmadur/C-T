@@ -1,8 +1,8 @@
 .campaign-content-wrapper {
   position: relative;
   background-size: cover;
-  background-color: #ffffff;
-  
+  background-color: $ct-color-white;
+
   .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -22,7 +22,6 @@
       background-position: center;
       background-size: cover;
       height: 395px;
-
     }
 
     swiper-slide img {
@@ -37,7 +36,7 @@
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
-      color: #fff;
+      color: $ct-color-white;
       border-radius: 15px;
       text-align: center;
       background-repeat: no-repeat;
@@ -45,7 +44,8 @@
       border-radius: 16px;
       box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
     }
-    swiper-slide.swiper-slide-fully-visible.swiper-slide-active .slide-text{
+
+    swiper-slide.swiper-slide-fully-visible.swiper-slide-active .slide-text {
       display: block !important;
     }
 
@@ -57,20 +57,18 @@
       width: 100%;
       flex-direction: column;
       gap: 4px;
-   
+
       .slide-title {
         font-size: 1.2rem;
         font-weight: 500;
         margin: 5px 0;
       }
-      .slide-time {
-         font-size: 0.8rem;
-         color: #999;
-       }
-    }
- 
 
-    
+      .slide-time {
+        font-size: 0.8rem;
+        color: #999;
+      }
+    }
 
     .swiper-slide {
       display: flex;
@@ -78,12 +76,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      background: #fff;
+      background: $ct-color-white;
       border-radius: 15px;
       border: 1px solid black;
       padding: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
   }
-
 }
