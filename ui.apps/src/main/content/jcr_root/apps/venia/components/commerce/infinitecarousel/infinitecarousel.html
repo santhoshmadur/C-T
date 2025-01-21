@@ -90,7 +90,10 @@
             swiperPrevButton.style.border = '1.5px solid #28455C';
             swiperPrevButton.style.backgroundColor = '#FFF';
             swiperPrevButton.style.cursor = 'pointer';
-            swiperPrevButton.style.zIndex = '10'; // Ensure the button is above other elements
+            swiperPrevButton.style.zIndex = '10'; 
+            swiperPrevButton.style.margin = '0 auto';
+            swiperPrevButton.style.transform = 'translateX(80%) translateY(-100%)';
+
         }
 
         if (swiperNextButton) {
@@ -108,7 +111,9 @@
             swiperNextButton.style.border = '1.5px solid #28455C';
             swiperNextButton.style.backgroundColor = '#FFF';
             swiperNextButton.style.cursor = 'pointer';
-            swiperNextButton.style.zIndex = '10'; // Ensure the button is above other elements
+            swiperNextButton.style.zIndex = '10';
+            swiperNextButton.style.margin = '0 auto';
+            swiperNextButton.style.transform = 'translateX(-70%) translateY(-100%)';
         }
     });
 </script>
