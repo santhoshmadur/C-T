@@ -16,7 +16,7 @@ body {
     color: $venia-text;
     margin: 0 auto;
     padding: 0;
-    min-width: 1400px;
+    // min-width: 1400px;
     max-width: 1440px;
 }
 
@@ -144,4 +144,10 @@ button:disabled {
 
 .ct-button-tertiary:hover {
     color: $ct-color-white;
+}
+
+@media (min-width:1000px) and (max-width: 1320px) {
+    body{
+        min-width: 1400px;
+    }
 }
