@@ -578,37 +578,6 @@
                     </default>
                 </product>
             </commerce>
-            <floatingbanner jcr:primaryType="nt:unstructured">
-                <policy_1735895504943
-                    jcr:lastModified="{Date}2025-01-03T14:44:02.758+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="floating-banner"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    allowedTypes="[h1,h2,h3,h4,h5,h6]"
-                    linkDisabled="false"
-                    type="h1">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                    <cq:styleGroups jcr:primaryType="nt:unstructured">
-                        <item0
-                            cq:styleGroupLabel="floating-banner"
-                            jcr:primaryType="nt:unstructured">
-                            <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0
-                                    cq:styleClasses="floating-banner-black-bg"
-                                    cq:styleId="1735895528255"
-                                    cq:styleLabel="black-bg"
-                                    jcr:primaryType="nt:unstructured"/>
-                                <item1
-                                    cq:styleClasses="floating-banner-gray-bg"
-                                    cq:styleId="1735897221424"
-                                    cq:styleLabel="gray-bg"
-                                    jcr:primaryType="nt:unstructured"/>
-                            </cq:styles>
-                        </item0>
-                    </cq:styleGroups>
-                </policy_1735895504943>
-            </floatingbanner>
             <headernavigation jcr:primaryType="nt:unstructured">
                 <policy_1735898948983
                     jcr:lastModified="{Date}2025-01-03T16:01:36.025+05:30"
@@ -657,34 +626,6 @@
                     </cq:styleGroups>
                 </policy_1735898948983>
             </headernavigation>
-            <productlists jcr:primaryType="nt:unstructured">
-                <policy_1736261357857
-                    jcr:lastModified="{Date}2025-01-07T20:19:42.183+05:30"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="Products-lists"
-                    sling:resourceType="wcm/core/components/policy/policy">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                    <cq:styleGroups jcr:primaryType="nt:unstructured">
-                        <item0
-                            cq:styleGroupLabel="Products-lists"
-                            jcr:primaryType="nt:unstructured">
-                            <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0
-                                    cq:styleClasses="products-lists-dark-gray"
-                                    cq:styleId="1736261372445"
-                                    cq:styleLabel="dark-gray"
-                                    jcr:primaryType="nt:unstructured"/>
-                                <item1
-                                    cq:styleClasses="products-lists-light-gray"
-                                    cq:styleId="1736261376257"
-                                    cq:styleLabel="light-gray"
-                                    jcr:primaryType="nt:unstructured"/>
-                            </cq:styles>
-                        </item0>
-                    </cq:styleGroups>
-                </policy_1736261357857>
-            </productlists>
         </components>
     </venia>
 </jcr:root>
