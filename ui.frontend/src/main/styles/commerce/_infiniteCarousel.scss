@@ -1,7 +1,7 @@
 .campaign-content-wrapper {
   position: relative;
   background-size: cover;
-  background-color: #ffffff;
+  background-color: $ct-color-white;
 
   .carousel-container {
     width: 100%;
@@ -22,7 +22,6 @@
       background-position: center;
       background-size: cover;
       height: 395px;
-
     }
 
     swiper-slide img {
@@ -37,7 +36,7 @@
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
-      color: #fff;
+      color: $ct-color-white;
       border-radius: 15px;
       text-align: center;
       background-repeat: no-repeat;
@@ -77,43 +76,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      background: #fff;
+      background: $ct-color-white;
       border-radius: 15px;
       border: 1px solid black;
       padding: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    // .swiper-button-prev::part(button),
-    // .swiper-button-next::part(button) {
-    //     all: unset;
-    //     /* Add your custom styles */
-    //     background-image: url("https://picsum.photos/20/16") !important;
-    //   display: flex !important;
-    //   width: 48px !important;
-    //   height: 48px !important;
-    //   background-repeat: no-repeat !important;
-    //   background-position: center !important;
-    //   justify-content: center !important;
-    //   align-items: center !important;
-    //   gap: 10px !important;
-    //   border-radius: 32px !important;
-    //   border: 1.5px solid var(--Dark-Color, #28455C) !important;
-    //   background: #FFF !important;
-    //     cursor: pointer;
-    
-    // }
-
-    // .swiper-button-prev::part(button) {
-    //   transform: rotate(180deg) !important;
-    // }
-
-  //   :root {
-  //     --swiper-navigation-size: 48px; /* Example variable */
-  //     --swiper-navigation-color: #FFF; /* Example variable */
-  //     --swiper-navigation-border-color: #28455C; /* Example variable */
-  // }
-
   }
-
 }
