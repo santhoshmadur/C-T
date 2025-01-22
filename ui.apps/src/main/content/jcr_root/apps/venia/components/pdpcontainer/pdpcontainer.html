@@ -169,11 +169,11 @@
   });
  
   //toggle mens slider on hoodie page;
-  if(rootContainer.classList.value.includes('hood')){
+  if(rootContainer.getAttribute("id").includes('hood')){
     document.querySelector('#men-toggle').click();
     colorOptions.forEach(box => box.classList.remove('colorActive'));
     document.querySelector("#orange").click();
   }else{
-    updateImageBackground("blue");
+    document.querySelector("#blue").click();
   }
 </script>
