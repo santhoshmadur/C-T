@@ -95,6 +95,7 @@
         background-color: transparent;
         position: absolute;
         top: 48px;
+        max-width: 1440px;
 
         .headernavigation__left .multifield-wrapper__text a {
             color: $ct-color-white;
