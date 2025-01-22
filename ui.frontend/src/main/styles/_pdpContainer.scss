@@ -30,24 +30,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
     width: 65%;
-    height: 900px;
-    padding: 10px;
+    height: 850px;
     background: rgba(200,192,172,0.3);
   
     .image-section{
       height: 50%;
+      width: 100%;
   
       #top-image-section {
-        width: 214px;
-        height: 322px;
-        position: relative;
-        transition: background-color 0.3s ease-in-out;
+        width: 836px;
+        display: flex;
+        height: 405px;
+        justify-content: space-around;
+        margin: 0px auto;
   
         img{
-          width: 220px;
-          height: 320px;
+          width: 566px;
+          height: 556px;
         }
       }
   
@@ -55,11 +55,12 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        gap: 100px;
+        height: 451px;
   
         img{
-          width: 50%;
-          height: 320px;
+          width: 456px;
+          height: 426px;
+          max-width: 419px;
         }
       }
     }
@@ -114,6 +115,7 @@
           cursor: pointer;
 
           .toggle-option{
+            pointer-events: none;
             display: flex;
             flex: 1;
             padding: 16px 24px;
@@ -253,5 +255,21 @@
         background: $ct-color-white;
       }
     }
+  }
+}
+
+.product-hoodie .image-section #top-image-section{
+  margin: 10px auto !important;
+
+  img{
+    width: 406px !important;
+    height: 432px !important;
+  }
+}
+.product-hat .image-section #top-image-section {
+  margin: 50px auto !important;
+  img{
+      width: 456px !important;
+      height: 332px !important;
   }
 }
