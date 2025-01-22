@@ -35,14 +35,14 @@
             <span> COLORS</span>
           </div>
           <div class="color-options" id="color-options">
-            <div class="color-item" id="orange">
-              <img src="${properties.productcolor3}" alt="Orange" />
-            </div>
-            <div class="color-item" id="blue">
+            <div class="color-item colorActive" id="blue">
               <img src="${properties.productcolor1}" alt="Blue" />
             </div>
             <div class="color-item" id="gray">
               <img src="${properties.productcolor2}" alt="Gray" />
+            </div>
+            <div class="color-item" id="orange">
+              <img src="${properties.productcolor3}" alt="Orange" />
             </div>
             <div class="color-item" id="white">
               <img src="${properties.productcolor4}" alt="White" />
@@ -167,10 +167,13 @@
     });
     sizeOptions.appendChild(sizeButton);
   });
-  updateImageBackground("orange");
+ 
   //toggle mens slider on hoodie page;
-
-  if(sHoodiePage.classList.value.includes('hood')){
-    document.querySelector('#men-toggle').click()
+  if(rootContainer.classList.value.includes('hood')){
+    document.querySelector('#men-toggle').click();
+    colorOptions.forEach(box => box.classList.remove('colorActive'));
+    document.querySelector("#orange").click();
+  }else{
+    updateImageBackground("blue");
   }
 </script>
