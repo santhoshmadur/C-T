@@ -1,137 +1,141 @@
-
 <div class="app-container">
-    <div class="product-container">
-        <div class="image-detail-container">
-            <div class="image-section">
-              <div id="top-image-section">
-                  <img src="/content/dam/venia/sites/black.png" alt="black" class="image" />
-              </div>
-            </div>
-            <div class="image-section">
-              <div id="bottom-image-section">
-                <img src="/content/dam/venia/sites/white.png" alt="black" class="image" />
-                <img src="/content/dam/venia/sites/gray.png" alt="gray" class="image" />
-              </div>
-            </div>
+  <div class="product-container">
+    <div class="image-detail-container">
+      <div class="image-section">
+        <div id="top-image-section">
+          <img src="${properties.productimage1}" alt="black" class="image" />
         </div>
-        <div class="details-section flex-column">
-            <div class="details-section__description flex-column">
-                <div class="details-section__description--heading">INAUGURAL SEASON WOLVES HOODIE</div>
-                <div class="details-section__description--price">$89</div>
-                <div class="details-section__description--subHeading">Show your team pride in ultimate comfort.</div>
-                <div class="details-section__description--text">Wrap yourself in the spirit of Wolves with this premium hoodie. Made from a soft, durable cotton-poly blend, it's perfect for repping the team wherever you go.</div>
-            </div>
-             <!-- hide for hat-->
-            <div class="details-section__toggle-section">
-              <div class="toggle-slider">
-                <div class="toggle-option" id="women-toggle">WOMEN'S</div>
-                <div class="toggle-option" id="men-toggle">MEN'S</div>
-                <div class="toggle-indicator"></div>
-              </div>
-            </div>
-             <!-- hide for hat -->
-            <div class="details-section__color-selector">
-              <div class="inner-div"><span> COLORS</span></div>
-                <div class="color-options" id="color-options">
-                  <div class="color-item colorActive" id="blue">
-                    <img src="/content/dam/venia/sites/gray.png" alt="Blue Jersey" />
-                  </div>
-                  <div class="color-item" id="gray">
-                    <img src="/content/dam/venia/sites/gray.png" alt="Gray Jersey" />
-                  </div>
-                  <div class="color-item" id="orange">
-                    <img src="/content/dam/venia/sites/gray.png" alt="Orange Jersey" />
-                  </div>
-                  <div class="color-item" id="white">
-                    <img src="/content/dam/venia/sites/gray.png" alt="White Jersey" />
-                  </div>
-                </div>
-            </div>
-            <div class="details-section__size-selector">
-                <div class="select-size-heading"> 
-                  <div class="inner-div"><span> SIZES </span></div>
-                  <!-- show for other goodies -->
-                  <div class="size-options allsizes" id="all-sizes"></div>
-                  <!-- show only for hat -->
-                  <div class="size-options one-size" id="one-size">
-                    <button class="size-button selected one-size">One-size fits all</button>
-                  </div>
-                  
-                </div>
-            </div>
-            <div class="details-section__shipping">
-              <button class="details-section__shipping--button add-to-bag">
-                <span>Add To Bag</span>
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
-                  <path d="M5.85237 1.33398C4.54583 1.33398 3.48194 2.3365 3.48194 3.58868V4.29696H1.85235C1.8477 4.29675 1.84305 4.29675 1.8384 4.29696C1.7671 4.30337 1.71057 4.3599 1.70416 4.4312L0.667147 13.9127C0.666941 13.9173 0.666941 13.9219 0.667147 13.9266C0.667147 14.3339 1.00053 14.6673 1.40789 14.6673H10.2968C10.7042 14.6673 11.0376 14.3339 11.0376 13.9266C11.0378 13.9219 11.0378 13.9173 11.0376 13.9127L10.0005 4.4312C9.99331 4.35483 9.92904 4.29665 9.85236 4.29696H8.22277V3.58868C8.22277 2.3365 7.15891 1.33398 5.85237 1.33398ZM5.85237 1.63026C7.00804 1.63026 7.9264 2.50399 7.9264 3.58865V4.29693H3.77823V3.58865C3.77823 2.50399 4.69673 1.63026 5.85237 1.63026ZM1.98674 4.59323H3.48207V5.18588C3.48155 5.22546 3.49342 5.26012 3.52475 5.29191C3.55611 5.32373 3.63026 5.33614 3.63026 5.33614C3.63026 5.33614 3.70441 5.32373 3.73577 5.29191C3.7671 5.26012 3.77897 5.22546 3.77845 5.18588V4.59323H7.92662V5.33398C7.9261 5.37366 7.9415 5.4119 7.9693 5.44011C7.9971 5.46832 8.03513 5.48423 8.07481 5.48423C8.11449 5.48423 8.15252 5.46832 8.18032 5.44011C8.20812 5.4119 8.22352 5.37366 8.223 5.33398V4.59323H9.71832L10.7415 13.9266V13.9313C10.739 14.1763 10.5427 14.3711 10.297 14.3711H1.4081C1.16246 14.3711 0.966115 14.1763 0.963628 13.9313V13.9266L1.98674 4.59323Z" stroke="white" stroke-width="0.933333"/>
-                  </svg>
-              </span>
-              </button>
-                <button class="details-section__shipping--button try-on">
-                  <span>TRY ON WITH AI </span>
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
-                      <path d="M11.3633 1.36523L13.1558 6.20944L18 8.00195L13.1558 9.79447L11.3633 14.6387L9.57076 9.79447L4.72656 8.00195L9.57076 6.20944L11.3633 1.36523Z" fill="#28455C"/>
-                      <path d="M5.62109 10.2188L6.32903 12.1319L8.24219 12.8398L6.32903 13.5478L5.62109 15.4609L4.91316 13.5478L3 12.8398L4.91316 12.1319L5.62109 10.2188Z" fill="#28455C"/>
-                      <path d="M6.33047 2.21875L6.68982 3.18987L7.66094 3.54922L6.68982 3.90857L6.33047 4.87969L5.97112 3.90857L5 3.54922L5.97112 3.18987L6.33047 2.21875Z" fill="#28455C"/>
-                      </svg>
-                  </span>
-                </button>
-            </div>
-            <div class="details-section__sustainability-info"> This product is made with at least 50% sustainable materials, using a blend of both recycled polyester and organix cotton fibres.</div>
+      </div>
+      <div class="image-section">
+        <div id="bottom-image-section">
+          <img src="${properties.productimage2}" alt="black" class="image" />
+          <img src="${properties.productimage3}" alt="gray" class="image" />
         </div>
+      </div>
     </div>
+    <div class="details-section flex-column">
+      <div class="details-section__description flex-column">
+        <div class="details-section__description--heading">${properties.productTitle}</div>
+        <div class="details-section__description--price">${properties.productPrice}</div>
+        <div class="details-section__description--subHeading">${properties.productDescription}</div>
+        <div class="details-section__description--text">${properties.productDetailsDescription}</div>
+      </div>
+      <sly data-sly-test="${properties.genderOptions == 'true'}">
+        <div class="details-section__toggle-section">
+          <div class="toggle-slider">
+            <div class="toggle-option" id="women-toggle">WOMEN'S</div>
+            <div class="toggle-option" id="men-toggle">MEN'S</div>
+            <div class="toggle-indicator"></div>
+          </div>
+        </div>
+      </sly>
+      <sly data-sly-test="${properties.colorOptions == 'true'}">
+        <div class="details-section__color-selector">
+          <div class="inner-div">
+            <span> COLORS</span>
+          </div>
+          <div class="color-options" id="color-options">
+            <div class="color-item colorActive" id="blue">
+              <img src="${properties.productcolor1}" alt="Blue Jersey" />
+            </div>
+            <div class="color-item" id="gray">
+              <img src="${properties.productcolor2}" alt="Gray Jersey" />
+            </div>
+            <div class="color-item" id="orange">
+              <img src="${properties.productcolor3}" alt="Orange Jersey" />
+            </div>
+            <div class="color-item" id="white">
+              <img src="${properties.productcolor4}" alt="White Jersey" />
+            </div>
+          </div>
+        </div>
+      </sly>
+      <div class="details-section__size-selector">
+        <div class="select-size-heading">
+          <div class="inner-div">
+            <span> SIZES </span>
+          </div>
+          <sly data-sly-test="${properties.sizeOptions == 'true'}">
+            <div class="size-options allsizes" id="all-sizes"></div>
+          </sly>
+          <sly data-sly-test="${properties.sizeOptions != 'true'}">
+            <div class="size-options one-size" id="one-size">
+              <button class="size-button selected one-size">One-size fits all</button>
+            </div>
+          </sly>
+        </div>
+      </div>
+      <div class="details-section__shipping">
+        <button class="details-section__shipping--button add-to-bag">
+          <span>Add To Bag</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="none">
+              <path d="M5.85237 1.33398C4.54583 1.33398 3.48194 2.3365 3.48194 3.58868V4.29696H1.85235C1.8477 4.29675 1.84305 4.29675 1.8384 4.29696C1.7671 4.30337 1.71057 4.3599 1.70416 4.4312L0.667147 13.9127C0.666941 13.9173 0.666941 13.9219 0.667147 13.9266C0.667147 14.3339 1.00053 14.6673 1.40789 14.6673H10.2968C10.7042 14.6673 11.0376 14.3339 11.0376 13.9266C11.0378 13.9219 11.0378 13.9173 11.0376 13.9127L10.0005 4.4312C9.99331 4.35483 9.92904 4.29665 9.85236 4.29696H8.22277V3.58868C8.22277 2.3365 7.15891 1.33398 5.85237 1.33398ZM5.85237 1.63026C7.00804 1.63026 7.9264 2.50399 7.9264 3.58865V4.29693H3.77823V3.58865C3.77823 2.50399 4.69673 1.63026 5.85237 1.63026ZM1.98674 4.59323H3.48207V5.18588C3.48155 5.22546 3.49342 5.26012 3.52475 5.29191C3.55611 5.32373 3.63026 5.33614 3.63026 5.33614C3.63026 5.33614 3.70441 5.32373 3.73577 5.29191C3.7671 5.26012 3.77897 5.22546 3.77845 5.18588V4.59323H7.92662V5.33398C7.9261 5.37366 7.9415 5.4119 7.9693 5.44011C7.9971 5.46832 8.03513 5.48423 8.07481 5.48423C8.11449 5.48423 8.15252 5.46832 8.18032 5.44011C8.20812 5.4119 8.22352 5.37366 8.223 5.33398V4.59323H9.71832L10.7415 13.9266V13.9313C10.739 14.1763 10.5427 14.3711 10.297 14.3711H1.4081C1.16246 14.3711 0.966115 14.1763 0.963628 13.9313V13.9266L1.98674 4.59323Z" stroke="white" stroke-width="0.933333" />
+            </svg>
+          </span>
+        </button>
+        <button class="details-section__shipping--button try-on">
+          <span>TRY ON WITH AI </span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
+              <path d="M11.3633 1.36523L13.1558 6.20944L18 8.00195L13.1558 9.79447L11.3633 14.6387L9.57076 9.79447L4.72656 8.00195L9.57076 6.20944L11.3633 1.36523Z" fill="#28455C" />
+              <path d="M5.62109 10.2188L6.32903 12.1319L8.24219 12.8398L6.32903 13.5478L5.62109 15.4609L4.91316 13.5478L3 12.8398L4.91316 12.1319L5.62109 10.2188Z" fill="#28455C" />
+              <path d="M6.33047 2.21875L6.68982 3.18987L7.66094 3.54922L6.68982 3.90857L6.33047 4.87969L5.97112 3.90857L5 3.54922L5.97112 3.18987L6.33047 2.21875Z" fill="#28455C" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="details-section__sustainability-info">${properties.productMade}</div>
+    </div>
+  </div>
 </div>
 <script>
-    const colors = ["rgb(0 0 0)", "rgb(255 255 255)", "rgb(200 200 200)"];
-    const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
-    const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/white.png', '/content/dam/venia/sites/gray.png'];
-    let selectedColor = "rgb(64 64 64)";
-    let selectedSize = "M";
-    let selectedIndex = 0;
-    const colorOptions = document.querySelectorAll(".color-item");
-    const sizeOptions = document.getElementById("all-sizes");
-
-    const toggleSlider = document.querySelector('.toggle-slider');
-    const toggleOptions = document.querySelectorAll('.toggle-option');
-    const toggleIndicator = document.querySelector('.toggle-indicator');
-    
-    toggleSlider.addEventListener('click', (e) => {
-      const clickedOption = e.target;
-      if (clickedOption.id === 'women-toggle') {
-        toggleIndicator.style.left = '2px';
-        toggleOptions[0].classList.add('active');
-        toggleOptions[1].classList.remove('active');
-      } else if (clickedOption.id === 'men-toggle') {
-        toggleIndicator.style.left = 'calc(50% + 2px)';
-        toggleOptions[1].classList.add('active');
-        toggleOptions[0].classList.remove('active');
-      }
-    });
-
-    function updateImageBackground() {
-      imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
-      imageSection.style.backgroundSize = "contain";
-      imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
+  const colors = ["rgb(0 0 0)", "rgb(255 255 255)", "rgb(200 200 200)"];
+  const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
+  const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/white.png', '/content/dam/venia/sites/gray.png'];
+  let selectedColor = "rgb(64 64 64)";
+  let selectedSize = "M";
+  let selectedIndex = 0;
+  const colorOptions = document.querySelectorAll(".color-item");
+  const sizeOptions = document.getElementById("all-sizes");
+  const toggleSlider = document.querySelector('.toggle-slider');
+  const toggleOptions = document.querySelectorAll('.toggle-option');
+  const toggleIndicator = document.querySelector('.toggle-indicator');
+  toggleSlider.addEventListener('click', (e) => {
+    const clickedOption = e.target;
+    if (clickedOption.id === 'women-toggle') {
+      toggleIndicator.style.left = '2px';
+      toggleOptions[0].classList.add('active');
+      toggleOptions[1].classList.remove('active');
+    } else if (clickedOption.id === 'men-toggle') {
+      toggleIndicator.style.left = 'calc(50% + 2px)';
+      toggleOptions[1].classList.add('active');
+      toggleOptions[0].classList.remove('active');
     }
-    colorOptions.forEach((color, index) => {
-      color.addEventListener("click", () => {
-        colorOptions.forEach(box => box.classList.remove('colorActive'));
-        color.classList.add("colorActive");
-      });
+  });
+
+  function updateImageBackground() {
+    imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
+    imageSection.style.backgroundSize = "contain";
+    imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
+  }
+  colorOptions.forEach((color, index) => {
+    color.addEventListener("click", () => {
+      colorOptions.forEach(box => box.classList.remove('colorActive'));
+      color.classList.add("colorActive");
     });
-    sizes.forEach(size => {
-      const sizeButton = document.createElement("button");
-      sizeButton.className = "size-button";
-      sizeButton.textContent = size;
-      if (size === selectedSize) sizeButton.classList.add("selected");
-      sizeButton.addEventListener("click", () => {
-        selectedSize = size;
-        document.querySelectorAll(".size-button").forEach(button => button.classList.remove("selected"));
-        sizeButton.classList.add("selected");
-      });
-      sizeOptions.appendChild(sizeButton);
+  });
+  sizes.forEach(size => {
+    const sizeButton = document.createElement("button");
+    sizeButton.className = "size-button";
+    sizeButton.textContent = size;
+    if (size === selectedSize) sizeButton.classList.add("selected");
+    sizeButton.addEventListener("click", () => {
+      selectedSize = size;
+      document.querySelectorAll(".size-button").forEach(button => button.classList.remove("selected"));
+      sizeButton.classList.add("selected");
     });
-    updateImageBackground();
+    sizeOptions.appendChild(sizeButton);
+  });
+  updateImageBackground();
 </script>
