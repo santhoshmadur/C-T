@@ -1,15 +1,15 @@
-<div class="app-container">
+<div class="app-container" id="${properties.productType}">
   <div class="product-container">
     <div class="image-detail-container">
       <div class="image-section">
         <div id="top-image-section">
-          <img src="${properties.productimage1}" alt="black" class="image" />
+          <img src="${properties.productimage1}" id="top_image" alt="black" class="image" />
         </div>
       </div>
       <div class="image-section">
         <div id="bottom-image-section">
-          <img src="${properties.productimage2}" alt="black" class="image" />
-          <img src="${properties.productimage3}" alt="gray" class="image" />
+          <img src="${properties.productimage2}" id="bottom_image_1" alt="black" class="image" />
+          <img src="${properties.productimage3}" id="bottom_image_2" alt="gray" class="image" />
         </div>
       </div>
     </div>
@@ -36,16 +36,16 @@
           </div>
           <div class="color-options" id="color-options">
             <div class="color-item colorActive" id="blue">
-              <img src="${properties.productcolor1}" alt="Blue Jersey" />
+              <img src="${properties.productcolor1}" alt="Blue" />
             </div>
             <div class="color-item" id="gray">
-              <img src="${properties.productcolor2}" alt="Gray Jersey" />
+              <img src="${properties.productcolor2}" alt="Gray" />
             </div>
             <div class="color-item" id="orange">
-              <img src="${properties.productcolor3}" alt="Orange Jersey" />
+              <img src="${properties.productcolor3}" alt="Orange" />
             </div>
             <div class="color-item" id="white">
-              <img src="${properties.productcolor4}" alt="White Jersey" />
+              <img src="${properties.productcolor4}" alt="White" />
             </div>
           </div>
         </div>
@@ -92,7 +92,28 @@
 <script>
   const colors = ["rgb(0 0 0)", "rgb(255 255 255)", "rgb(200 200 200)"];
   const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
-  const imagePath = ['/content/dam/venia/sites/black.png', '/content/dam/venia/sites/white.png', '/content/dam/venia/sites/gray.png'];
+  const images = {
+    orange:{
+      "top_image":"orange/product-1.png",
+      "bottom_image_1":"orange/product-2.png",
+      "bottom_image_2":"orange/product-3.png",
+    },
+    blue:{
+    "top_image":"blue/product-1.png",
+    "bottom_image_1":"blue/product-2.png",
+    "bottom_image_2":"blue/product-3.png",
+    },
+    gray:{
+      "top_image":"gray/product-1.png",
+      "bottom_image_1":"gray/product-2.png",
+      "bottom_image_2":"gray/product-3.png",
+    },
+    white:{
+      "top_image":"white/product-1.png",
+      "bottom_image_1":"white/product-2.png",
+      "bottom_image_2":"white/product-3.png",
+    }
+  }
   let selectedColor = "rgb(64 64 64)";
   let selectedSize = "M";
   let selectedIndex = 0;
@@ -101,6 +122,8 @@
   const toggleSlider = document.querySelector('.toggle-slider');
   const toggleOptions = document.querySelectorAll('.toggle-option');
   const toggleIndicator = document.querySelector('.toggle-indicator');
+  const rootContainer = document.querySelector(".app-container");
+
   toggleSlider.addEventListener('click', (e) => {
     const clickedOption = e.target;
     if (clickedOption.id === 'women-toggle') {
@@ -114,15 +137,22 @@
     }
   });
 
-  function updateImageBackground() {
-    imageSection.style.backgroundImage = "url(" + imagePath[selectedIndex] + ")";
-    imageSection.style.backgroundSize = "contain";
-    imageSection.style.backgroundRepeat = "no-repeat, no-repeat";
+  function updateImageBackground(key) {
+    const prefixPath = '/content/dam/venia/sites/products/';
+    const currentProduct = rootContainer.getAttribute("id").split("-")[1]; //hoodie or hat or jersey
+    const top_image = document.querySelector("#top_image");
+    const bottom_image_1 = document.querySelector("#bottom_image_1");
+    const bottom_image_2 = document.querySelector("#bottom_image_2");
+    top_image.src = ""+ prefixPath + "/" + currentProduct + "/" + images[key].top_image;
+    bottom_image_1.src = ""+ prefixPath + "/" + currentProduct + "/" + images[key].bottom_image_2;
+    bottom_image_2.src = ""+ prefixPath + "/" + currentProduct + "/" + images[key].bottom_image_1;
   }
   colorOptions.forEach((color, index) => {
     color.addEventListener("click", () => {
       colorOptions.forEach(box => box.classList.remove('colorActive'));
       color.classList.add("colorActive");
+      const currentColor =  color.id;
+      updateImageBackground(currentColor);
     });
   });
   sizes.forEach(size => {
@@ -137,5 +167,13 @@
     });
     sizeOptions.appendChild(sizeButton);
   });
-  updateImageBackground();
+ 
+  //toggle mens slider on hoodie page;
+  if(rootContainer.getAttribute("id").includes('hood')){
+    document.querySelector('#men-toggle').click();
+    colorOptions.forEach(box => box.classList.remove('colorActive'));
+    document.querySelector("#orange").click();
+  }else{
+    document.querySelector("#blue").click();
+  }
 </script>

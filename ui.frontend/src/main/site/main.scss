@@ -9,3 +9,10 @@
 @import '../styles/**/*.scss';
 @import './styles/*.scss';
 
+
+body{
+    width: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

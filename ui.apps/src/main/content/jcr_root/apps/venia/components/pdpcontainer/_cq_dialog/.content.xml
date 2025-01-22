@@ -27,6 +27,26 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
+                                            <producttype
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Product Type"
+                                                name="./productType">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <product-hat
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="product-hat"
+                                                        value="product-hat"/>
+                                                    <product-hoodie
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="product-hoodie"
+                                                        value="product-hoodie"/>
+                                                    <product-jersey
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="product-jersey"
+                                                        value="product-jersey"/>
+                                                </items>
+                                            </producttype>
                                             <producttitle
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
