@@ -255,12 +255,18 @@
   }
 }
 
-#product-hoodie .image-section #top-image-section{
-  margin: 10px auto !important;
+#product-hoodie .image-section{
 
-  img{
-    width: 406px !important;
-    height: 432px !important;
+  #top-image-section{
+    margin: 10px auto !important;
+
+    img{
+      width: 406px !important;
+      height: 432px !important;
+    }
+  }
+  #bottom-image-section img {
+    max-width: 402px !important;
   }
 }
 #product-hat .image-section #top-image-section {
