@@ -3,13 +3,19 @@
     <div class="image-detail-container">
       <div class="image-section">
         <div id="top-image-section">
-          <img src="${properties.productimage1}" id="top_image" alt="black" class="image" />
+          <img src="${properties.productimage1}" id="top_image" alt="black" class="image" loading="eager" />
         </div>
       </div>
       <div class="image-section">
         <div id="bottom-image-section">
-          <img src="${properties.productimage2}" id="bottom_image_1" alt="black" class="image" />
-          <img src="${properties.productimage3}" id="bottom_image_2" alt="gray" class="image" />
+          <picture>
+            <source srcset="${properties.productimage2}" type="image/webp">
+            <img src="${properties.productimage2}" id="bottom_image_1" alt="black" class="image" loading="eager">
+          </picture>
+          <picture>
+            <source srcset="${properties.productimage3}" type="image/webp">
+            <img src="${properties.productimage3}" id="bottom_image_2" alt="gray" class="image" loading="eager">
+          </picture>
         </div>
       </div>
     </div>
