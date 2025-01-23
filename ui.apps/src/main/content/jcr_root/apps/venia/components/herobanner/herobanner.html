@@ -3,11 +3,15 @@
     <div class="heroBanner">
       <div class="heroBanner-content-wrapper">
         <div class="heroBanner-heading">
-          <sly data-sly-resource="${'left' @ resourceType='venia/components/text'}"></sly>
+            <div class="heroBanner-heading-fillText white-border-heading bigger-font">The wolves</div>
+            <div class="heroBanner-heading-dashedText white-heading">come out at night</div>
+            <div class="heroBanner-heading-dashedText white-sub-heading">show your loyalty to the pack and win tickets</div>
         </div>
         <div class="heroBanner-content">
           <div class="heroBanner-content-text-wrapper">
-            <sly data-sly-resource="${'center' @ resourceType='venia/components/text'}"></sly>
+           <div class="heroBanner-content-text">
+            Use the clues to name three players as fast as you can. Best time wins free tickets for you and three friends to the next game!
+           </div>
           </div>
           <button class="heroBanner-content-button">${properties.text}<img src="/content/dam/venia/sites/clp/stopwatch-icon.svg" alt="start Icon" />
           </button>
@@ -29,14 +33,15 @@
       </div>
     </div>
   </div>
-  <sly data-sly-test="${!wcmmode.edit}">
   <div id="gameModal" class="modal hidden">
     <div class="modal-content" style="background-image: url('/content/dam/venia/sites/clp/popup.png');">
       <span class="close-button">&times; </span>
       <div class="modal-wrapper">
         <div class="modal-body">
           <div class="modal-body-wolf-image" style="background-image: url('/content/dam/venia/sites/clp/bg-logo.png');"></div>
-          <sly data-sly-resource="${'popupcenter' @ resourceType='venia/components/text'}"></sly>
+          <div class="modal-body-pack-heading">THIS PACK NEEDS</div>
+          <div class="wolves">ALPHA WOLVES</div>
+          <div class="modal-body-pack-text">Be among the first 777 fans to join the pack and secure priority access to inaugural season opener tickets, plus 10% discount on Wolves merch.</div>
           <div class="user-input-wrapper">
             <div class="input-container">
               <input type="email" placeholder="Your Email Address" class="email-input" />
@@ -53,7 +58,6 @@
       </div>
     </div>
   </div>
-  </sly>
 </div>
 <script>
   const modal = document.getElementById("gameModal");

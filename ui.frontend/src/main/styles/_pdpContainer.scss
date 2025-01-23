@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding: 56px 56px 0;
+    // padding: 56px 56px 0;
     position: relative;
     width: 100%;
   }
@@ -30,24 +30,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
     width: 65%;
-    height: 900px;
-    padding: 10px;
+    overflow: hidden;
+    height: 1030px;
     background: rgba(200,192,172,0.3);
   
     .image-section{
       height: 50%;
+      width: 100%;
   
       #top-image-section {
-        width: 214px;
-        height: 322px;
-        position: relative;
-        transition: background-color 0.3s ease-in-out;
+        width: 836px;
+        display: flex;
+        height: 405px;
+        justify-content: space-around;
+        margin: 0px auto;
   
         img{
-          width: 220px;
-          height: 320px;
+          width: 566px;
+          height: 556px;
         }
       }
   
@@ -55,11 +56,12 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        gap: 100px;
+        height: 451px;
   
         img{
-          width: 50%;
-          height: 320px;
+          width: 100%;
+          height: 516px;
+          max-width: 468px;
         }
       }
     }
@@ -82,9 +84,10 @@
 
       &--subHeading {
         font-size: 16px;
-        font-weight: 600;
         letter-spacing: -0.48px;
         color: $ct-color-gray-dark;
+        font-weight: 800;
+        margin-top: 16px;
       }
 
       &--text {
@@ -100,8 +103,7 @@
     }
     &__toggle-section{
        display: flex;
-       margin: 10px 0;
-
+       margin: 24px 0 16px;
        .toggle-slider{
           position: relative;
           display: flex;
@@ -114,6 +116,7 @@
           cursor: pointer;
 
           .toggle-option{
+            pointer-events: none;
             display: flex;
             flex: 1;
             padding: 16px 24px;
@@ -146,9 +149,9 @@
       .inner-div{
         font-size: 24px;
         font-style: normal;
-        font-weight: 700;
         line-height: 100%;
-        margin-bottom: 9pt;
+        margin-bottom: 24px;
+        font-weight: 800;
     
       }
       .color-options{
@@ -181,7 +184,7 @@
     }
 
     &__size-selector{
-      margin: 10px 0;
+      margin: 16px 0 24px;
 
       .select-size-heading{
         width: 400px;
@@ -191,9 +194,8 @@
         font-weight: 800;
         font-size: 24px;
         font-style: normal;
-        font-weight: 700;
         line-height: 100%;
-        margin-bottom: 9pt;
+        margin-bottom: 24px;
       }
       
       .size-options {
@@ -219,7 +221,7 @@
     }
     &__sustainability-info{
       width: 403px;
-      padding: 10px;
+      padding: 24px 10px 10px;
       color: $ct-color-gray-dark;
       font-size: 14px;
       font-style: normal;
@@ -253,5 +255,14 @@
         background: $ct-color-white;
       }
     }
+  }
+}
+
+
+#product-hat .image-section #top-image-section {
+  margin: 50px auto !important;
+  img{
+      width: 476px !important;
+      height: 362px !important;
   }
 }

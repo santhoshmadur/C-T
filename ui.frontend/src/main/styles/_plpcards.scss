@@ -1,4 +1,5 @@
 .plp-wrapper {
+  margin-bottom: 20px;
     .cards-container {
         display: grid;
         grid-row-gap: 20px;
@@ -131,7 +132,7 @@
         border-radius: 32px;
         min-width: 105px;
         min-height: 45px;
-        border: solid 2px;
+        border: 1.5px solid #28455C;
         cursor: pointer;
       }
   
@@ -194,17 +195,19 @@
         margin-top: 30px;
       }
   
-      button:active {
-        border-style: none;
-        text-transform: capitalize;
-      }
+      // button:active {
+      //   border: 1px solid white;
+      //   text-transform: uppercase;
+      // }
   
       .grid-2cl-30-60 {
-        grid-template-columns: 32% 65.5%;
+        // grid-template-columns: 32% 65.5%;
+        grid-template-columns: calc(32.5% - 10px) calc(67.5% - 10px);
       }
   
       .grid-2cl-60-30 {
-        grid-template-columns: 65.5% 32%;
+        // grid-template-columns: 65.5% 32%;
+        grid-template-columns:  calc(65.5% - 10px) calc(34.5% - 10px);
       }
   
       .grid-3-cl {
@@ -271,12 +274,14 @@
         height: 235px !important;
         width: auto !important;
         cursor: pointer;
+        transition: 0.3s ease-in-out;
     }
     
     .hat .rc-carousel-item-image{
         height: 180px !important;
         width: auto !important;
         cursor: pointer;
+        transition: 0.3s ease-in-out;
     }
     
     .jersey .rc-carousel-item-image{
@@ -284,6 +289,7 @@
         width: auto !important;
         cursor: pointer;
         margin-right: -50px;
+        transition: 0.3s ease-in-out;
     }
     
     .cards-content-block{
@@ -311,6 +317,11 @@
         margin-top: 100px;
         width: 100%;
         cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    .mask_img {
+      transition: 0.3s ease-in-out;
     }
     
     .mobile_img:hover,.mask_img:hover,.shoeimg:hover{
@@ -328,5 +339,6 @@
         left: 23%;
         height: 93% !important;
         width: auto !important;
+        transition: 0.3s ease-in-out;
     }
 }

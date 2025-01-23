@@ -11,13 +11,13 @@
 
       &-title{
         font-size: 48px;
-        font-weight: 600;
+        font-weight: 800;
       }
      
       &-link {
         text-decoration: none;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         margin-right: 20px;
         padding: 16px;
         border: 1px solid #28455C;
@@ -107,8 +107,9 @@
             &-availability{
               font-size: 14px;
               font-style: italic;
-              font-weight: 400;
+              font-weight: 800;
               line-height: 100%;
+              letter-spacing: -0.42px;
             }
           }
           &-price {
