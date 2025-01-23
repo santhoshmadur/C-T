@@ -1,6 +1,6 @@
 <div class="app-container" id="${properties.productType}">
   <div class="product-container">
-    <div class="iframe-container"></div>
+    <div class="iframe-container hidden"></div>
     <div class="image-detail-container">
       <div class="image-section">
         <div id="top-image-section">
@@ -151,6 +151,7 @@
     color.addEventListener("click", () => {
       if(iframeContainer.childNodes.length > 0){
         iframeContainer.removeChild(iframeContainer.firstChild);
+        iframeContainer.classList.add('hidden');
       }
       colorOptions.forEach(box => box.classList.remove('colorActive'));
       color.classList.add("colorActive");
@@ -186,5 +187,6 @@
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframeContainer.appendChild(iframe);
+    iframeContainer.classList.remove('hidden');
   }
 </script>
