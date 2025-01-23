@@ -107,6 +107,14 @@
     align-items: center;
   }
 
+  .product-card-image img.jersey{
+    width: 404px;
+  }
+
+  .product-card-image img.hoodie{
+    width: 550px;
+  }
+
   .product-card-image img {
     flex-shrink: 0;
   }
