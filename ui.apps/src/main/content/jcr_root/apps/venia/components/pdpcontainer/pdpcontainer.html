@@ -1,5 +1,6 @@
 <div class="app-container" id="${properties.productType}">
   <div class="product-container">
+    <div class="iframe-container"></div>
     <div class="image-detail-container">
       <div class="image-section">
         <div id="top-image-section">
@@ -74,7 +75,7 @@
             </svg>
           </span>
         </button>
-        <button class="details-section__shipping--button try-on">
+        <button class="details-section__shipping--button try-on" onclick="loadiFrameModal()">
           <span>TRY ON WITH AI </span>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
@@ -121,6 +122,7 @@
   const toggleOptions = document.querySelectorAll('.toggle-option');
   const toggleIndicator = document.querySelector('.toggle-indicator');
   const rootContainer = document.querySelector(".app-container");
+  const iframeContainer = document.querySelector('.iframe-container');
 
   toggleSlider.addEventListener('click', (e) => {
     const clickedOption = e.target;
@@ -147,6 +149,9 @@
   }
   colorOptions.forEach((color, index) => {
     color.addEventListener("click", () => {
+      if(iframeContainer.childNodes.length > 0){
+        iframeContainer.removeChild(iframeContainer.firstChild);
+      }
       colorOptions.forEach(box => box.classList.remove('colorActive'));
       color.classList.add("colorActive");
       const currentColor =  color.id;
@@ -173,5 +178,13 @@
     document.querySelector("#orange").click();
   }else{
     document.querySelector("#blue").click();
+  }
+
+  function loadiFrameModal(){
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://kiksar-vto-dev.s3.amazonaws.com/code%26theory/index.html#/ConfigModule/client_Viewer';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframeContainer.appendChild(iframe);
   }
 </script>

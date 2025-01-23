@@ -11,6 +11,30 @@
     gap: 12px;
   }
 
+  .hidden{
+    display: none;
+  }
+
+  .iframe-container{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    overflow: hidden;
+    height: 1030px;
+    background: rgba(200,192,172,0.3);
+
+    #iframe{
+      width: 100%;
+      height: 100%;
+
+       #canvas{
+        height: 1030px !important;
+        width: 910px !important;
+      }
+    }
+  }
+
   .description--heading {
     font-size: 20px;
     font-weight: 800;
@@ -24,16 +48,6 @@
     // padding: 56px 56px 0;
     position: relative;
     width: 100%;
-  }
-  .iframe-container{
-    position: absolute;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    width: 65%;
-    overflow: hidden;
-    height: 1030px;
-    background: rgba(200,192,172,0.3);
   }
   .image-detail-container {
     display: flex;
