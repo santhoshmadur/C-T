@@ -7,6 +7,7 @@
     height: 772px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right top;
 
 
     .heroBanner {
@@ -229,6 +230,7 @@
         color: transparent;
         -webkit-text-stroke: 3px #d6d6d6;
         text-align: left;
+        max-width: 437px;
     }
 
     .modal-body-wolf-image {
