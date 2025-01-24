@@ -13,7 +13,7 @@
 
   .description--heading {
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     color: $ct-color-gray-dark;
   }
 
@@ -86,7 +86,7 @@
 
       &--heading {
         color: $ct-color-primary-dark;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 35px;
         letter-spacing: -1.05px;
       }
@@ -95,7 +95,7 @@
         font-size: 16px;
         letter-spacing: -0.48px;
         color: $ct-color-gray-dark;
-        font-weight: 800;
+        font-weight: 700;
         margin-top: 16px;
       }
 
@@ -106,7 +106,7 @@
       }
       &--price {
         font-size: 24px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: -0.72px;
       }
     }
@@ -161,7 +161,7 @@
         font-style: normal;
         line-height: 100%;
         margin-bottom: 24px;
-        font-weight: 800;
+        font-weight: 700;
     
       }
       .color-options{
@@ -201,7 +201,7 @@
       }
     
       .select-size-heading .inner-div{
-        font-weight: 800;
+        font-weight: 700;
         font-size: 24px;
         font-style: normal;
         line-height: 100%;
@@ -221,7 +221,7 @@
         background: white;
         cursor: pointer;
         min-width: 93px;
-        font-weight: 400;
+        font-weight: 700;
       }
       
       .size-button.selected{
@@ -235,7 +235,7 @@
       color: $ct-color-gray-dark;
       font-size: 14px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 700;
       letter-spacing: -0.48px;
     }
 
@@ -254,6 +254,7 @@
         justify-content: center;
         gap: 10px;
         align-items: center;
+        font-weight: 700;
       }
       .add-to-bag {
         background: $ct-color-primary;
