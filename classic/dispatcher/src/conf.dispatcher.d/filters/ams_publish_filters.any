@@ -11,11 +11,11 @@
 # /005 { /type "allow" /url "/bin/*"    }  # allow bin path access
 
 # This rule allows content to be access
-/0010 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|swf|ttf|woff|woff2|html)' /path "/content/*" }  # disable this rule to allow mapped content only
+/0010 { /type "allow" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|pdf|png|svg|webp|swf|ttf|woff|woff2|html)' /path "/content/*" }  # disable this rule to allow mapped content only
 /0011 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
 
 # Enable specific mime types clientlibs directories
-/0012 { /type "allow" /method "GET" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|png|svg|swf|ttf|woff|woff2)' /path "/etc/clientlibs/*" }
+/0012 { /type "allow" /method "GET" /extension '(css|eot|gif|ico|jpeg|jpg|js|gif|png|svg|webp|swf|ttf|woff|woff2)' /path "/etc/clientlibs/*" }
 
 # Enable clientlibs proxy servlet
 /0013 { /type "allow" /method "GET" /url "/etc.clientlibs/*" }
