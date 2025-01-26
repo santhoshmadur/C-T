@@ -7,6 +7,43 @@
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Title"
+                name="./title"/>
+            <subtitle
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Subtitle"
+                name="./subTitle"/>
+            <description
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Description"
+                name="./description"/>
+            <instruction
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Instruction"
+                name="./instruction"/>
+            <ctalabel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="CTA Label"
+                name="./ctaLabel"/>
+            <hoodieimage
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Hoodie Image"
+                name="./hoodieImage"
+                rootPath="/content/dam/venia"/>
+            <jerseyimage
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Jersey Image"
+                name="./jerseyImage"
+                rootPath="/content/dam/venia"/>
         </items>
     </content>
 </jcr:root>
