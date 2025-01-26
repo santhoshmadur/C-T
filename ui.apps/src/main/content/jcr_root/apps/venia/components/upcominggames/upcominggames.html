@@ -1,50 +1,22 @@
+<sly data-sly-use.model="com.venia.core.models.commerce.UpComingGamesModel"></sly>
 <div class="game-schedule">
     <div class="game-schedule__container">
         <div class="game-schedule__heading">
-            <p class="game-schedule__title">NEWS & UPDATES</p>
-            <a href="#" class="game-schedule__view-all">View All 
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 8H15" stroke="#28455C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 1L17 8L10 15" stroke="#28455C" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+            <p class="game-schedule__title">${model.title}</p>
+            <a href="${model.ctaLink}" target="${model.target}" class="game-schedule__view-all">${model.ctaLabel}
+                <img src="${model.ctaIcon}" alt="icon">
             </a>
         </div>
         <div class="game-schedule__cards">
+            <sly data-sly-list="${model.gameCards}">
             <div class="game-schedule__card">
-                <p class="game-schedule__type">Home</p>
-                <img src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="game-schedule__image"/>
-                <p class="game-schedule__team-name">PHOENIX SUNS</p>
-                <p class="game-schedule__time">Monday 12/03 <br/> 7:00p PST</p>
-                <button class="game-schedule__button ct-button ct-button-primary">Buy Tickets</button>
+                <p class="game-schedule__type">${item.scheduleType}</p>
+                <img src="${item.image}" alt="image" class="game-schedule__image"/>
+                <p class="game-schedule__team-name">${item.teamName}</p>
+                <p class="game-schedule__time">${item.date} <br/> ${item.time}</p>
+                <button class="game-schedule__button ct-button ct-button-primary">${item.ctaLabel}</button>
             </div>
-            <div class="game-schedule__card">
-                <p class="game-schedule__type">Away</p>
-                <img src="/content/dam/venia/sites/homepage/games-2.svg" alt="image" class="game-schedule__image"/>
-                <p class="game-schedule__team-name">CHICAGO BULLS</p>
-                <p class="game-schedule__time">Wednesday 12/06 <br/> 7:30p PST </p>
-                <button class="game-schedule__button ct-button ct-button-primary">Buy Tickets</button>
-            </div>
-            <div class="game-schedule__card">
-                <p class="game-schedule__type">Away</p>
-                <img src="/content/dam/venia/sites/homepage/games-3.svg" alt="image" class="game-schedule__image"/>
-                <p class="game-schedule__team-name">LOS ANGELES LAKERS</p>
-                <p class="game-schedule__time">Wednesday 12/06 <br/> 7:30p PST</p>
-                <button class="game-schedule__button ct-button ct-button-primary">Buy Tickets</button>
-            </div>
-            <div class="game-schedule__card">
-                <p class="game-schedule__type">Home</p>
-                <img src="/content/dam/venia/sites/homepage/games-4.svg" alt="image" class="game-schedule__image"/>
-                <p class="game-schedule__team-name">MINNESOTA TIMBERWOLVES</p>
-                <p class="game-schedule__time">Wednesday 12/06 <br/> 7:30p PST</p>
-                <button class="game-schedule__button ct-button ct-button-primary">Buy Tickets</button>
-            </div>
-            <div class="game-schedule__card">
-                <p class="game-schedule__type">Home</p>
-                <img src="/content/dam/venia/sites/homepage/games-5.svg" alt="image" class="game-schedule__image"/>
-                <p class="game-schedule__team-name">MEMPHIS GRIZZLIES</p>
-                <p class="game-schedule__time">Wednesday 12/06 <br/> 7:30p PST</p>
-                <button class="game-schedule__button ct-button ct-button-primary">Buy Tickets</button>
-            </div>
+            </sly>
         </div>
     </div>
 </div>

@@ -7,18 +7,79 @@
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs
+            <title
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/tabs"
-                maximized="{Boolean}true">
-                <items jcr:primaryType="nt:unstructured">
-                    <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        emptyText="Text"
-                        name="./text"/>
-                </items>
-            </tabs>
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Title"
+                name="./title"/>
+            <ctalabel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="CTA Label"
+                name="./ctaLabel"/>
+            <ctaicon
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="CTA Icon"
+                name="./ctaIcon"
+                rootPath="/content/dam/venia"/>
+            <ctatarget
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                name="./target"
+                text="OpenInNewTab"
+                uncheckedValue="_self"
+                value="_blank"/>
+            <ctalink
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                fieldLabel="CTA Link"
+                name="./ctaLink"
+                rootPath="/content"/>
+            <multi
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Game Cards">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./gameCards">
+                    <items jcr:primaryType="nt:unstructured">
+                        <scheduletype
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Schedule Type"
+                            name="./scheduleType"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="News Image"
+                            name="./image"
+                            rootPath="/content/dam/venia"/>
+                        <teamname
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Team Name"
+                            name="./teamName"/>
+                        <date
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Date"
+                            name="./date"/>
+                        <time
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Time"
+                            name="./time"/>
+                        <ctalabel
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="CTA Label"
+                            name="./ctaLabel"/>
+                    </items>
+                </field>
+            </multi>
         </items>
     </content>
 </jcr:root>
