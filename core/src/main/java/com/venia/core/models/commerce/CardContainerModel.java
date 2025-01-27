@@ -5,6 +5,7 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.apache.sling.api.resource.Resource;
 
 import java.util.List;
 
@@ -357,7 +358,7 @@ public class CardContainerModel {
     }
 
     @Model(
-            adaptables = SlingHttpServletRequest.class,
+            adaptables = Resource.class,
             defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
     )
     public static class ProductsModel {
