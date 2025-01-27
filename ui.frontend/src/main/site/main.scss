@@ -8,11 +8,11 @@
 @import url('~@adobe/aem-core-cif-product-recs-extension/dist/main.css');
 @import '../styles/**/*.scss';
 @import './styles/*.scss';
-
+@import './fonts.scss';
 
 body{
     width: 100%;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: $ct-font;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
