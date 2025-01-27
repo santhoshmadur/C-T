@@ -188,7 +188,7 @@
                                                 name="./basketballAvailability"/>
                                             <basketballprice
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Basketball Price"
                                                 name="./basketballPrice"/>
                                             <maskbgimage
@@ -215,7 +215,7 @@
                                                 name="./maskSubtitle"/>
                                             <maskprice
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Mask Price"
                                                 name="./maskPrice"/>
                                             <maskproductimage
@@ -248,7 +248,7 @@
                                                 name="./mobileCustomizable"/>
                                             <mobileprice
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Mobile Price"
                                                 name="./mobilePrice"/>
                                         </items>
