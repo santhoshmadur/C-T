@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="Upcoming Games"
+    jcr:title="News and Update"
     sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
@@ -40,28 +40,28 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                 composite="{Boolean}true"
-                fieldLabel="Game Cards">
+                fieldLabel="News Cards">
                 <field
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="granite/ui/components/coral/foundation/container"
-                    name="./gameCards">
+                    name="./newsCards">
                     <items jcr:primaryType="nt:unstructured">
-                        <scheduletype
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Schedule Type"
-                            name="./scheduleType"/>
                         <image
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                             fieldLabel="News Image"
                             name="./image"
                             rootPath="/content/dam/venia"/>
-                        <teamname
+                        <category
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Team Name"
-                            name="./teamName"/>
+                            fieldLabel="News Category"
+                            name="./category"/>
+                        <description
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldLabel="News Description"
+                            name="./description"/>
                         <date
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
@@ -72,11 +72,6 @@
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Time"
                             name="./time"/>
-                        <ctalabel
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="CTA Label"
-                            name="./ctaLabel"/>
                     </items>
                 </field>
             </multi>

@@ -1,49 +1,51 @@
-
+<sly data-sly-use.model="com.venia.core.models.commerce.FooterNavigationModel"></sly>
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-left">
             <div class="footer-column">
                 <ul>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">SCHEDULE & TICKETS</a></li>
-                    <li><a href="#">FAN ZONE</a></li>
+                    <sly data-sly-list="${model.firstColumn}">
+                        <li>
+                            <a href="${item.navLink}" target="${item.navTarget}"> ${item.navTitle} </a>
+                        </li>
+                    </sly>
                 </ul>
             </div>
             <div class="footer-column">
                 <ul>
-                    <li><a href="#">FULL SEASON MEMBERSHIPS</a></li>
-                    <li><a href="#">HALF SEASON MEMBERSHIPS</a></li>
-                    <li><a href="#">QUARTER SEASON MEMBERSHIPS</a></li>
-                    <li><a href="#">GROUP TICKETS</a></li>
-                    <li><a href="#">TICKET TERMS & CONDITIONS</a></li>
-                    <li><a href="#">HOW TO AVOID TICKET FRAUD</a></li>
+                    <sly data-sly-list="${model.secondColumn}">
+                        <li>
+                            <a href="${item.navLink}" target="${item.navTarget}"> ${item.navTitle} </a>
+                        </li>
+                    </sly>
                 </ul>
             </div>
             <div class="footer-column">
                 <ul>
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">EMPLOYMENT</a></li>
-                    <li><a href="#">HEALTH & SAFETY</a></li>
-                    <li><a href="#">THOMAS & MACK CENTER</a></li>
-                    <li><a href="#">STAFF DIRECTORY</a></li>
-                    <li><a href="#">EXECUTIVE TEAM</a></li>
+                    <sly data-sly-list="${model.thirdColumn}">
+                        <li>
+                            <a href="${item.navLink}" target="${item.navTarget}"> ${item.navTitle} </a>
+                        </li>
+                    </sly>
                 </ul>
             </div>
             <div class="footer-column">
                 <ul>
-                    <li><a href="#">TERMS OF USE</a></li>
-                    <li><a href="#">PRIVACY POLICY</a></li>
-                    <li><a href="#">YOUR PRIVACY CHOICES</a></li>
+                    <sly data-sly-list="${model.fourthColumn}">
+                        <li>
+                            <a href="${item.navLink}" target="${item.navTarget}"> ${item.navTitle} </a>
+                        </li>
+                    </sly>
                 </ul>
             </div>
-
         </div>
-
         <div class="footer-icons">
-            <a href="https://www.instagram.com/desertwolves01"><img src="/content/dam/venia/sites/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="/content/dam/venia/sites/tik-tok.png" alt="TikTok"></a>
-            <a href="https://www.youtube.com/@Desert-Wolves"><img src="/content/dam/venia/sites/youtube.png" alt="YouTube"></a>
+            <sly data-sly-list="${model.socialIcons}">
+                <a href="${item.socialLink}" target="${item.socialTarget}">
+                    <img src="${item.socialIcon}" alt="Social Icon" />
+                </a>
+            </sly>
         </div>
     </div>
-    <div class="footer-circle" style="background-image: url('/content/dam/venia/sites/clp/footer-logo.png')"></div>
+    <a class="footer-circle" style="background-image: url('${model.footerLogo @context='uri'}')" href="${model.footerLink}" target="${model.footerTarget}"></a>
 </footer>

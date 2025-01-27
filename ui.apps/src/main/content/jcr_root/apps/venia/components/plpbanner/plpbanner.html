@@ -1,28 +1,23 @@
-
 <div class="merch-showcase-wrapper">
   <div class="merch-showcase">
     <div class="merch-showcase-heading">
-      <sly data-sly-resource="${'left' @ resourceType='venia/components/text'}"></sly>
-      <button>Join The Pack</button>
+      <p class="las-vegas">${properties.title}</p>
+      <p class="wolves">${properties.subTitle}</p>
+      <p class="sub_heading ">${properties.description}</p>
+      <p class="sub_heading ">${properties.instruction}</p>
+      <button>${properties.ctaLabel}</button>
     </div>
-    <!-- <div class="merch-showcase-details">
-      <sly data-sly-resource="${'right-title' @ resourceType='venia/components/text'}"></sly>
-      <sly data-sly-resource="${'rigth-desc' @ resourceType='venia/components/text'}"></sly>
-      <button>Join The Pack</button>
-    </div> -->
     <div class="merch-showcase-products">
       <div class="product-card">
         <div class="product-card-image">
-          <img src="/content/dam/venia/sites/plp_img/banner_hoodie12.png" alt="merch1">
+          <img class="hoodie" src="${properties.hoodieImage}" alt="merch1">
         </div>
       </div>
       <div class="product-card">
         <div class="product-card-image">
-          <img src="/content/dam/venia/sites/plp_img/banner_jersey.png" alt="merch1">
+          <img class="jersey" src="${properties.jerseyImage}" alt="merch1">
         </div>
       </div>
     </div>
-    
   </div>
 </div>
-<script src="" async defer></script>
