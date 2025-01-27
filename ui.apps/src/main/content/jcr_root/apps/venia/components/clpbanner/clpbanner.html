@@ -72,8 +72,10 @@
     }
   }, 10000);
   closeButton.addEventListener("click", () => {
-    modal.classList.add("hidden");
-    isPopupShown = true;
+    if(modal){
+      modal.classList.add("hidden");
+      isPopupShown = true;
+    }
   });
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
