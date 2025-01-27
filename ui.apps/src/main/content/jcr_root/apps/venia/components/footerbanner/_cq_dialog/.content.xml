@@ -7,18 +7,32 @@
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs
+            <backgroundimage
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/tabs"
-                maximized="{Boolean}true">
-                <items jcr:primaryType="nt:unstructured">
-                    <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        emptyText="Text"
-                        name="./text"/>
-                </items>
-            </tabs>
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Background Image"
+                name="./backgroundImage"
+                rootPath="/content/dam/venia"/>
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Title"
+                name="./title"/>
+            <subtitle
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Subtitle"
+                name="./subTitle"/>
+            <description
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Description"
+                name="./description"/>
+            <placeholder
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Placeholder"
+                name="./placeholder"/>
         </items>
     </content>
 </jcr:root>

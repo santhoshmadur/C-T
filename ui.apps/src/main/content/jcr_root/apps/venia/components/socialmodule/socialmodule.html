@@ -1,0 +1,33 @@
+<div class="campaign-content-wrapper">
+<div class="info-wrapper">
+    <div class="info-wrapper__section info-wrapper__section--left">
+        <div class="info-wrapper__section__image" style="background-image: url('${properties.leftIimage @context='uri'}')"></div>
+        <div class="info-wrapper__section__description">
+            <div class="info-wrapper__section__description-heading">${properties.leftTitle}</div>
+            <div class="info-wrapper__section__description-text">${properties.leftSubTitle}</div>
+            <div class="info-wrapper__section__description-social-links">
+                <a href="${properties.igLink}" class="info-wrapper__section__description-social-link" target="${properties.igTarget}">
+                <img src="${properties.igLogo}" alt="instagram">
+                </a>
+                <a href="${properties.ttLink}" class="info-wrapper__section__social-link" target="${properties.ttTarget}">
+                <img src="${properties.ttLogo}" alt="tiktok">
+                </a>
+                <a href="${properties.ytLink}" class="info-wrapper__section__social-link" target="${properties.ytTarget}">
+                <img src="${properties.ytLogo}" alt="youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="info-wrapper__section info-wrapper__section--right">
+        <div class="info-wrapper__section__image">
+            <div class="info-wrapper__section__image--background-image" style="background-image: url('${properties.rightBgImage @context='uri'}')"></div>
+            <div class="info-wrapper__section__image--bg-man" style="background-image: url('${properties.rightImage @context='uri'}')"></div>
+        </div>
+        <div class="info-wrapper__section__description">
+            <div class="info-wrapper__section__description-heading">${properties.rightTitle}</div>
+            <div class="info-wrapper__section__description-text">${properties.rightSubTitle}</div>
+            <a class="info-wrapper__section__description-button" href="${properties.ctaLink}" target="${properties.ctaTarget}">${properties.ctaLabel}</a>
+        </div>
+    </div>
+</div>
+</div>

@@ -69,7 +69,7 @@
         position: absolute;
         transform: rotate(270deg);
         font-size: 50px;
-        font-weight: 800;
+        font-weight: 700;
         top: 82px;
         left: -55px;
         border: solid 2px;
@@ -103,13 +103,17 @@
       .cards-custom-btn span {
         color:#B9571A;
         font-size: 14px;
-        font-weight: 800;
+        font-weight: 700;
         text-transform: uppercase;
+      }
+
+      .custom-width {
+        width: 260px;
       }
   
       .cards-text {
         font-size: 20px;
-        font-weight: 800;
+        font-weight: 700;
         text-transform:uppercase;
       }
   
@@ -128,7 +132,7 @@
         border-style: none;
         text-transform: uppercase;
         font-size: 14px;
-        font-weight: 800;
+        font-weight: 700;
         border-radius: 32px;
         min-width: 105px;
         min-height: 45px;

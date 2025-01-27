@@ -1,0 +1,84 @@
+<div class="heroBanner-main">
+  <div class="heroBanner-container" style="background-image: url('${properties.backgroundImage @context='uri'}');">	
+    <div class="heroBanner">
+      <div class="heroBanner-content-wrapper">
+        <div class="heroBanner-heading">
+            <div class="heroBanner-heading-fillText white-border-heading bigger-font">${properties.title}</div>
+            <div class="heroBanner-heading-dashedText white-heading">${properties.subTitle}</div>
+            <div class="heroBanner-heading-dashedText white-sub-heading">${properties.description}</div>
+        </div>
+        <div class="heroBanner-content">
+          <div class="heroBanner-content-text-wrapper">
+           <div class="heroBanner-content-text">
+            ${properties.instruction}
+           </div>
+          </div>
+          <a class="heroBanner-content-button" href="${properties.ctaLink}" target="${properties.target}">${properties.ctaLabel}
+          <img src="${properties.ctaIcon}" alt="start Icon" />
+		</a>
+        </div>
+      </div>
+      <div class="heroBanner-levels">
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('${properties.cardImage @context='uri'}');"></div>
+          <div class="heroBanner-level-text">1</div>
+        </div>
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('${properties.cardImage @context='uri'}');"></div>
+          <div class="heroBanner-level-text">2</div>
+        </div>
+        <div class="heroBanner-level">
+          <div class="heroBanner-level-image" style="background-image: url('${properties.cardImage @context='uri'}');"></div>
+          <div class="heroBanner-level-text">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <sly data-sly-test="${!wcmmode.edit}">
+  <div id="gameModal" class="modal hidden">
+    <div class="modal-content" style="background-image: url('${properties.popupbgimaage @context='uri'}');">
+      <span class="close-button">&times; </span>
+      <div class="modal-wrapper">
+        <div class="modal-body">
+          <div class="modal-body-wolf-image" style="background-image: url('${properties.popuplogo @context='uri'}');"></div>
+          <div class="modal-body-pack-heading">${properties.popuptitle}</div>
+          <div class="wolves">${properties.popupsubtitle}</div>
+          <div class="modal-body-pack-text">${properties.popupdescription}</div>
+          <div class="user-input-wrapper">
+            <div class="input-container">
+              <input type="email" placeholder="${properties.placeholder}" class="email-input" />
+              <span class="arrow-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                  <path d="M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 1L17 8L10 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+              </span>
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </sly>
+  </div>
+</div>
+<script>
+  const modal = document.getElementById("gameModal");
+  const closeButton = document.querySelector(".close-button");
+  let isPopupShown = false;
+  window.setTimeout(() => {
+    if(!isPopupShown){
+      modal.classList.remove("hidden");
+    }
+  }, 10000);
+  closeButton.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    isPopupShown = true;
+  });
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.add("hidden");
+      isPopupShown = true;
+    }
+  });
+</script>

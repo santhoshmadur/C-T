@@ -1,6 +1,5 @@
 
 .merch-showcase-wrapper {
-    font-family: 'Helvetica Neue', sans-serif;
     display: inline-flex;
     height: 648px;
     // padding: 56px 51.678px 56px 41px;
@@ -30,15 +29,15 @@
   }
 
   .merch-showcase-heading .las-vegas {
-    color: #B9571A;
+    color: transparent;
     text-align: start;
-    font-family: "Helvetica Neue";
-    font-size: 96px;
+    font-size: 112px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 100%;
-    letter-spacing: -1.92px;
+    letter-spacing: -3.36px;
     text-transform: uppercase;
+    -webkit-text-stroke: 3px #B9571A;
   }
 
   .merch-showcase-heading .wolves {
@@ -46,17 +45,19 @@
     // -webkit-text-stroke-width: 3;
     // -webkit-text-stroke-color: #FFF;
     color: #28455C;
-    font-family: "Helvetica Neue";
     font-size: 56px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 100%;
+    letter-spacing: -1.68px;
     text-transform: uppercase;
   }
 
   .merch-showcase-heading .sub_heading{
     font-size: 20px;
     color: #474747;
+    font-weight: 400;
+    line-height: 120%;
     margin-top: 30px;
     max-width: 437px;
   }
@@ -74,7 +75,7 @@
     font-family: "Helvetica Neue";
     font-size: 16px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 100%;
     letter-spacing: -0.48px;
     border-radius: 32px;
@@ -120,54 +121,44 @@
     flex-shrink: 0;
   }
 
-  .product-card-name-cta {
-    display: flex;
-    width: 168px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-  }
 
-  .product-card-name-cta p {
+
+.merch-showcase-details-heading-white {
     color: #FFF;
-    text-align: center;
+    opacity: 0.8;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.merch-showcase-details-heading-gray {
+    color: #404040;
+    opacity: 0.8;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+  .merch-showcase-details-description {
+    color: #FFF;
     font-family: "Helvetica Neue";
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
-    letter-spacing: -0.48px;
+    line-height: 120%;
+    letter-spacing: -0.72px;
   }
-
-  .product-card-name-cta button,
-  .merch-showcase-details button {
-    display: flex;
-    padding: 12px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background: #FFF;
-    border: none;
-    color: #000;
-    text-align: center;
-    font-family: "Helvetica Neue";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: -0.48px;
-  }
-
-  .merch-showcase-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    align-self: stretch;
-    margin-top: 36px;
-  }
-
+  
 .merch-showcase-details-heading-white {
     color: #FFF;
     opacity: 0.8;

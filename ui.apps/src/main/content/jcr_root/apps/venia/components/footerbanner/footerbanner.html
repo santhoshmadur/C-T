@@ -1,16 +1,15 @@
-
-<div class="joinThePack-wrapper">
+<div class="joinThePack-wrapper" style="background: url('${properties.backgroundImage @context='uri'}');">
     <div class="joinThePack-container">
         <div class="joinThePack-left">
             <div class="joinThePack-heading">
-                <p class="joinThePack-heading-1">JOIN THE PACK now!</p>
-                <p class="joinThePack-heading-2">Brag Later about how you’ve been a fan from the start.</p>
+                <p class="joinThePack-heading-1">${properties.title}</p>
+                <p class="joinThePack-heading-2">${properties.subTitle}</p>
             </div>
-            <div class="joinThePack-description">Sign up for exclusive ticket sales, game-day discounts, priority access to games, and exclusive merch.</div>
+            <div class="joinThePack-description">${properties.description}</div>
         </div>
         <div class="joinThePack-right">
             <div class="input-container">
-                <input type="email" placeholder="Enter Your Email Address" class="email-input" />
+                <input type="email" placeholder="${properties.placeholder}" class="email-input" />
                 <span class="arrow-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
                         <path d="M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -22,7 +21,3 @@
         </div>
     </div>
 </div>
-
-
-
-<script src="" async defer></script>

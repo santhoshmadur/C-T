@@ -1,0 +1,115 @@
+.campaign-content-wrapper {
+    position: relative;
+    background-size: cover;
+    background-color: #ffffff;
+  
+    .info-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 60px 5px 20px;
+      border-radius: 10px;
+      color: #28455c;
+      background: transparent;
+      min-height: 600px;
+  
+      &__section {
+        flex: 1;
+        padding: 60px 5px 20px;;
+        // padding-top: 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        height: 100%;
+  
+        &__image {
+          flex: 1;
+          background-size: contain;
+          min-height: 440px;
+          height: 440px;
+          width: 660px;
+          background-repeat: no-repeat;
+  
+          &--background-image{
+            min-height: 440px;
+            height: 440px;
+            width: 100%;
+            background-repeat: no-repeat;
+          }
+          &--bg-man{
+            height: 512px;
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            position: absolute;
+            top: 48px;
+            right: 50px;
+            width: 378px;
+            background-size: auto;
+          }
+        }
+  
+        &__description {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 16px;
+          margin-top: 20px;
+          color: #28455C;
+  
+          &-heading {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 36px */
+            letter-spacing: -1.08px;
+            text-transform: uppercase;
+          }
+  
+          &-text {
+            color: #474747;
+            font-family: "Helvetica Neue";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; 
+            text-align: left;
+          }
+  
+          &-social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+  
+            a {
+              text-decoration: none;
+              color: #fff;
+              border-radius: 5px;
+              font-size: 0.9rem;
+            }
+          }
+  
+          &-button {
+            background: #ffffff;
+            color: inherit;
+            border: none;
+            padding: 16px;
+            font-size: 1rem;
+            cursor: pointer;
+            max-width: 190px;
+            left: 0;
+            right: 0;
+            position: relative;
+            border: 1px solid #28455c;
+            border-radius: 32px;
+            font-weight: 700;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+}
