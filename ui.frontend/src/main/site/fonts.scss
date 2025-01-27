@@ -99,15 +99,6 @@
 
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url('../resources/fonts/Helvetica/HelveticaNeueLTStd-ThCn.woff2') format('woff2'),
-        url('../resources/fonts/Helvetica/HelveticaNeueLTStd-ThCn.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Helvetica Neue';
     src: url('../resources/fonts/Helvetica/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
         url('../resources/fonts/Helvetica/HelveticaNeueLTStd-Roman.woff') format('woff');
     font-weight: normal;
@@ -416,6 +407,15 @@
     font-family: 'Helvetica Neue';
     src: url('../resources/fonts/Helvetica/HelveticaNeueLTStd-Ex.woff2') format('woff2'),
         url('../resources/fonts/Helvetica/HelveticaNeueLTStd-Ex.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../resources/fonts/Helvetica/HelveticaNeueLTStd-ThCn.woff2') format('woff2'),
+        url('../resources/fonts/Helvetica/HelveticaNeueLTStd-ThCn.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
