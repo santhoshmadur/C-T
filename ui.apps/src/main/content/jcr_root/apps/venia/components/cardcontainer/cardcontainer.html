@@ -1,41 +1,37 @@
+<sly data-sly-use.model="com.venia.core.models.commerce.CardContainerModel"></sly>
 <div class="plp-wrapper">
   <div class="cards-container" style="margin-top: 30px;">
     <div class="cards-block bg-cover grid-2cl-30-60">
       <div class="cards">
-        <img class="" src="/content/dam/venia/sites/plp_img/square/1.png" />
+        <img class="" src="${model.hoodieImage}" />
       </div>
       <div class="cards-xl bg-gray">
         <div class="cards-header-block">
           <div class="cards-image-block">
-            <img class="" src="/content/dam/venia/sites/plp_img/hoodiebg.png" />          
+            <img class="" src="${model.hoodieBgImage}" />
           </div>
           <div class="carousel-part">
                   <!-- Flexbox -->
             <div class="rc-carousel-box hoodie">
                 <!-- Items start -->
+                <sly data-sly-list="${model.hoodieProducts}">
                 <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/Hoodie1.png" alt="dhl" />
+                    <img class="rc-carousel-item-image" src="${item.productImage}" alt="hoodieProducts" />
                 </div>
-                <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/Hoodie2.png" alt="fedex" />
-                </div>
-                <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/Hoodie3.png" alt="ups" />
-                </div>
+                </sly>
             </div>
           </div>
         </div>
         <div class="cards-content-block mt-15 grid-2cl">
           <div class="cards-text-block mt-15 grid-2cl-75-25">
-            <div class="cards-text text-blue custom-width"> Inaugural Season Wolves Hoodie </div>
-            <div class="cards-price text-blue text-align-end">$129</div>
+            <div class="cards-text text-blue custom-width">${model.hoodieTitle}</div>
+            <div class="cards-price text-blue text-align-end">${model.hoodiePrice}</div>
             <div class="cards-custom-btn mt-15 custom-width">
-                <span class="">Customizable </span>
+                <span class="">${model.hoodieCustomizable}</span>
               </div>
           </div>
           <div class="cards-buynow-btn text-align-end">
-            <button type="button" class="bg-white text-blue" onclick='window.location.href="/content/venia/language-masters/en/home/hoodie.html"'>
-              Shop Now </button>
+            <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hoodieCtaLink @context='uri'}'">${model.hoodieCtaLabel}</button>
           </div>
         </div>
       </div>
@@ -44,49 +40,47 @@
         <div class="cards-xl bg-gray">
           <div class="cards-header-block content-center">
             <div class="cards-image-block">
-              <img class="" style="position: absolute;top:0;left:0" src="/content/dam/venia/sites/plp_img/Bgorange.png" />
-              <img class="shoeimg" src="/content/dam/venia/sites/plp_img/shoe.png" />
+              <img class="" style="position: absolute;top:0;left:0" src="${model.shoesBgImage}" />
+              <img class="shoeimg" src="${model.shoesProductImage}" />
             </div>
           </div>
           <div style="bottom:100px;" class="cards-content-block mt-15 grid-2cl">
             <div class="cards-text-block mt-15 grid-2cl-75-25">
-              <div class="cards-text text-white custom-width"> LIMITED EDITION DiVERGE CUSTOM SNEAKERS </div>
-              <div class="cards-price text-white">$179</div>
-              <div class="text-white mt-15 custom-width">LIMITED TO 77 PAIRS</div>
+              <div class="cards-text text-white custom-width">${model.shoesTitle}</div>
+              <div class="cards-price text-white">${model.shoesPrice}</div>
+              <div class="text-white mt-15 custom-width">${model.shoesSubTitle}</div>
               <div>&nbsp</div>
               <div class="cards-buynow-btn  mt-15">
-                <button type="button" class="bg-white text-blue">
-                  Shop Now 
-                </button>
+                <button type="button" class="bg-white text-blue">${model.shoesCtaLabel}</button>
               </div>
             </div>
            
           </div>
         </div>
         <div class="cards">
-            <img class="" src="/content/dam/venia/sites/plp_img/square/2.png" />
+            <img class="" src="${model.shoesImage}" />
         </div>
       </div>
     <div class="cards-block bg-cover grid-2cl-60-30">
       <div class="column">
         <div class="row  grid-2cl">
           <div class="cards bg-grey">
-                <img class="" src="/content/dam/venia/sites/plp_img/square/3.png" />
+                <img class="" src="${model.basketballimage}" />
           </div>
           <div class="cards bg-light-gray">
             <div class="cards-header-block content-center">
               <div class="cards-image-block">
-                <img class="mt-30" src="/content/dam/venia/sites/plp_img/ball.png" />
+                <img class="mt-30" src="${model.basketballBgImage}" />
               </div>
             </div>
 
             <div class="cards-content-block mt-15 grid-2cl  padding-15">
               <div class="cards-text-block mt-15">
-                <div class="cards-text text-blue"> Wolves Basketball </div> 
-                <div class="text-blue mt-15">2 styles available</div>
+                <div class="cards-text text-blue">${model.basketballTitle}</div>
+                <div class="text-blue mt-15">${model.basketballAvailability}</div>
               </div>
               <div class="cards-buynow-btn text-align-end mt-15">
-                <div class="cards-price text-blue text-align-end">$69</div>
+                <div class="cards-price text-blue text-align-end">${model.basketballPrice}</div>
               </div>
             </div>
           </div>
@@ -95,22 +89,22 @@
           <div class="cards bg-grey">
             <div class="cards-header-block">
               <div class="cards-image-block">
-                <img class="" style="position: absolute;" src="/content/dam/venia/sites/plp_img/maskbg.png" />
-                <img class="mask_img" style="position: absolute;" src="/content/dam/venia/sites/plp_img/wolves.png" />
+                <img class="" style="position: absolute;" src="${model.maskBgImage}" />
+                <img class="mask_img" style="position: absolute;" src="${model.maskImage}" />
               </div>
             </div>
             <div class="cards-content-block mt-15 grid-2cl padding-15">
               <div class="cards-text-block mt-15">
-                <div class="cards-text text-white"> WOLVES MASK </div> 
-                <div class="text-white mt-15">Ready to print 3D Model also available</div>
+                <div class="cards-text text-white">${model.maskTitle}</div>
+                <div class="text-white mt-15">${model.maskSubtitle}</div>
               </div>
               <div class="cards-buynow-btn text-align-end mt-15">
-                <div class="cards-price text-white text-align-end">$179</div>
+                <div class="cards-price text-white text-align-end">${model.maskPrice}</div>
               </div>
             </div>
           </div>
           <div class="cards bg-light-gray">    
-            <img class="" src="/content/dam/venia/sites/plp_img/square/4.png" />
+            <img class="" src="${model.maskProductImage}"  alt="maskProductImage"/>
           </div>
         </div>
       </div>
@@ -118,19 +112,19 @@
         <div class="cards cards-xl-height bg-grey">
           <div class="cards-header-block">
             <div class="cards-image-block">
-              <img class="" style="position: absolute;" src="/content/dam/venia/sites/plp_img/mobilebg.png" />
-              <img class="mobile_img"  src="/content/dam/venia/sites/plp_img/mobile.png" />
+              <img class="" style="position: absolute;" src="${model.mobileBgImage}" />
+              <img class="mobile_img"  src="${model.mobileImage}" />
             </div>
           </div>
           <div class="cards-content-block mt-15 grid-2cl padding-15">
             <div class="cards-text-block mt-15">
-              <div class="cards-text text-white custom-width"> WOLVES MOBILE PHONE CASES </div> 
+              <div class="cards-text text-white custom-width">${model.mobileTitle}</div>
               <div class="cards-custom-btn mt-15">
-                <span class="text-white">Customizable </span>
+                <span class="text-white">${model.mobileCustomizable}</span>
               </div>
             </div>
             <div class="cards-buynow-btn text-align-end mt-15">
-              <div class="cards-price text-white text-align-end">$29</div>
+              <div class="cards-price text-white text-align-end">${model.mobilePrice}</div>
             </div>
           </div>
         </div>
@@ -138,38 +132,33 @@
     </div>
     <div class="cards-block bg-cover grid-2cl-30-60">
       <div class="cards ">
-        <img class="" src="/content/dam/venia/sites/plp_img/square/5.png" />
+        <img class="" src="${model.hatImage}" />
       </div>
       <div class="cards-xl bg-gray">
         <div class="cards-header-block">
           <div class="cards-image-block">
-            <img class="" src="/content/dam/venia/sites/plp_img/hatbg.png" />          
+            <img class="" src="${model.hatBgImage}" />
           </div>
           <div class="carousel-part">
                   <!-- Flexbox -->
             <div class="rc-carousel-box hat">
                 <!-- Items start -->
+                <sly data-sly-list="${model.hatProducts}">
                 <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/hat1.png" alt="dhl" />
+                    <img class="rc-carousel-item-image" src="${item.productImage}" alt="hatProducts" />
                 </div>
-                <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/hat2.png" alt="fedex" />
-                </div>
-                <div class="rc-carousel-item">
-                    <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/hat3.png" alt="ups" />
-                </div>
+                </sly>
             </div>
           </div>
         </div>
         <div class="cards-content-block mt-15 grid-2cl">
           <div class="cards-text-block mt-15 grid-2cl-75-25">
-            <div class="cards-text text-blue custom-width"> Inaugural Season Wolves TRUCKER HAT </div>
-            <div class="cards-price text-gray text-align-end">$49</div>
-            <div class="text-gray mt-15 custom-width">3 colors available</div>
+            <div class="cards-text text-blue custom-width">${model.hatTitle}</div>
+            <div class="cards-price text-gray text-align-end">${model.hatPrice}</div>
+            <div class="text-gray mt-15 custom-width">${model.hatAvailability}</div>
           </div>
           <div class="cards-buynow-btn text-align-end">
-            <button type="button" class="bg-white text-blue" onclick='window.location.href="/content/venia/language-masters/en/home/hat.html"'>
-              Shop Now </button>
+            <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hatCtaLink @context='uri'}'">${model.hatCtaLabel}</button>
           </div>
         </div>
       </div>
@@ -178,41 +167,33 @@
         <div class="cards-xl bg-gray">
             <div class="cards-header-block">
               <div class="cards-image-block">
-                <img class="" src="/content/dam/venia/sites/plp_img/jerseybg.png" />          
+                <img class="" src="${model.jerseyBgImage}"  alt="jerseyBgImage"/>
               </div>
               <div class="carousel-part">
                       <!-- Flexbox -->
                 <div class="rc-carousel-box jersey">
                     <!-- Items start -->
+                    <sly data-sly-list="${model.jerseyProducts}">
                     <div class="rc-carousel-item">
-                        <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/jersey4.png" alt="dhl" />
+                        <img class="rc-carousel-item-image" src="${item.productImage}" alt="jerseyProducts" />
                     </div>
-                    <div class="rc-carousel-item">
-                        <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/jersey3.png" alt="fedex" />
-                    </div>
-                    <div class="rc-carousel-item">
-                        <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/jersey2.png" alt="ups" />
-                    </div>
-                    <div class="rc-carousel-item">
-                      <img class="rc-carousel-item-image" src="/content/dam/venia/sites/plp_img/jersey1.png" alt="ups" />
-                  </div>
+                    </sly>
                 </div>
               </div>
             </div>
             <div class="cards-content-block mt-15 grid-2cl">
               <div class="cards-text-block mt-15 grid-2cl-75-25">
-                <div class="cards-text text-blue custom-width"> Inaugural Season Wolves Jersey </div>
-                <div class="cards-price text-blue text-align-end">$49</div>
-                <div class="text-gray mt-15 custom-width">4 colors available</div>
+                <div class="cards-text text-blue custom-width">${model.jerseyTitle}</div>
+                <div class="cards-price text-blue text-align-end">${model.jerseyPrice}</div>
+                <div class="text-gray mt-15 custom-width">${model.jerseyAvailability}</div>
               </div>
               <div class="cards-buynow-btn text-align-end">
-                <button type="button" class="bg-white text-blue" onclick='window.location.href="/content/venia/language-masters/en/home/jersey.html"'>
-                  Shop Now </button>
+                <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.jerseyCtaLink @context='uri'}'">${model.jerseyCtaLabel}</button>
               </div>
             </div>
           </div>
         <div class="cards">
-            <img class="" src="/content/dam/venia/sites/plp_img/square/6.png" />
+            <img class="" src="${model.jerseyImage}"  alt="jerseyImage"/>
         </div>
       </div>
   </div>
