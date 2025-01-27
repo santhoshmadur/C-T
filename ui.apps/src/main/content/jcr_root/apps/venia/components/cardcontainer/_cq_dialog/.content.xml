@@ -353,7 +353,7 @@
                                             <jerseyimage
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="Left jersey Image"
+                                                fieldLabel="Right jersey Image"
                                                 name="./jerseyImage"
                                                 rootPath="/content/dam/venia"/>
                                             <bgimage
