@@ -54,7 +54,7 @@
                         <image
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                            fieldLabel="News Image"
+                            fieldLabel="Team Image"
                             name="./image"
                             rootPath="/content/dam/venia"/>
                         <teamname

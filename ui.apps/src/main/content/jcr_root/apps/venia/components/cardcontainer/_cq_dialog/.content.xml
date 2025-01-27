@@ -140,7 +140,7 @@
                                             <shoesimage
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="Left Shoes Image"
+                                                fieldLabel="Right Shoes Image"
                                                 name="./shoesImage"
                                                 rootPath="/content/dam/venia"/>
                                         </items>
