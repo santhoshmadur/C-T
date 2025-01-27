@@ -61,14 +61,17 @@
       gap: 4px;
 
       .slide-title {
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1.5rem;
+        font-weight: 700;
         margin: 5px 0;
+        color: $ct-color-primary-dark;
+        text-transform: uppercase;
+        letter-spacing: -0.72px;
       }
 
       .slide-time {
         font-size: 0.8rem;
-        color: #999;
+        color: $ct-color-dark-gray;
       }
     }
 
@@ -90,6 +93,7 @@
       overflow: visible !important;
       margin-top: -1px;
       width: 20% !important;
+      margin-right: 15px !important;
     }
 
     // .swiper-slide-visible{

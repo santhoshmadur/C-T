@@ -194,9 +194,28 @@
       .mt-15 {
         margin-top: 15px;
       }
+
+      .mt-8{
+        margin-top: 8px;
+      }
+      .ml-25{
+        margin-left: 25px;
+      }
+
+      .gap-8{
+        gap: 8px;
+      }
+
+      .p-lr-40{
+        padding:0 40px;
+        bottom: 20px !important;
+      }
   
       .mt-30 {
         margin-top: 30px;
+      }
+      .normalCase{
+        text-transform: none !important;
       }
   
       // button:active {
@@ -292,7 +311,8 @@
         height: 330px !important;
         width: auto !important;
         cursor: pointer;
-        margin-right: -50px;
+        margin-right: -48px;
+        margin-left: 6px;
         transition: 0.3s ease-in-out;
     }
     
@@ -314,6 +334,9 @@
     
     .grid-2cl-75-25{
         grid-template-columns: 75% 25%;
+    }
+    .grid-2cl-50-25{
+      grid-template-columns: 50% 25%;
     }
     
     .mobile_img{
