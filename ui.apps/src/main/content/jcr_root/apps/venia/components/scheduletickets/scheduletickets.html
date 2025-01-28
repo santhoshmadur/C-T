@@ -1,136 +1,41 @@
+<sly data-sly-use.model="com.venia.core.models.commerce.ScheduleTicketsModel"></sly>
 <div class="scheduletickets">
     <div class="schedule-tickets">
         <div class="schedule-container">
             <!-- Banner Image -->
-            <div class="schedule-container__banner" style="background-image: url();">
-                <div class="banner-opacity">2024/2025 SEASON</div>
+            <div class="schedule-container__banner" style="background: url('${model.heroBgImage @context='uri'}') no-repeat;">
+                <div class="banner-opacity">${model.heroTitle}</div>
             </div>
             <div class="schedule-container__tickets-container">
                 <div class="schedule-container__tickets-container--topBlock topBlock">
                     <div class="topBlock--header">
-                        <div class="heading">SCHEDULE &amp; TICKETS</div>
-                        <div class="controls"><button class="filter-sort-button"><span>FILTER</span><span><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path d="M4 8H12M2 4H14M6 12H10" stroke="white" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg></span></button></div>
+                        <div class="heading">${model.cardTitle}</div>
+                        <div class="controls">
+                            <button class="filter-sort-button">
+                                <span>${model.ctaLabel}</span>
+                                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 8H12M2 4H14M6 12H10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                            </button>
+                        </div>
                     </div>
                     <div class="topBlock--containerInfo">
-                        <p>Purchase your tickets in advance to save on ticket costs and avoid game-day lines!</p>
-                        <p>Single game tickets are discounted for advance sales. Advance sales include any purchase
-                            online, over the phone, or in person at the Thomas &amp; Mack Center Box Office prior to the
-                            day of the event. Day of game prices increase by $10 in every price level.</p>
+                        <p>${model.cardDescriptionOne}</p>
+                        <p>${model.cardDescriptionTwo}</p>
                     </div>
                 </div>
                 <div class="schedule-container__tickets-container--card-block">
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg"
-                             alt="image" 
-                             class="scheduleCard--image">
-                        <p class="scheduleCard--name">SALT LAKE CITY JAZZ</p>
-                        <p class="scheduleCard--time">Monday 12/03 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">BROOKLYN NETS</p>
-                        <p class="scheduleCard--time">Wednesday 12/05 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">LOS ANGELES LAKERS</p>
-                        <p class="scheduleCard--time">Sunday 12/09 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">DENVER NUGGETS</p>
-                        <p class="scheduleCard--time">Wednesday 12/12 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">CHICAGO BULLS</p>
-                        <p class="scheduleCard--time">Monday 12/17 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">MINNESOTA TIMBERWOLVES</p>
-                        <p class="scheduleCard--time">Wednesday 12/19 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">MEMPHIS GRIZZLIES</p>
-                        <p class="scheduleCard--time">Friday 12/21 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">ATLANTA HAWKS</p>
-                        <p class="scheduleCard--time">Sunday 12/23 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">PHILADELPHIA SIXERS</p>
-                        <p class="scheduleCard--time">Wednesday 12/26 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">LOS ANGELES CLIPPERS</p>
-                        <p class="scheduleCard--time">Wednesday 01/02 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">CHICAGO BULLS</p>
-                        <p class="scheduleCard--time">Friday 01/04 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name"> PHOENIX SUNS</p>
-                        <p class="scheduleCard--time">Sunday 01/07 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">MINNESOTA TIMBERWOLVES</p>
-                        <p class="scheduleCard--time">Wednesday 01/10 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">MEMPHIS GRIZZLIES</p>
-                        <p class="scheduleCard--time">Saturday 01/13 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
-                    <div class="scheduleCard">
-                        <p class="scheduleCard--groundType">HOME</p><img
-                            src="/content/dam/venia/sites/homepage/games-1.svg" alt="image" class="scheduleCard--image">
-                        <p class="scheduleCard--name">SALT LAKE CITY JAZZ</p>
-                        <p class="scheduleCard--time">Monday 01/15 7:00p PST</p><button
-                            class="scheduleCard--button ct-button ct-button-primary">Buy Tickets</button>
-                    </div>
+                    <sly data-sly-list="${model.gameCards}">
+                        <div class="scheduleCard">
+                            <p class="scheduleCard--groundType">${item.scheduleType}</p>
+                            <img src="${item.image}" alt="image" class="scheduleCard--image">
+                            <p class="scheduleCard--name">${item.teamName}</p>
+                            <p class="scheduleCard--time">${item.date} <br /> ${item.time} </p>
+                            <button class="scheduleCard--button ct-button ct-button-primary">${item.ctaLabel}</button>
+                        </div>
+                    </sly>
                 </div>
             </div>
         </div>

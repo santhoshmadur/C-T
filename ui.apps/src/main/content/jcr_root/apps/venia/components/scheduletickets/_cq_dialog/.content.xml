@@ -12,9 +12,9 @@
                 sling:resourceType="granite/ui/components/coral/foundation/tabs"
                 maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <productimages
+                    <herobanner
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Product Images"
+                        jcr:title="Hero Banner"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -27,26 +27,26 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <productImages
+                                            <bgimage
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Product Images">
-                                                <field
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    fieldLabel="Product Image"
-                                                    name="./productImages"
-                                                    rootPath="/content/dam"/>
-                                            </productImages>
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Hero Banner Background Image"
+                                                name="./heroBgImage"
+                                                rootPath="/content/dam/venia"/>
+                                            <herotitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Hero Banner Title"
+                                                name="./heroTitle"/>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </productimages>
-                    <backgroundimages
+                    </herobanner>
+                    <cards
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Background Images"
+                        jcr:title="Cards"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -59,24 +59,76 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <image
+                                            <cardtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Card Heading Title"
+                                                name="./cardTitle"/>
+                                            <carddescriptionone
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Card Description 1"
+                                                name="./cardDescriptionOne"/>
+                                            <carddescriptiontwo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Card Description 2"
+                                                name="./cardDescriptionTwo"/>
+                                            <ctalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Label"
+                                                name="./ctaLabel"/>
+                                            <multi
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Background Images">
+                                                composite="{Boolean}true"
+                                                fieldLabel="Game Cards">
                                                 <field
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    required="true"
-                                                    fieldLabel="Background Image"
-                                                    rootPath="/content/dam"
-                                                    name="./bgImages"/>
-                                            </image>
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./gameCards">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <scheduletype
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Schedule Type"
+                                                            name="./scheduleType"/>
+                                                        <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Team Image"
+                                                            name="./image"
+                                                            rootPath="/content/dam/venia"/>
+                                                        <teamname
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Team Name"
+                                                            name="./teamName"/>
+                                                        <date
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Date"
+                                                            name="./date"/>
+                                                        <time
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Time"
+                                                            name="./time"/>
+                                                        <ctalabel
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="CTA Label"
+                                                            name="./ctaLabel"/>
+                                                    </items>
+                                                </field>
+                                            </multi>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </backgroundimages>
+                    </cards>
                 </items>
             </tabs>
         </items>

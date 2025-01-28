@@ -12,54 +12,56 @@ import java.util.List;
         adaptables = SlingHttpServletRequest.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-public class UpComingGamesModel {
+public class ScheduleTicketsModel {
 
     @ValueMapValue
-    private String title;
+    private String heroBgImage;
+
+    @ValueMapValue
+    private String heroTitle;
+
+    @ValueMapValue
+    private String cardTitle;
+
+    @ValueMapValue
+    private String cardDescriptionOne;
+
+    @ValueMapValue
+    private String cardDescriptionTwo;
 
     @ValueMapValue
     private String ctaLabel;
 
-    @ValueMapValue
-    private String ctaIcon;
-
-    @ValueMapValue
-    private String target;
-
-    @ValueMapValue
-    private String ctaLink;
-
     @ChildResource(name = "gameCards")
     private List<GameCardsModel> gameCards;
 
-    public String getTitle() {
-        return title;
+    public String getHeroBgImage() {
+        return heroBgImage;
+    }
+
+    public String getHeroTitle() {
+        return heroTitle;
+    }
+
+    public String getCardTitle() {
+        return cardTitle;
+    }
+
+    public String getCardDescriptionOne() {
+        return cardDescriptionOne;
+    }
+
+    public String getCardDescriptionTwo() {
+        return cardDescriptionTwo;
     }
 
     public String getCtaLabel() {
         return ctaLabel;
     }
 
-    public String getCtaIcon() {
-        return ctaIcon;
-    }
-
-    public String getTarget() {
-        return target;
-    }
-
-    public String getCtaLink() {
-        if (ctaLink.contains("/content/")){
-            return ctaLink+".html";
-        }else {
-            return ctaLink;
-        }
-    }
-
     public List<GameCardsModel> getGameCards() {
         return gameCards;
     }
-
 
 }
 
