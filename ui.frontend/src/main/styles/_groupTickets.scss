@@ -1,0 +1,190 @@
+.game-container {
+  display: flex;
+  width: 100%;
+  padding: 56px 48px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: $ct-color-light-gray;
+
+  &__textBlock {
+    text-align: left;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      color: $ct-color-primary-dark;
+      font-family: "Helvetica Neue";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    .text-block-max-font {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      color: $ct-color-gray-light;
+    }
+  }
+
+  &__ticketsBlock {
+    justify-content: center;
+    display: flex;
+    gap: 24px;
+    align-self: stretch;
+
+    .ticketCardParent {
+      display: flex;
+      width: 318px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 16px;
+
+      .ticketCard {
+        width: 318px;
+        height: 212px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .heading {
+          text-align: center;
+          font-family: "Helvetica Neue";
+          font-size: 60px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 100%;
+          color: $ct-color-white;
+        }
+      }
+
+      &--description {
+        display: flex;
+        width: 318px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        height: 154px;
+        margin-left: 9pt;
+        justify-content: space-around;
+        margin-left: 12px;
+        .description{
+          color: $ct-color-primary-dark;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        .price{
+          color: $ct-color-black;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+        }
+
+        .buy-tickets{
+          text-transform: uppercase;
+          color: $ct-color-white;
+           background-color: $ct-color-primary;
+        }
+        .sold-out{
+          text-transform: uppercase;
+          border-radius: 32px;
+          background: $ct-btn-disabled;
+        }
+      }
+
+    }
+  }
+
+  &__groupticketsBlock {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    height: 440px;
+    margin-top: 24px;
+
+    &--leftSection {
+      width: 50%;
+      background: rebeccapurple;
+      border-radius: 16px;
+
+      &-header {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 100%;
+        letter-spacing: -1.8px;
+        color: $ct-color-white;
+      }
+    }
+
+    &--rightSection {
+      width: 50%;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      gap: 40px;
+      justify-content: space-around;
+
+      &-description {
+        width: 550px;
+      }
+
+      &-option {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: space-evenly;
+
+        h3{
+          color:$ct-color-primary-dark;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        p{
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          color: $ct-color-black;
+        }
+      }
+
+      &-footer {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        .icon-border {
+          display: flex;
+          width: 48px;
+          height: 48px;
+          padding: 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 32px;
+          border: 1.5px solid $ct-color-primary-dark;
+        }
+      }
+    }
+  }
+}

@@ -1,101 +1,99 @@
 package com.venia.core.models.commerce;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
+import org.apache.sling.api.resource.Resource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @ExtendWith(AemContextExtension.class)
 class FooterNavigationModelTest {
 
     private final AemContext context = new AemContext();
-    private FooterNavigationModel footerNavigationModel;
+
+    private static final String COMPONENT_PATH = "/content/footer";
+
+    private FooterNavigationModel model;
 
     @BeforeEach
     void setUp() {
-        // Create mock content
-        context.create().resource("/content/footer",
-                "footerLogo", "/content/dam/logo.png",
-                "footerTarget", "_blank",
-                "footerLink", "/content/about");
+        context.addModelsForClasses(FooterNavigationModel.class);
 
-        context.create().resource("/content/footer/firstColumn/1",
-                "navTitle", "Column 1",
-                "navLink", "/content/page1",
-                "navTarget", "_self");
+        context.create().resource(COMPONENT_PATH,
+                "footerLogo", "/content/dam/footer-logo.png",
+                "footerTarget", "_self",
+                "footerLink", "/content/footer-page"
+        );
 
-        context.create().resource("/content/footer/secondColumn/1",
-                "navTitle", "Column 2",
-                "navLink", "/content/page2",
-                "navTarget", "_blank");
+        context.create().resource(COMPONENT_PATH + "/firstColumn/1",
+                "navTitle", "Home",
+                "navLink", "/content/home",
+                "navTarget", "_self"
+        );
 
-        context.create().resource("/content/footer/socialIcons/1",
-                "socialIcon", "facebook",
-                "socialLink", "https://facebook.com",
-                "socialTarget", "_blank");
+        context.create().resource(COMPONENT_PATH + "/secondColumn/1",
+                "navTitle", "About Us",
+                "navLink", "/content/about-us",
+                "navTarget", "_self"
+        );
 
-        // Adapt the model
-        context.currentResource(context.resourceResolver().getResource("/content/footer"));
-        footerNavigationModel = context.request().adaptTo(FooterNavigationModel.class);
+        context.create().resource(COMPONENT_PATH + "/socialIcons/1",
+                "socialIcon", "facebook-icon",
+                "socialTarget", "_blank",
+                "socialLink", "https://facebook.com"
+        );
+
+        context.create().resource(COMPONENT_PATH + "/socialIcons/2",
+                "socialIcon", "twitter-icon",
+                "socialTarget", "_blank",
+                "socialLink", "https://twitter.com"
+        );
+        Resource headerResource = context.resourceResolver().getResource(COMPONENT_PATH);
+        context.currentResource(headerResource);
+        model = context.request().adaptTo(FooterNavigationModel.class);
     }
 
     @Test
-    void testFooterLogo() {
-        // Assert footer logo value
-        assertEquals("/content/dam/logo.png", footerNavigationModel.getFooterLogo());
-    }
+    void testFooterNavigationModel() {
 
-    @Test
-    void testFooterLinkWithContent() {
-        // Assert footer link value includes .html extension
-        assertEquals("/content/about.html", footerNavigationModel.getFooterLink());
-    }
+        assertNotNull(model);
+        assertEquals("/content/dam/footer-logo.png", model.getFooterLogo());
+        assertEquals("_self", model.getFooterTarget());
+        assertEquals("/content/footer-page.html", model.getFooterLink());
 
-
-    @Test
-    void testFirstColumn() {
-        // Assert first column values
-        List<FooterNavigationModel.ColumnModel> firstColumn = footerNavigationModel.getFirstColumn();
+        List<FooterNavigationModel.ColumnModel> firstColumn = model.getFirstColumn();
         assertNotNull(firstColumn);
         assertEquals(1, firstColumn.size());
-        FooterNavigationModel.ColumnModel column = firstColumn.get(0);
-        assertEquals("Column 1", column.getNavTitle());
-        assertEquals("/content/page1.html", column.getNavLink());
-        assertEquals("_self", column.getLinkTarget());
-    }
+        FooterNavigationModel.ColumnModel firstColumnItem = firstColumn.get(0);
+        assertEquals("Home", firstColumnItem.getNavTitle());
+        assertEquals("/content/home.html", firstColumnItem.getNavLink());
+        assertEquals("_self", firstColumnItem.getLinkTarget());
 
-    @Test
-    void testSecondColumn() {
-        // Assert second column values
-        List<FooterNavigationModel.ColumnModel> secondColumn = footerNavigationModel.getSecondColumn();
+        List<FooterNavigationModel.ColumnModel> secondColumn = model.getSecondColumn();
         assertNotNull(secondColumn);
         assertEquals(1, secondColumn.size());
-        FooterNavigationModel.ColumnModel column = secondColumn.get(0);
-        assertEquals("Column 2", column.getNavTitle());
-        assertEquals("/content/page2.html", column.getNavLink());
-        assertEquals("_blank", column.getLinkTarget());
-    }
+        FooterNavigationModel.ColumnModel secondColumnItem = secondColumn.get(0);
+        assertEquals("About Us", secondColumnItem.getNavTitle());
+        assertEquals("/content/about-us.html", secondColumnItem.getNavLink());
+        assertEquals("_self", secondColumnItem.getLinkTarget());
 
-    @Test
-    void testSocialIcons() {
-        // Assert social icon values
-        List<FooterNavigationModel.SocialIconsModel> socialIcons = footerNavigationModel.getSocialIcons();
+        List<FooterNavigationModel.SocialIconsModel> socialIcons = model.getSocialIcons();
         assertNotNull(socialIcons);
-        assertEquals(1, socialIcons.size());
-        FooterNavigationModel.SocialIconsModel socialIcon = socialIcons.get(0);
-        assertEquals("facebook", socialIcon.getSocialIcon());
-        assertEquals("https://facebook.com", socialIcon.getSocialLink());
-        assertEquals("_blank", socialIcon.getSocialTarget());
-    }
+        assertEquals(2, socialIcons.size());
 
-    @Test
-    void testFooterTarget() {
-        // Assert footer target value
-        assertEquals("_blank", footerNavigationModel.getFooterTarget());
+        FooterNavigationModel.SocialIconsModel facebookIcon = socialIcons.get(0);
+        assertEquals("facebook-icon", facebookIcon.getSocialIcon());
+        assertEquals("_blank", facebookIcon.getSocialTarget());
+        assertEquals("https://facebook.com", facebookIcon.getSocialLink());
+
+        FooterNavigationModel.SocialIconsModel twitterIcon = socialIcons.get(1);
+        assertEquals("twitter-icon", twitterIcon.getSocialIcon());
+        assertEquals("_blank", twitterIcon.getSocialTarget());
+        assertEquals("https://twitter.com", twitterIcon.getSocialLink());
     }
 }
