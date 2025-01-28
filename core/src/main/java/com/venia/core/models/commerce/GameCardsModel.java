@@ -29,6 +29,12 @@ public class GameCardsModel {
     @ValueMapValue
     private String ctaLabel;
 
+    @ValueMapValue
+    private String ctaTarget;
+
+    @ValueMapValue
+    private String ctaLink;
+
     public String getImage() {
         return image;
     }
@@ -53,4 +59,11 @@ public class GameCardsModel {
         return ctaLabel;
     }
 
+    public String getCtaTarget() {
+        return ctaTarget;
+    }
+
+    public String getCtaLink() {
+        return ctaLink;
+    }
 }

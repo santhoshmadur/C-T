@@ -40,6 +40,12 @@ public class GroupTicketsModel {
     private String ctaLabel;
 
     @ValueMapValue
+    private String ctaTarget;
+
+    @ValueMapValue
+    private String ctaLink;
+
+    @ValueMapValue
     private String phoneIcon;
 
     @ValueMapValue
@@ -77,6 +83,14 @@ public class GroupTicketsModel {
         return ctaLabel;
     }
 
+    public String getCtaTarget() {
+        return ctaTarget;
+    }
+
+    public String getCtaLink() {
+        return ctaLink;
+    }
+
     public String getPhoneIcon() {
         return phoneIcon;
     }
@@ -106,6 +120,12 @@ public class GroupTicketsModel {
         @ValueMapValue
         private String ctaLabel;
 
+        @ValueMapValue
+        private String ctaTarget;
+
+        @ValueMapValue
+        private String ctaLink;
+
         public String getImage() {
             return image;
         }
@@ -132,6 +152,14 @@ public class GroupTicketsModel {
             }else {
                 return "buy-tickets";
             }
+        }
+
+        public String getCtaTarget() {
+            return ctaTarget;
+        }
+
+        public String getCtaLink() {
+            return ctaLink;
         }
     }
 

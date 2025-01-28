@@ -73,6 +73,19 @@
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                             fieldLabel="CTA Label"
                                                             name="./ctaLabel"/>
+                                                        <ctatarget
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./ctaTarget"
+                                                                text="OpenInNewTab"
+                                                                uncheckedValue="_self"
+                                                                value="_blank"/>
+                                                        <ctalink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                                fieldLabel="CTA Link"
+                                                                name="./ctaLink"
+                                                                rootPath="/content"/>
                                                     </items>
                                                 </field>
                                             </multi>
@@ -141,6 +154,19 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="CTA Label"
                                                 name="./ctaLabel"/>
+                                            <ctatarget
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./ctaTarget"
+                                                    text="OpenInNewTab"
+                                                    uncheckedValue="_self"
+                                                    value="_blank"/>
+                                            <ctalink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                    fieldLabel="CTA Link"
+                                                    name="./ctaLink"
+                                                    rootPath="/content"/>
                                             <phoneicon
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"

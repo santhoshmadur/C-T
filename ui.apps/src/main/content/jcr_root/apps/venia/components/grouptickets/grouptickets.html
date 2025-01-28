@@ -16,7 +16,7 @@
                         <div class="ticketCardParent--description">
                             <div class="description">${item.startingPrice}</div>
                             <div class="price">${item.description}</div>
-                            <button class="ct-button ${item.ticketStatus}">${item.ctaLabel}</button>
+                            <a class="ct-button ${item.ticketStatus}" href="${item.ctaLink}" target="${item.ctaTarget}">${item.ctaLabel}</a>
                         </div>
                     </div>
                 </sly>
@@ -39,7 +39,7 @@
                         </sly>
                     </div>
                     <div class="game-container__groupticketsBlock--rightSection-footer">
-                        <button class="ticketsBlock--button ct-button ct-button-primary">${model.ctaLabel}</button>
+                        <a class="ticketsBlock--button ct-button ct-button-primary" href="${model.ctaLink}" target="${model.ctaTarget}">${model.ctaLabel}</a>
                         <span class="icon-border">
               <img src="${model.phoneIcon}" alt="phone">
             </span>

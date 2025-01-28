@@ -12,9 +12,9 @@
                 sling:resourceType="granite/ui/components/coral/foundation/tabs"
                 maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <productimages
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Product Images"
+                        jcr:title="Title"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -27,26 +27,38 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <productImages
+                                            <title
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Product Images">
-                                                <field
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    fieldLabel="Product Image"
-                                                    name="./productImages"
-                                                    rootPath="/content/dam"/>
-                                            </productImages>
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./title"/>
+                                            <ctalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Label"
+                                                name="./ctaLabel"/>
+                                            <ctatarget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./ctaTarget"
+                                                text="OpenInNewTab"
+                                                uncheckedValue="_self"
+                                                value="_blank"/>
+                                            <ctalink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                fieldLabel="CTA Link"
+                                                name="./ctaLink"
+                                                rootPath="/content"/>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </productimages>
-                    <backgroundimages
+                    </title>
+                    <left
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Background Images"
+                        jcr:title="Left"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -61,22 +73,114 @@
                                         <items jcr:primaryType="nt:unstructured">
                                             <image
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Background Images">
-                                                <field
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    required="true"
-                                                    fieldLabel="Background Image"
-                                                    rootPath="/content/dam"
-                                                    name="./bgImages"/>
-                                            </image>
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Image"
+                                                name="./leftIimage"
+                                                rootPath="/content/dam/venia"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./leftTitle"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Description"
+                                                name="./leftDescription"/>
+                                            <primaryctalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Primary CTA Label"
+                                                name="./primaryCtaLabel"/>
+                                            <primaryctatarget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./primaryCtaTarget"
+                                                text="OpenInNewTab"
+                                                uncheckedValue="_self"
+                                                value="_blank"/>
+                                            <primaryctalink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                fieldLabel="Primary CTA Link"
+                                                name="./primaryCtaLink"
+                                                rootPath="/content"/>
+                                            <secondaryctalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Secondary CTA Label"
+                                                name="./secondaryCtaLabel"/>
+                                            <secondaryctatarget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./secondaryCtaTarget"
+                                                text="OpenInNewTab"
+                                                uncheckedValue="_self"
+                                                value="_blank"/>
+                                            <secondaryctalink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                                fieldLabel="Secondary CTA Link"
+                                                name="./secondaryCtaLink"
+                                                rootPath="/content"/>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </backgroundimages>
+                    </left>
+                    <right
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Right"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <image
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Image"
+                                                name="./rightImage"
+                                                rootPath="/content/dam/venia"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./rightTitle"/>
+                                            <address
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Address"
+                                                name="./address"/>
+                                            <phone1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Phone 1"
+                                                name="./phone1"/>
+                                            <phone2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Phone 2"
+                                                name="./phone2"/>
+                                            <email
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Email"
+                                                name="./email"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </right>
                 </items>
             </tabs>
         </items>
