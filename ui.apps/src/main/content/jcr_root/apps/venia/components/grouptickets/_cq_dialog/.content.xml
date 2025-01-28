@@ -12,9 +12,9 @@
                 sling:resourceType="granite/ui/components/coral/foundation/tabs"
                 maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <productimages
+                    <firstsection
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Product Images"
+                        jcr:title="First Section"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -27,26 +27,64 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <productImages
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./title"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Description"
+                                                name="./description"/>
+                                            <multi
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Product Images">
+                                                composite="{Boolean}true"
+                                                fieldLabel="Season Tickets">
                                                 <field
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    fieldLabel="Product Image"
-                                                    name="./productImages"
-                                                    rootPath="/content/dam"/>
-                                            </productImages>
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./seasonTickets">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Card Image"
+                                                            name="./image"
+                                                            rootPath="/content/dam/venia"/>
+                                                        <textonimage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Text on Image"
+                                                            name="./textOnImage"/>
+                                                        <startingprice
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Starting Price"
+                                                            name="./startingPrice"/>
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Description"
+                                                            name="./description"/>
+                                                        <ctalabel
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="CTA Label"
+                                                            name="./ctaLabel"/>
+                                                    </items>
+                                                </field>
+                                            </multi>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </productimages>
-                    <backgroundimages
+                    </firstsection>
+                    <secondsection
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Background Images"
+                        jcr:title="Second Section"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -61,22 +99,66 @@
                                         <items jcr:primaryType="nt:unstructured">
                                             <image
                                                 jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Image"
+                                                name="./image"
+                                                rootPath="/content/dam/venia"/>
+                                            <textonimage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Text on Image"
+                                                name="./textOnImage"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldLabel="Description"
+                                                name="./secondDescription"/>
+                                            <multi
+                                                jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                                fieldLabel="Background Images">
+                                                composite="{Boolean}true"
+                                                fieldLabel="Title and Description">
                                                 <field
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                    required="true"
-                                                    fieldLabel="Background Image"
-                                                    rootPath="/content/dam"
-                                                    name="./bgImages"/>
-                                            </image>
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./titleAndDescription">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Title"
+                                                            name="./title"/>
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                            fieldLabel="Description"
+                                                            name="./description"/>
+                                                    </items>
+                                                </field>
+                                            </multi>
+                                            <ctalabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CTA Label"
+                                                name="./ctaLabel"/>
+                                            <phoneicon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Phone Icon"
+                                                name="./phoneIcon"
+                                                rootPath="/content/dam/venia"/>
+                                            <mailicon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Mail Icon"
+                                                name="./mailIcon"
+                                                rootPath="/content/dam/venia"/>
                                         </items>
                                     </column>
                                 </items>
                             </columns>
                         </items>
-                    </backgroundimages>
+                    </secondsection>
                 </items>
             </tabs>
         </items>
