@@ -70,7 +70,8 @@
     }
 
     &__type {
-        color: rgba(225, 225, 225, 0.60);        ;
+        color: rgba(225, 225, 225, 0.60);
+        ;
         text-align: center;
         font-family: "Helvetica Neue";
         font-size: 60px;
@@ -90,7 +91,7 @@
     }
 
     &__team-name {
-        color: var(--Dark-Color, $ct-color-primary-dark);
+        color: $ct-color-primary-dark;
         text-align: center;
         font-family: "Helvetica Neue";
         font-size: 24px;
@@ -113,6 +114,26 @@
     }
 
     &__button {
-       margin-top: 16px;
+        margin-top: 16px;
+        color: $ct-color-white;
+        text-align: center;
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 14px */
+        letter-spacing: -0.14px;
+        display: flex;
+        padding: 16px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        background: $ct-color-primary;
+    }
+
+    &__button span {
+        width: 128px;
     }
 }
