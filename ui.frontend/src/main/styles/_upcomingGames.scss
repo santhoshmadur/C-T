@@ -114,5 +114,24 @@
 
     &__button {
        margin-top: 16px;
+       color: var(--White, #FFF);
+text-align: center;
+font-family: "Helvetica Neue";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 14px */
+letter-spacing: -0.14px;
+display: flex;
+padding: 16px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 32px;
+background: var(--Medium-Color, #B9571A);
+    }
+
+    &__button span {
+        width: 128px;
     }
 }

@@ -43,6 +43,7 @@
         letter-spacing: -1.68px;
         text-transform: uppercase;
         color: $ct-color-white;
+        margin-top: -24px;
     }
 
     .white-sub-heading {
@@ -90,6 +91,10 @@
         /* 24px */
     }
 
+    .heroBanner-content-text {
+        width: 510px;
+    }
+
     .heroBanner-content-button {
         display: flex;
         padding: 16px 24px;
@@ -118,6 +123,7 @@
         justify-content: center;
         align-items: flex-start;
         gap: 10px;
+        margin-bottom: -32px;
     }
 
     .heroBanner-level {
@@ -280,7 +286,7 @@
         font-weight: 400;
         line-height: 120%;
         text-align: left;
-        width: 453px;
+        width: 437px;
         margin-top: 8px;
     }
 
@@ -322,12 +328,12 @@
     }
 
     .email-input::placeholder {
-      color: #ffffff;
-      font-feature-settings: 'liga' off, 'clig' off;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%; /* 22.4px */
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -0.42px;
     }
 
     .line {
