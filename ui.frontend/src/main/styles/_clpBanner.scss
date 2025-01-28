@@ -1,163 +1,161 @@
-
 .heroBanner-main {
-.heroBanner-container {
-    display: block;
-    padding: 70px;
-    background: $ct-color-primary-dark;
-    height: 772px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right top;
+    .heroBanner-container {
+        display: block;
+        padding: 70px;
+        background: $ct-color-primary-dark;
+        height: 772px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right top;
 
 
-    .heroBanner {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        align-self: stretch;
-        margin-top: 88px;
-    }
-
-    .heroBanner-content-wrapper {
-        display: flex;
-        align-items: start;
-        gap: 16px;
-        flex-direction: column;
-    }
-
-    .heroBanner-heading {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        margin-top: 36px;
-    }
-
-    .white-heading {
-      
-        font-size: 56px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        /* 112px */
-        letter-spacing: -1.68px;
-        text-transform: uppercase;
-        color: $ct-color-white;
-        margin-top: -24px;
-    }
-
-    .white-sub-heading {
-      
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        /* 112px */
-        letter-spacing: -1.68px;
-        text-transform: uppercase;
-        color: $ct-color-white;
-    }
-
-    .white-border-heading {
-        font-size: 112px;
-        font-weight: 900;
-        line-height: 100%;
-        letter-spacing: -1.68px;
-        text-transform: uppercase;
-        color: transparent;
-        -webkit-text-stroke: 2px #fff;
-        letter-spacing: -3.36px;
-    }
-
-    .bigger-font {
-        font-size: 112px;
-    }
-
-    .heroBanner-content {
-        display: flex;
-        width: 660px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-    }
-
-    .heroBanner-content-text-wrapper {
-        color: $ct-color-white;
-      
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400 !important;
-        line-height: 120%;
-        /* 24px */
-    }
-
-    .heroBanner-content-text {
-        width: 510px;
-    }
-
-    .heroBanner-content-button {
-        display: flex;
-        padding: 16px 24px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        background: $ct-color-white;
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        letter-spacing: -0.48px;
-        background-color: #ffffff;
-        color: #29455c;
-        border-radius: 32px;
-    }
-
-    .heroBanner-content-button:hover {
-        text-decoration: underline;
-    }
-
-    .heroBanner-levels {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 10px;
-        margin-bottom: -32px;
-    }
-
-    .heroBanner-level {
-        width: 189px;
-        height: 251px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        display: flex;
-        justify-content: center;
-        border: 1.178px solid $ct-color-primary-dark;
-        background: $ct-color-white;
-        align-items: center;
-        flex-direction: column;
-        gap: 0.367px;
-        flex-shrink: 0;
-
-        &-image{
-            background-repeat: no-repeat;
-            width: 200px;
-            background-size: contain;
-            background-position: top center;
-            height: 100px;
+        .heroBanner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            align-self: stretch;
+            margin-top: 88px;
         }
-        &-text{
-            font-size: 121.726px;
-            color:$ct-color-primary;
+
+        .heroBanner-content-wrapper {
+            display: flex;
+            align-items: start;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .heroBanner-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .white-heading {
+
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            /* 112px */
+            letter-spacing: -1.68px;
+            text-transform: uppercase;
+            color: $ct-color-white;
+            margin-top: -24px;
+        }
+
+        .white-sub-heading {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -1.68px;
+            text-transform: uppercase;
+            color: $ct-color-white;
+        }
+
+        .white-border-heading {
+            font-size: 112px;
             font-weight: 900;
             line-height: 100%;
-            letter-spacing: -3.652px;
+            letter-spacing: -1.68px;
             text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 2px #fff;
+            letter-spacing: -3.36px;
         }
-    }
 
-  }
+        .bigger-font {
+            font-size: 112px;
+        }
+
+        .heroBanner-content {
+            display: flex;
+            width: 660px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .heroBanner-content-text-wrapper {
+            color: $ct-color-white;
+
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400 !important;
+            line-height: 120%;
+            /* 24px */
+        }
+
+        .heroBanner-content-text {
+            width: 510px;
+        }
+
+        .heroBanner-content-button {
+            display: flex;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: $ct-color-white;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -0.48px;
+            background-color: #ffffff;
+            color: #29455c;
+            border-radius: 32px;
+        }
+
+        .heroBanner-content-button:hover {
+            text-decoration: underline;
+        }
+
+        .heroBanner-levels {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: -32px;
+        }
+
+        .heroBanner-level {
+            width: 189px;
+            height: 251px;
+            flex-shrink: 0;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            border: 1.178px solid $ct-color-primary-dark;
+            background: $ct-color-white;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.367px;
+            flex-shrink: 0;
+
+            &-image {
+                background-repeat: no-repeat;
+                width: 200px;
+                background-size: contain;
+                background-position: top center;
+                height: 100px;
+            }
+
+            &-text {
+                font-size: 121.726px;
+                color: $ct-color-primary;
+                font-weight: 900;
+                line-height: 100%;
+                letter-spacing: -3.652px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
 
     .modal {
         position: fixed;
@@ -272,14 +270,13 @@
         font-style: normal;
         font-weight: 500;
         line-height: 100%;
-        /* 48px */
         letter-spacing: -1.44px;
         text-align: justify;
     }
 
     .modal-body-pack-text {
         color: $ct-color-white;
-        font-feature-settings: 'liga'off, 'clig'off;
+        font-feature-settings: 'liga' off, 'clig' off;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -315,7 +312,7 @@
 
     }
 
-    .arrow-icon{
+    .arrow-icon {
         display: flex;
         width: 48px;
         padding: 16px;
