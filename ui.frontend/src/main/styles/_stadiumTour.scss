@@ -1,0 +1,68 @@
+.tour-container {
+  background: $ct-color-white;
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+  
+  &__section{
+    gap: 16px;
+    display: flex;
+    width: 50%;
+    height: 688px;
+    padding-bottom: 36px;
+    flex-direction: column;
+    align-items: center;
+  
+    &__image{
+      width: 100%;
+      min-height: 440px;
+      background: #639;
+      border-radius: 1pc;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &__content{
+      justify-content: space-between;
+      display: flex;
+      width: 660px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      &--title{
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        color: $ct-color-primary-dark;
+        font-family: "Helvetica Neue";
+      }
+      &--description{
+        color: $ct-color-gray-light;
+        font-family: "Helvetica Neue";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        display: grid;
+        gap: 8px;
+      }
+      &--btns{
+        display: flex;
+        gap: 8px;
+
+        .btn-primary{
+          border-radius: 32px;
+          color: $ct-color-white;
+          background: $ct-color-primary;;
+        }
+        .btn-secondary{
+          border-radius: 32px;
+          border: 1.5px solid $ct-color-primary-dark;
+        }
+      }
+    }
+  
+  }
+}
