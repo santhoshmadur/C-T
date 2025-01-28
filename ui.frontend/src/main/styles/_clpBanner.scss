@@ -3,7 +3,7 @@
 .heroBanner-container {
     display: block;
     padding: 70px;
-    background: #28455c;
+    background: $ct-color-primary-dark;
     height: 772px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,8 +133,8 @@
         border-radius: 15px;
         display: flex;
         justify-content: center;
-        border: 1.178px solid var(--Dark-Color, #28455C);
-        background: #FFF;
+        border: 1.178px solid $ct-color-primary-dark;
+        background: $ct-color-white;
         align-items: center;
         flex-direction: column;
         gap: 0.367px;
@@ -149,7 +149,7 @@
         }
         &-text{
             font-size: 121.726px;
-            color:#B9571A;
+            color:$ct-color-primary;
             font-weight: 900;
             line-height: 100%;
             letter-spacing: -3.652px;
@@ -177,7 +177,7 @@
     }
 
     .modal-content {
-        background: var(--Dark-Color, #28455C);
+        background: $ct-color-primary-dark;
         padding: 20px;
         border-radius: 16px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -191,7 +191,7 @@
         font-size: 24px;
         cursor: pointer;
         float: right;
-        color: #ffffff;
+        color: $ct-color-white;
     }
 
     .modal-wrapper {
@@ -257,18 +257,17 @@
     }
 
     .modal-body-pack-heading {
-        color: #ffffff;
+        color: $ct-color-white;
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
         line-height: 100%;
-        /* 48px */
         letter-spacing: -1.44px;
         text-align: justify;
     }
 
     .modal-body-pack-heading-v {
-        color: #ffffff;
+        color: $ct-color-white;
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
@@ -279,7 +278,7 @@
     }
 
     .modal-body-pack-text {
-        color: #ffffff;
+        color: $ct-color-white;
         font-feature-settings: 'liga'off, 'clig'off;
         font-size: 16px;
         font-style: normal;
@@ -310,7 +309,7 @@
         width: 520px;
         border-radius: 4px;
         outline: none;
-        color: #ffffff;
+        color: $ct-color-white;
         border: none;
         background: transparent;
 
@@ -324,11 +323,11 @@
         align-items: center;
         gap: 10px;
         border-radius: 32px;
-        border: 1.5px solid #FFF;
+        border: 1.5px solid $ct-color-white;
     }
 
     .email-input::placeholder {
-        color: #FFF;
+        color: $ct-color-white;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -339,7 +338,7 @@
     .line {
         width: 570px;
         height: 3px;
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 2px solid $ct-color-white;
         margin: 0;
     }
 }
