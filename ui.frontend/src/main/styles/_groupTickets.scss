@@ -94,12 +94,14 @@
         .buy-tickets{
           text-transform: uppercase;
           color: $ct-color-white;
-           background-color: $ct-color-primary;
+          background-color: $ct-color-primary;
+          width: 160px;
         }
         .sold-out{
           text-transform: uppercase;
           border-radius: 32px;
           background: $ct-btn-disabled;
+          width: 160px;
         }
       }
 
