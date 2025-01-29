@@ -37,6 +37,12 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="CTA Label"
                                                 name="./ctaLabel"/>
+                                            <ctaicon
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="CTA Icon"
+                                                    name="./ctaIcon"
+                                                    rootPath="/content/dam/venia"/>
                                             <ctatarget
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
