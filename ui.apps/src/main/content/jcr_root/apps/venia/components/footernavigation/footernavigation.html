@@ -40,11 +40,14 @@
             </div>
         </div>
         <div class="footer-icons">
-            <sly data-sly-list="${model.socialIcons}">
-                <a href="${item.socialLink}" target="${item.socialTarget}">
-                    <img src="${item.socialIcon}" alt="Social Icon" />
-                </a>
-            </sly>
+            <div class="footer-icons-text">Stay Connected With Us</div>
+            <div class="footer-icons-social">
+                <sly data-sly-list="${model.socialIcons}">
+                    <a href="${item.socialLink}" target="${item.socialTarget}">
+                        <img src="${item.socialIcon}" alt="Social Icon" />
+                    </a>
+                </sly>
+            </div>
         </div>
     </div>
     <a class="footer-circle" style="background-image: url('${model.footerLogo @context='uri'}')" href="${model.footerLink}" target="${model.footerTarget}"></a>
