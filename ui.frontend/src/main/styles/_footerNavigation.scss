@@ -55,15 +55,33 @@
 
     .footer-icons {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         gap: 16px;
+        align-items: flex-start;
+        
+        &-text{
+            color: $ct-color-white;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -0.72px;
+            text-transform: uppercase;
+        }
+
+        &-social {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            a img {
+                 filter: invert(1);
+                 width: 24px;
+                 height: 24px;
+             }
+        }
     }
 
-    .footer-icons a img {
-        filter: invert(1);
-        width: 24px;
-        height: 24px;
-    }
 
     .footer-circle {
         width: 294px;

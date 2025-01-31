@@ -113,13 +113,13 @@
     }
   }
   &.Home{
-      .info-wrapper,
-      .info-wrapper__section{
-        padding-top: 0 !important;
+    .info-wrapper,
+    .info-wrapper__section{
+      padding-top: 0 !important;
 
-        .info-wrapper__section__image--bg-man{
-          top: -72px !important;
-        }
+      .info-wrapper__section__image--bg-man{
+        top: -72px !important;
       }
     }
+  }
 }

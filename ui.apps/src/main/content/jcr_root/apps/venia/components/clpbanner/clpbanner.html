@@ -34,33 +34,6 @@
       </div>
     </div>
   </div>
-  <sly data-sly-test="${!wcmmode.edit}">
-  <div id="gameModal" class="modal hidden">
-    <div class="modal-content" style="background-image: url('${properties.popupbgimaage @context='uri'}');">
-      <span class="close-button">&times; </span>
-      <div class="modal-wrapper">
-        <div class="modal-body">
-          <div class="modal-body-wolf-image" style="background-image: url('${properties.popuplogo @context='uri'}');"></div>
-          <div class="modal-body-pack-heading">${properties.popuptitle}</div>
-          <div class="wolves">${properties.popupsubtitle}</div>
-          <div class="modal-body-pack-text">${properties.popupdescription}</div>
-          <div class="user-input-wrapper">
-            <div class="input-container">
-              <input type="email" placeholder="${properties.placeholder}" class="email-input" />
-              <span class="arrow-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
-                  <path d="M1 8H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M10 1L17 8L10 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-              </span>
-            </div>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </sly>
-  </div>
 </div>
 <script>
   const modal = document.getElementById("gameModal");
