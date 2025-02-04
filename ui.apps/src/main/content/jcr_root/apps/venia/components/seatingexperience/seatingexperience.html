@@ -1,0 +1,426 @@
+<style>
+
+    .seatingexperience-content-wrapper{
+    
+        display:flex;
+        
+    }
+    
+    .seatingexperience-column-1{
+            
+         width: 96%;
+         height:80%;
+         background-color: #C8C0AC4D;
+         display:flex;
+            
+    }
+    
+    .seatingexperience-column-2{
+            
+         width: 48%;
+         height: 48%;
+            
+    }
+    
+    .seatingexperience-column-1-content_block{
+        
+        min-width:10.313rem;
+        max-width:10.313rem;
+        display:flex;
+        justify-content:center;
+        flex-direction: column;
+    
+    }
+    
+    .seatingexperience-column-1-content_block_img{
+        
+        display:flex;
+        flex-direction: column;
+        height: 38rem;
+        justify-content: flex-end;
+        margin-left: 35px;
+      
+    }
+    
+    .seatingexperience-column-1-content_block_img img{
+    
+        margin-bottom:15px;
+        width:48px;
+        cursor: pointer;
+    
+    }
+    
+    .seatingexperience-column-1-imgblock{
+        margin-top:78px;
+        width:100%;
+    }
+    
+    .seatingexperience-column-1-imgblock img{
+    
+        width:calc(100% - 14%);
+
+    }
+    
+    .seatingexperience-column-1-content_block_statistic{
+        text-transform: uppercase;
+        color:#28455C;
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        font-weight:800;
+        align-self: end;
+        margin-top:30px;
+    }
+    
+    .seatingexperience-column-1-content_block_statistic_txt{
+        margin-bottom:20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .square{
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .dark_blue{
+        background:#28455C;
+    }
+    .blue{
+        background:#697D8D;
+    }
+    .grey{
+        background:#D5D6D7;
+    }
+    
+    
+    .seatingexperience-column-2-headerpart{
+        
+        display:flex;
+        align-items: center;
+        padding: 0px 48px 0 24px;
+        height: 48px;
+        border-bottom: solid 1px #C8C0AC;
+    
+    }
+    
+    .seatingexperience-column-2-headerpart_calendar_text{
+    
+        font-size: 1rem;
+        font-weight: 800;
+        font-family: 'Helvetica Neue';
+    
+    }
+    
+    .calendar_icon,.info_icon{
+    
+        width:24px;
+        height:24px;
+    
+    }
+    
+    .calendar_icon{
+    
+        margin-right:10px;
+    
+    }
+    
+    .info_icon{
+    
+        margin-left:109px;
+        
+    }
+
+    .row {
+
+        display: grid;
+        grid-column-gap: 20px;
+    
+    }
+
+    .column {
+        
+        display: grid;
+        grid-row-gap: 20px;
+    
+    }
+
+    .grid-2cl {
+    
+        grid-template-columns: 49% 49%;
+    
+    }
+    
+    .seatingexperience-column-2-Subheaderpart h3{
+    	    
+        font-size: 35px;
+        font-weight: 800;
+        font-family: 'Helvetica Neue';
+        padding: 24px 24px 24px 24px;
+        color: #28455C;
+    
+    }
+    
+    .seatingexperience-column-2-Subheaderpart h6{
+    
+    	padding: 0px 24px 24px 24px;
+        font-size: 16px;
+        color: #474747;
+    
+    }
+    
+    .seatingexperience-column-2-Subheaderpart{
+    
+    	border-bottom: solid 1px #C8C0AC;
+        
+    }
+    
+    .seatingexperience-column-2-seatselection{
+    	
+        padding: 24px 48px 24px 24px;
+        border-bottom: solid 1px #C8C0AC;
+    
+    }
+    
+    
+   .seatingexperience-column-2-seatselection .heading_part{
+        
+        font-family: "Helvetica Neue";
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+   
+   }
+   
+   .seatingexperience-column-2-seatselection .ticket-selection-text{
+   		
+        margin-top: -20px;
+    	color: #474747;
+    	font-size: 1rem;
+   
+   }
+   
+   .seat-selection-cta{
+   		width: 132px;
+        padding: 16px 0;
+        text-align: center;
+        border-radius: 32px;
+        background: #B9571A;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+   
+   }
+   
+   .seatingexperience-column-2-seatselection .row{
+   		
+        grid-column-gap: 70px !important;
+   
+   }
+   
+   .seatingexperience-column-2-Subheaderpart-menusection{
+   		
+        padding: 0px 48px 24px 24px;
+        display:flex;
+   		
+   }
+   
+   
+   .seatingexperience-column-2-Subheaderpart-menusection-textpart{
+   	      
+          padding: 13px 15px;
+          border-radius: 32px;
+          border: solid 1px;
+          margin-right: 15px;
+          font-size: 1rem;
+          font-weight: 800;
+          display: flex;
+          justify-content: center;
+          align-items: anchor-center;
+
+   }
+   
+    .seatingexperience-column-2-Subheaderpart-menusection-textpart .user_icon_cta{
+   		
+        margin-left:7px;
+   	
+    }
+    </style>
+    
+    <div class="seatingexperience-content-wrapper">
+    
+        <div class="seatingexperience-column-1">
+            <div class="seatingexperience-column-1-content_block">
+                <div class="seatingexperience-column-1-content_block_img">
+                    <img src="/content/dam/venia/sites/seatingexp/zoomin_icon.png" />
+                    <img src="/content/dam/venia/sites/seatingexp/zoomout_icon.png" />
+                    <img src="/content/dam/venia/sites/seatingexp/undo_icon.png" />
+                </div>
+                <div class="seatingexperience-column-1-content_block_statistic">
+                
+                    <div class="seatingexperience-column-1-content_block_statistic_txt"><div class="square dark_blue"></div>available</div>
+                    <div class="seatingexperience-column-1-content_block_statistic_txt"><div class="square blue"></div>selected</div>
+                    <div class="seatingexperience-column-1-content_block_statistic_txt"><div class="square grey"></div>unavailable</div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-1-imgblock">
+                <img src="/content/dam/venia/sites/stadium.png" />
+            </div>
+            
+            
+        </div>
+        <div class="seatingexperience-column-2">
+        
+            <div class="seatingexperience-column-2-headerpart">
+                <img class="calendar_icon" src="/content/dam/venia/sites/seatingexp/calender_icon.png" />
+                <div class="seatingexperience-column-2-headerpart_calendar_text">
+                    SUNDAY, DECEMBER 9 AT 7:00 PM
+                </div>
+                <img class="info_icon" src="/content/dam/venia/sites/seatingexp/info_icon.png"/>
+            </div>
+            <div class="seatingexperience-column-2-Subheaderpart">
+                <h3>PHOENIX SUNS AT LAS VEGAS DESERT WOLVES</h3>
+                <h6>T-Mobile Arena, Las Vegas, NV</h6>
+                
+                <div class="seatingexperience-column-2-Subheaderpart-menusection">
+                	
+                    	<img  class="seatingexperience-column-2-Subheaderpart-menusection-textpart menu_icon_cta" src="/content/dam/venia/sites/seatingexp/menu_icon.png" />
+                    
+                    <button class="seatingexperience-column-2-Subheaderpart-menusection-textpart">
+                    	2
+                        <img  class="user_icon_cta" src="/content/dam/venia/sites/seatingexp/user_icon.png" />
+                    </button>
+                    
+                		<div class="seatingexperience-column-2-Subheaderpart-menusection-textpart">
+                        	$17 - $200
+                        </div>
+                    
+                
+                </div>
+
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 6
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 7
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 8
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 17
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 18
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 19
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 20
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seatingexperience-column-2-seatselection">
+                <div class="column">
+                    <div class="row  grid-2cl">
+                        <div class="heading_part">
+                            Sections 21
+                        </div>
+                        <div class="seat-selection-cta">
+                            select Seats
+                        </div>
+                        <div class="ticket-selection-text">
+                            2 tickets, from $79 each
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

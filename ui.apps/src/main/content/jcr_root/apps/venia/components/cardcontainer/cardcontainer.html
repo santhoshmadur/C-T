@@ -23,16 +23,17 @@
           </div>
         </div>
         <div class="cards-content-block mt-15 grid-2cl">
-          <div class="cards-text-block mt-15 grid-2cl-75-25">
+          <div class="cards-text-block mt-15 grid-2cl-60-30">
             <div class="cards-text text-blue custom-width">${model.hoodieTitle}</div>
-            <div class="cards-price text-blue text-align-end">${model.hoodiePrice}</div>
-            <div class="cards-custom-btn mt-15 custom-width">
-                <span class="">${model.hoodieCustomizable}</span>
-              </div>
+            <!-- <div class="cards-custom-btn mt-15 custom-width">
+              <span class="">${model.hoodieCustomizable}</span>
+             </div> -->
+             <div class="cards-buynow-btn text-align-start">
+              <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hoodieCtaLink @context='uri'}'">${model.hoodieCtaLabel}</button>
+            </div>
+            <div class="cards-price text-blue text-align-start">${model.hoodiePrice}</div>
           </div>
-          <div class="cards-buynow-btn text-align-end">
-            <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hoodieCtaLink @context='uri'}'">${model.hoodieCtaLabel}</button>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -44,15 +45,16 @@
               <img class="shoeimg" src="${model.shoesProductImage}" />
             </div>
           </div>
-          <div style="bottom:100px;" class="cards-content-block mt-15 grid-2cl">
-            <div class="cards-text-block mt-15 grid-2cl-75-25">
+          <div style="" class="cards-content-block mt-15 grid-2cl">
+            <div class="cards-text-block mt-15 grid-2cl-60-30">
               <div class="cards-text text-white custom-width">${model.shoesTitle}</div>
-              <div class="cards-price text-white">${model.shoesPrice}</div>
+              <div class="cards-buynow-btn  mt-15">
+                <button type="button" style="position: absolute;top:55px" class="bg-white text-blue">${model.shoesCtaLabel}</button>
+              </div>
               <div class="text-white mt-15 custom-width">${model.shoesSubTitle}</div>
               <div>&nbsp</div>
-              <div class="cards-buynow-btn  mt-15">
-                <button type="button" class="bg-white text-blue">${model.shoesCtaLabel}</button>
-              </div>
+              <div class="mt-15 cards-price text-white">${model.shoesPrice}</div>
+              
             </div>
            
           </div>
@@ -70,18 +72,22 @@
           <div class="cards bg-light-gray">
             <div class="cards-header-block content-center">
               <div class="cards-image-block">
-                <img class="mt-30" src="${model.basketballBgImage}" />
+                <img class="mt-30" style="height:342px;width: 342px;" src="${model.basketballBgImage}" />
               </div>
             </div>
 
             <div class="cards-content-block grid-2cl p-lr-40">
-              <div class="cards-text-block gap-8">
+              <div class="cards-text-block">
                 <div class="cards-text text-blue normalCase">${model.basketballTitle}</div>
-                <div class="text-blue">${model.basketballAvailability}</div>
+                <!-- <div class="text-blue">${model.basketballAvailability}</div> -->
+                <div class="cards-buynow-btn text-align-end ">
+                  <div class="cards-price text-blue text-align-start">${model.basketballPrice}</div>
+                </div>
               </div>
-              <div class="cards-buynow-btn text-align-end mt-15">
-                <div class="cards-price text-blue text-align-end">${model.basketballPrice}</div>
+              <div class="cards-buynow-btn text-align-end ">
+                <button type="button" class="bg-white text-blue">${model.hatCtaLabel}</button>
               </div>
+              
             </div>
           </div>
         </div>
@@ -96,10 +102,11 @@
             <div class="cards-content-block mt-15 grid-2cl padding-15">
               <div class="cards-text-block mt-15">
                 <div class="cards-text text-white">${model.maskTitle}</div>
-                <div class="text-white mt-15">${model.maskSubtitle}</div>
+                <div class="cards-price text-white text-align-start">${model.maskPrice}</div>
+                <!-- <div class="text-white mt-15">${model.maskSubtitle}</div> -->
               </div>
               <div class="cards-buynow-btn text-align-end mt-15">
-                <div class="cards-price text-white text-align-end">${model.maskPrice}</div>
+                <button type="button" class="bg-white text-blue">${model.hatCtaLabel}</button>
               </div>
             </div>
           </div>
@@ -119,13 +126,17 @@
           <div class="cards-content-block mt-15 grid-2cl padding-15">
             <div class="cards-text-block mt-15">
               <div class="cards-text text-white custom-width">${model.mobileTitle}</div>
-              <div class="cards-custom-btn mt-15">
+              <!-- <div class="cards-custom-btn mt-15">
                 <span class="text-white">${model.mobileCustomizable}</span>
+              </div> -->
+              <div class="cards-buynow-btn text-align-end mt-15">
+                <div class="cards-price text-white text-align-start">${model.mobilePrice}</div>
               </div>
             </div>
             <div class="cards-buynow-btn text-align-end mt-15">
-              <div class="cards-price text-white text-align-end">${model.mobilePrice}</div>
+              <button type="button" class="bg-white text-blue">${model.hatCtaLabel}</button>
             </div>
+            
           </div>
         </div>
       </div>
@@ -152,14 +163,15 @@
           </div>
         </div>
         <div class="cards-content-block grid-2cl">
-          <div class="cards-text-block grid-2cl-50-25">
+          <div class="cards-text-block grid-2cl-60-30">
             <div class="cards-text text-blue custom-width">${model.hatTitle}</div>
-            <div class="cards-price text-gray text-align-end">${model.hatPrice}</div>
-            <div class="text-gray mt-8 custom-width">${model.hatAvailability}</div>
+              <div class="cards-buynow-btn text-align-end">
+                <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hatCtaLink @context='uri'}'">${model.hatCtaLabel}</button>
+              </div>
+            <div class="cards-price text-gray text-align-start">${model.hatPrice}</div>
+            <!-- <div class="text-gray mt-8 custom-width">${model.hatAvailability}</div> -->
           </div>
-          <div class="cards-buynow-btn text-align-end">
-            <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.hatCtaLink @context='uri'}'">${model.hatCtaLabel}</button>
-          </div>
+         
         </div>
       </div>
     </div>
@@ -182,14 +194,15 @@
               </div>
             </div>
             <div class="cards-content-block grid-2cl">
-              <div class="cards-text-block grid-2cl-50-25 ml-25">
+              <div class="cards-text-block grid-2cl-60-30 ml-25">
                 <div class="cards-text text-blue custom-width">${model.jerseyTitle}</div>
-                <div class="cards-price text-blue text-align-end">${model.jerseyPrice}</div>
-                <div class="text-gray mt-8 custom-width">${model.jerseyAvailability}</div>
+                <div class="cards-buynow-btn text-align-end">
+                  <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.jerseyCtaLink @context='uri'}'">${model.jerseyCtaLabel}</button>
+                </div>
+                <div class="cards-price text-blue text-align-start">${model.jerseyPrice}</div>
+                <!-- <div class="text-gray mt-8 custom-width">${model.jerseyAvailability}</div> -->
               </div>
-              <div class="cards-buynow-btn text-align-end">
-                <button type="button" class="bg-white text-blue" onclick="window.location.href='${model.jerseyCtaLink @context='uri'}'">${model.jerseyCtaLabel}</button>
-              </div>
+              
             </div>
           </div>
         <div class="cards">

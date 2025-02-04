@@ -11,8 +11,9 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 15px;
-        height: -webkit-fill-available;
+        // padding: 15px;
+        // height: -webkit-fill-available;
+        height: 450px;
         position: relative;
         justify-content: space-between;
       }
@@ -32,7 +33,7 @@
       }
   
       .cards-xl-height {
-        height: inherit;
+        height: 100% !important;
         justify-content: space-between;
       }
   
@@ -49,8 +50,8 @@
       .bg-cover .cards {
         padding: 0px;
         width: 100%;
-        height: inherit;
-        min-height: 467px;
+        height: 450px;
+        min-height: 450px;
         overflow: hidden;
       }
   
@@ -187,6 +188,11 @@
       .text-align-end{
         text-align: end;
       }
+
+      .text-align-start{
+        text-align: start;        
+      }
+      
       .n-mt-30 {
         margin-top: -30px;
       }
@@ -268,40 +274,41 @@
 
       .carousel-part{
         position: absolute;
-        width: 96%;
+        width: 100%;
         /* overflow-x: hidden; */
         overflow: hidden;
     }
     
     .rc-carousel-box.hoodie{
         display: flex;
-        margin-top: 40px;
-        margin-left: -100px;
+        margin-top: 80px;
+        margin-left: -79px;
         justify-content: space-between;
     }
     
     .rc-carousel-box.hat{
         display: flex;
-        margin-top: 90px;
-        justify-content: space-between;
+        margin-top: 110px;
+        justify-content: space-evenly;
     }
     
     .rc-carousel-box.jersey{
         display: flex;
         margin-top: 15px;
-        margin-left: -160px;
+        // margin-left: -160px;
         justify-content: space-between;
     }
     
     .hoodie .rc-carousel-item-image{
-        height: 235px !important;
+        height: 275px !important;
+        margin-left: -36px;
         width: auto !important;
         cursor: pointer;
         transition: 0.3s ease-in-out;
     }
     
     .hat .rc-carousel-item-image{
-        height: 180px !important;
+        height: 207px !important;
         width: auto !important;
         cursor: pointer;
         transition: 0.3s ease-in-out;
@@ -319,9 +326,15 @@
     .cards-content-block{
         position: absolute;
         bottom: 15px;
-        width: 96%;
+        width: 100%;
         display: grid;
         z-index: 2;
+        
+    }
+
+    .cards-xl .cards-content-block{
+        left: 50px;
+        right: 50px;
     }
     
     .rc-carousel-item-image:hover{
@@ -336,7 +349,7 @@
         grid-template-columns: 75% 25%;
     }
     .grid-2cl-50-25{
-      grid-template-columns: 50% 25%;
+        grid-template-columns: 50% 25%;
     }
     
     .mobile_img{
@@ -348,7 +361,7 @@
     }
 
     .mask_img {
-      transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
     
     .mobile_img:hover,.mask_img:hover,.shoeimg:hover{
@@ -363,8 +376,8 @@
     .shoeimg{
         position: absolute;
         top: 0;
-        left: 23%;
-        height: 93% !important;
+        left: 24%;
+        height: 97% !important;
         width: auto !important;
         transition: 0.3s ease-in-out;
     }
